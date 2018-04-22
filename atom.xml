@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-04-22T14:02:11.500Z</updated>
+  <updated>2018-04-22T14:06:47.786Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,61 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>面试总结之js</title>
+    <link href="http://yoursite.com/2018/04/22/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%933/"/>
+    <id>http://yoursite.com/2018/04/22/前端面试总结3/</id>
+    <published>2018-04-22T14:04:47.000Z</published>
+    <updated>2018-04-22T14:06:47.786Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="js的特点："><a href="#js的特点：" class="headerlink" title="js的特点："></a>js的特点：</h3><p>脚本语言解释性单线程</p><h3 id="数据类型："><a href="#数据类型：" class="headerlink" title="数据类型："></a>数据类型：</h3><p>基本类型number string undefined null boolen（在栈中，可以直接访问）<br>引用类型object function array date regexp（在堆中，实际存放了一个指针，操作是对引用的操作）</p><h3 id="变量声明提升-函数声明提升："><a href="#变量声明提升-函数声明提升：" class="headerlink" title="变量声明提升,函数声明提升："></a>变量声明提升,函数声明提升：</h3><p>在js中所有声明都会提升在顶部，赋值不提升。函数声明提升在变量声明提升之前，变量声明不会覆盖函数声明。但是赋值会覆盖。</p><h3 id="作用域链，闭包"><a href="#作用域链，闭包" class="headerlink" title="作用域链，闭包"></a>作用域链，闭包</h3><p>作用域链是指js中内部函数可以访问外部函数中的变量，外部不能访问内部。当一个函数执行之前会创建一个对象存储函数的变量，然后挂载在作用域链中。<br>如果一个内部函数被作为一个返回值返回，那么外部函数虽然被销毁了，内部函数却不会被销毁并且依然会保存外部函数执行器上下文，这样就形成了闭包。</p><h3 id="闭包的优缺点："><a href="#闭包的优缺点：" class="headerlink" title="闭包的优缺点："></a>闭包的优缺点：</h3><p>优点是由于外部不能访问内部，所以可以设计私有的方法和变量。方便调用上下文变量<br>缺点就是会导致内存泄漏</p><h3 id="事件冒泡事件捕获："><a href="#事件冒泡事件捕获：" class="headerlink" title="事件冒泡事件捕获："></a>事件冒泡事件捕获：</h3><p>当一个事件源本身无法处理该事件的时候，会将该事件逐层向外传递就是事件冒泡<br>事件捕获是事件冒泡相反的顺序</p><h3 id="事件监听："><a href="#事件监听：" class="headerlink" title="事件监听："></a>事件监听：</h3><p>标准浏览器：addEventListener()/removeEventListener()<br>ie:attachEvent()/detachEvent()<br>句柄绑定：onclick=function（）{}</p><h3 id="事件对象和目标对象："><a href="#事件对象和目标对象：" class="headerlink" title="事件对象和目标对象："></a>事件对象和目标对象：</h3><p>标准浏览器：event    event.target<br>ie：window.event     window.event.srcElement<br>target指向触发事件的对象，currentTarget指向处理事件的对象</p><h3 id="阻止默认事件："><a href="#阻止默认事件：" class="headerlink" title="阻止默认事件："></a>阻止默认事件：</h3><p>标准：preventDafult<br>ie：returnValue=false</p><h3 id="阻止事件冒泡："><a href="#阻止事件冒泡：" class="headerlink" title="阻止事件冒泡："></a>阻止事件冒泡：</h3><p>标准：event.stopPropagation()<br>ie:window.event.cancelBubble()</p><h3 id="自执行函数"><a href="#自执行函数" class="headerlink" title="自执行函数"></a>自执行函数</h3><p>js中表达式是立即执行的，如果我们把一个函数变成一个表达式，就是自执行函数，不需要调用直接执行。自执行函数内部作用域受保护，所以一般可以用作命名空间，如jquery。也可以用来处理闭包问题</p><h3 id="遍历数组的方法："><a href="#遍历数组的方法：" class="headerlink" title="遍历数组的方法："></a>遍历数组的方法：</h3><p>for,for in,for each(不支持break)</p><h3 id="合并数组："><a href="#合并数组：" class="headerlink" title="合并数组："></a>合并数组：</h3><p>…<br>concat</p><h3 id="深拷贝浅拷贝（-Object-assign-是浅拷贝）"><a href="#深拷贝浅拷贝（-Object-assign-是浅拷贝）" class="headerlink" title="深拷贝浅拷贝（ Object.assign()是浅拷贝）"></a>深拷贝浅拷贝（ Object.assign()是浅拷贝）</h3><p>浅拷贝只复制了一层拷贝，即只复制了简单类型<br>深拷贝是层级赋值，遍历所有对象进行复制</p><h3 id="箭头函数"><a href="#箭头函数" class="headerlink" title="箭头函数:"></a>箭头函数:</h3><p>箭头函数中的this是定义是所在的对象</p><h3 id="匿名函数优缺点："><a href="#匿名函数优缺点：" class="headerlink" title="匿名函数优缺点："></a>匿名函数优缺点：</h3><p>优点：不会污染全局变量<br>缺点：绑定事件时无法解绑</p><h3 id="let和const"><a href="#let和const" class="headerlink" title="let和const"></a>let和const</h3><p>let:块级作用域只在该块区域有效，可以阻止闭包，会导致暂时性死域（如果有全局的变量同名，那么不论在let前后永远都无法访问全局变量），一个区域不接受同名变量<br>const:声明一个只读的常量，如果是一个对象可以正常的进行添加属性</p><h3 id="继承："><a href="#继承：" class="headerlink" title="继承："></a>继承：</h3><p>1.es6中的class extend继承<br>2.原型链：通过new父级构造函数的方式，并且prototype改为父级，这样自己可以访问所有父级的所有属性（浪费）<br>3.用call和apply写构造函数<br>4.共享原型：prototype相同（无法更改，一个改都改了）<br>5.圣杯模型：创建一个空函数，空函数的原型等于父级原型，子级的原型等于new这个空函数。这样两者修改原型不会受影响。修改原型上构造函数为自身，保存一下原型uber为父级</p><h3 id="call-apply-bind"><a href="#call-apply-bind" class="headerlink" title="call/apply/bind"></a>call/apply/bind</h3><p>改变this指向，传参不同（可以实现一个对象调用另一个对象的方法），call一个个传，apply传数组，并且他俩立即执行，bind返回的是一个函数，可以手动执行</p><h3 id="DOM-BOM："><a href="#DOM-BOM：" class="headerlink" title="DOM/BOM："></a>DOM/BOM：</h3><p>dom：文档对象模型。将文档当做对象看，用来获取或设置文档中标签的属性。<br>bom：浏览器对象模型。将浏览器当做对象看，用来获取或设置浏览器的属性。</p><h3 id="异步方法："><a href="#异步方法：" class="headerlink" title="异步方法："></a>异步方法：</h3><p>1.计时器和回调函数，<br>2.jquery的$deferred() when().done()<br>3.promise<br>4.defer/async异步加载脚本<br>5.generator ：用function*创建函数 yield中写每一步的操作。实例对象.next()执行</p><h3 id="原型："><a href="#原型：" class="headerlink" title="原型："></a>原型：</h3><p>prototype是函数的属性，<strong>proto</strong>是对象的属性。</p><h3 id="promise："><a href="#promise：" class="headerlink" title="promise："></a>promise：</h3><p>用同步的方法去写异步，三种状态 进行 成功 失败<br>在构造函数中决定promise对象的状态，然后通过then方法中传的两个函数，成功的函数和失败的函数进行链式调用。<br>promise.all()并行执行多个异步操作，传递一个promise对象实例数组，数组中有一个失败则都失败给catch()处理</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;js的特点：&quot;&gt;&lt;a href=&quot;#js的特点：&quot; class=&quot;headerlink&quot; title=&quot;js的特点：&quot;&gt;&lt;/a&gt;js的特点：&lt;/h3&gt;&lt;p&gt;脚本语言解释性单线程&lt;/p&gt;
+&lt;h3 id=&quot;数据类型：&quot;&gt;&lt;a href=&quot;#数据类型：&quot; class=&quot;
+      
+    
+    </summary>
+    
+      <category term="面试" scheme="http://yoursite.com/categories/%E9%9D%A2%E8%AF%95/"/>
+    
+    
+      <category term="面试" scheme="http://yoursite.com/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>面试总结之网络</title>
+    <link href="http://yoursite.com/2018/04/22/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%932/"/>
+    <id>http://yoursite.com/2018/04/22/前端面试总结2/</id>
+    <published>2018-04-22T14:03:47.000Z</published>
+    <updated>2018-04-22T14:04:20.291Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="AJAX（异步JavaScript和xml）"><a href="#AJAX（异步JavaScript和xml）" class="headerlink" title="AJAX（异步JavaScript和xml）"></a>AJAX（异步JavaScript和xml）</h3><p>XML 指可扩展标记语言，被设计用来传输和存储数据<br>ajax主要就是利用window.xmlhttprequest对象来判断数据请求的状态<br>首先判断请求方法是get还是post，然后用该对象的open方法发送请求<br>通过该对象的readystatechange方法判断readystate==4和status==200是否成功<br>最后用该对象的send方法发送出去</p><h3 id="处理AJAX并发请求："><a href="#处理AJAX并发请求：" class="headerlink" title="处理AJAX并发请求："></a>处理AJAX并发请求：</h3><p>1.串行<br>2.回调计数<br>3.jquery.$deferred() $when(xx).done(fun)</p><h3 id="get和post的区别："><a href="#get和post的区别：" class="headerlink" title="get和post的区别："></a>get和post的区别：</h3><p>get是请求数据，post是提交数据<br>get大小是1024字节，post没有限制<br>post比get安全性高</p><h3 id="http和https的区别："><a href="#http和https的区别：" class="headerlink" title="http和https的区别："></a>http和https的区别：</h3><p>https比http多了一层ssl安全协议<br>端口号不同<br>https不免费</p><h3 id="HTTP1-0-HTTP1-1-HTTP2-0区别："><a href="#HTTP1-0-HTTP1-1-HTTP2-0区别：" class="headerlink" title="HTTP1.0,HTTP1.1,HTTP2.0区别："></a>HTTP1.0,HTTP1.1,HTTP2.0区别：</h3><p>请求时，1.0只能一个一个发送，1.1串行（长链接），2.0并行（多路复用）<br>1.1和2.0都有首部压缩<br>2.0协议解析为二进制</p><h3 id="三次握手："><a href="#三次握手：" class="headerlink" title="三次握手："></a>三次握手：</h3><p>客户端向服务端发送SYN数据包(服务端确定客户端发送正常)<br>服务端向客户端发送SYN和ACK<br>(客户端确定服务端发送接受正常，自己发送正常，服务端确认客户端发送正常，自己接受正常)<br>客户端向服务端发送ACK(双方接受发送均正常)</p><h3 id="四次挥手："><a href="#四次挥手：" class="headerlink" title="四次挥手："></a>四次挥手：</h3><p>客户端向服务端发送FIN和ACK<br>服务端像客户端发送ACK<br>服务端断开连接，向客户端发送FIN/ACK<br>客户端返回ACK</p><h3 id="TCP和UDP区别："><a href="#TCP和UDP区别：" class="headerlink" title="TCP和UDP区别："></a>TCP和UDP区别：</h3><p>TCP需要建立连接，UDP不需要<br>TCP比UDP可靠<br>UDP比TCP效率高，节约网络开销</p><h3 id="由于ajax受同源策略的限制："><a href="#由于ajax受同源策略的限制：" class="headerlink" title="由于ajax受同源策略的限制："></a>由于ajax受同源策略的限制：</h3><p>即域名，端口号，协议必须相同，所以ajax不能跨域</p><h3 id="跨域的几种方法："><a href="#跨域的几种方法：" class="headerlink" title="跨域的几种方法："></a>跨域的几种方法：</h3><p>1.jsonp的原理：利用标签的src可跨域性，在url载入成功后执行回调函数获取数据<br>2.document.domain结合iframe标签<br>3.window.name结合iframe<br>4.h5的window.postmassage<br>5.资源共享</p><h3 id="cookie-session："><a href="#cookie-session：" class="headerlink" title="cookie/session："></a>cookie/session：</h3><p>因为http是无状态的协议，所以session在服务端记录用户的状态，cookie在客户端记录用户的一些信息，并且不可跨域，定义在http的header字段中。cookie会存储一个sessionid用来识别session，大小有限制，过期了自动清理，localStorage会一直保存，需要手动清理，sessionstorage关闭窗口就没了，他俩只存储不会发送</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;AJAX（异步JavaScript和xml）&quot;&gt;&lt;a href=&quot;#AJAX（异步JavaScript和xml）&quot; class=&quot;headerlink&quot; title=&quot;AJAX（异步JavaScript和xml）&quot;&gt;&lt;/a&gt;AJAX（异步JavaScript和xm
+      
+    
+    </summary>
+    
+      <category term="面试" scheme="http://yoursite.com/categories/%E9%9D%A2%E8%AF%95/"/>
+    
+    
+      <category term="面试" scheme="http://yoursite.com/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+      <category term="网络" scheme="http://yoursite.com/tags/%E7%BD%91%E7%BB%9C/"/>
+    
+  </entry>
   
   <entry>
     <title>面试总结之html/css</title>
@@ -43,6 +98,31 @@
       <category term="css" scheme="http://yoursite.com/tags/css/"/>
     
       <category term="面试" scheme="http://yoursite.com/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于框架/设计模式那些</title>
+    <link href="http://yoursite.com/2018/04/22/%E5%85%B6%E4%BB%96/"/>
+    <id>http://yoursite.com/2018/04/22/其他/</id>
+    <published>2018-04-22T11:14:47.000Z</published>
+    <updated>2018-04-22T14:09:16.392Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="git"><a href="#git" class="headerlink" title="git:"></a>git:</h3><p>在创建好的文件夹下使用git init创建版本库<br>使用git add xxx添加文件<br>使用git commit -m ‘xxx’ 添加到仓库<br>git clone xxx 指令，克隆一个本地库</p><h3 id="webpack-模块化方案"><a href="#webpack-模块化方案" class="headerlink" title="webpack:模块化方案"></a>webpack:模块化方案</h3><p>通过require import export model.exprot导入导出来构建模块<br>npm install webpack -g<br>npm init<br>npm install webpack –save-dev<br>npm run build</p><h3 id="gulp：注重工作流程"><a href="#gulp：注重工作流程" class="headerlink" title="gulp：注重工作流程"></a>gulp：注重工作流程</h3><p>require引入 task分配任务，src引入流，pipe执行流，watch监听，dest写入流<br>npm install global gulp<br>npm install –save -dev gulp<br>gulp</p><h3 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式:"></a>设计模式:</h3><p>工厂模式：定义一个函数，函数中通过传的参数来构造一个对象，并将这个对象返回<br>中介者模式：MVC是中介者模式代表，通过一个中介者将多对多的关系改为一对多的关系<br>观察者模式：发布者和订阅者之间的一对多的关系，当发布者发生变化时，所有订阅者都将受到通知</p><h3 id="vue："><a href="#vue：" class="headerlink" title="vue："></a>vue：</h3><p>el,data,methods,computed,watch,template,props,compoments<br>节点，数据，方法，计算属性，监听，模板，父子传值，组件</p><h2 id="指令："><a href="#指令：" class="headerlink" title="指令："></a>指令：</h2><p>v-bind,v-on,v-model,v-for,v-if，v-once<br>绑定属性，绑定事件，双向绑定，循环dom，判断是否渲染,渲染一次</p><h2 id="vue-cli："><a href="#vue-cli：" class="headerlink" title="vue-cli："></a>vue-cli：</h2><p>官方给的脚手架，用来构建一个vue</p><h3 id="vuex："><a href="#vuex：" class="headerlink" title="vuex："></a>vuex：</h3><p>vue.use(vuex)<br>管理vue之间的行为<br>vuex.store({<br>    state:存放组件共享的数据（响应式）<br>    mutations:操作数据方法<br>    actions:异步执行的方法<br>    getter：获取数据<br>})<br>vue({<br>    store<br>})</p><h3 id="vue-router"><a href="#vue-router" class="headerlink" title="vue-router:"></a>vue-router:</h3><p><router-link to="">跳转</router-link>to是指定页面目录</p><p><router-view></router-view>渲染<br>path：路径,compontents:组件</p><h3 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期:"></a>生命周期:</h3><p>八个阶段：<br>        beforeCreate（创建前）el 和 data 并未初始化<br>        created（创建后）data 数据的初始化，el没有<br>        beforeMount(载入前)    完成了 el 和 data 初始化<br>        mounted（载入后）完成挂载<br>        beforeUpdate（更新前）<br>        updated（更新后）<br>        beforeDestroy（销毁前）<br>        destroyed（销毁后）</p><h3 id="MVVM模型："><a href="#MVVM模型：" class="headerlink" title="MVVM模型："></a>MVVM模型：</h3><p>model view view-model，利用了在view-model层双向数据绑定的方式连接model和view模块，view向view-model请求动作，view-model让model响应更新。</p><h3 id="双向数据绑定："><a href="#双向数据绑定：" class="headerlink" title="双向数据绑定："></a>双向数据绑定：</h3><p>vue是通过数据劫持的方式来做数据绑定的，通过Object.defineProperty()来实现对属性的劫持，达到监听数据变动的目的</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;git&quot;&gt;&lt;a href=&quot;#git&quot; class=&quot;headerlink&quot; title=&quot;git:&quot;&gt;&lt;/a&gt;git:&lt;/h3&gt;&lt;p&gt;在创建好的文件夹下使用git init创建版本库&lt;br&gt;使用git add xxx添加文件&lt;br&gt;使用git commit -m
+      
+    
+    </summary>
+    
+      <category term="其他" scheme="http://yoursite.com/categories/%E5%85%B6%E4%BB%96/"/>
+    
+    
+      <category term="其他" scheme="http://yoursite.com/tags/%E5%85%B6%E4%BB%96/"/>
     
   </entry>
   

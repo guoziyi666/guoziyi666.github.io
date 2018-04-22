@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Language" content="zh-cn">
+    <meta charset="utf-8">
+    
+    
+    
+    <title>面试总结之网络 | Welcome</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    
+    <meta name="theme-color" content="#77AAFF">
+    
+    
+    <meta name="keywords" content="面试,网络">
+    
+    
+
+    
+
+    <!-- Baidu Push -->
+<script>
+	(function(){
+		var bp = document.createElement('script');
+		var curProtocol = window.location.protocol.split(':')[0];
+		if (curProtocol === 'https') {
+			bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+		}
+		else {
+			bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+		}
+		var s = document.getElementsByTagName("script")[0];
+		s.parentNode.insertBefore(bp, s);
+	})();
+
+	var _hmt = _hmt || [];
+</script>
+
+
+
+    
+    <meta name="description" content="AJAX（异步JavaScript和xml）XML 指可扩展标记语言，被设计用来传输和存储数据ajax主要就是利用window.xmlhttprequest对象来判断数据请求的状态首先判断请求方法是get还是post，然后用该对象的open方法发送请求通过该对象的readystatechange方法判断readystate==4和status==200是否成功最后用该对象的send方法发送出去 处">
+<meta name="keywords" content="面试,网络">
+<meta property="og:type" content="article">
+<meta property="og:title" content="面试总结之网络">
+<meta property="og:url" content="http://yoursite.com/2018/04/22/前端面试总结2/index.html">
+<meta property="og:site_name" content="Welcome">
+<meta property="og:description" content="AJAX（异步JavaScript和xml）XML 指可扩展标记语言，被设计用来传输和存储数据ajax主要就是利用window.xmlhttprequest对象来判断数据请求的状态首先判断请求方法是get还是post，然后用该对象的open方法发送请求通过该对象的readystatechange方法判断readystate==4和status==200是否成功最后用该对象的send方法发送出去 处">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-04-22T14:04:20.291Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="面试总结之网络">
+<meta name="twitter:description" content="AJAX（异步JavaScript和xml）XML 指可扩展标记语言，被设计用来传输和存储数据ajax主要就是利用window.xmlhttprequest对象来判断数据请求的状态首先判断请求方法是get还是post，然后用该对象的open方法发送请求通过该对象的readystatechange方法判断readystate==4和status==200是否成功最后用该对象的send方法发送出去 处">
+    
+        <link rel="alternate" type="application/atom+xml" title="Welcome" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link id="style" rel="stylesheet" href="/css/style.css?v=3.0">
+    <link rel="stylesheet" href="https://oindk07nf.qnssl.com/atom-one-dark.css"
+media="screen" type="text/css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+            
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+    <aside id="menu"  class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" >
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg" alt="avatar">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname" id="name">guoziyi</h5>
+          
+            <div id="yiyanmotto" class="motto">&nbsp;</div>
+          
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+              <li class="waves-block waves-effect">
+                  <a href="/"  >
+                    <i class="icon icon-lg icon-home"></i>
+                    <span>主 页</span><i class="icon icon-lg icon-caret-left"></i>
+                  </a>
+              </li>
+            
+              <li class="waves-block waves-effect">
+                  <a href="/archives"  >
+                    <i class="icon icon-lg icon-archives"></i>
+                    <span>归 档</span><i class="icon icon-lg icon-caret-left"></i>
+                  </a>
+              </li>
+            
+              <li class="waves-block waves-effect">
+                  <a href="/categories"  >
+                    <i class="icon icon-lg icon-th-list"></i>
+                    <span>分 类</span><i class="icon icon-lg icon-caret-left"></i>
+                  </a>
+              </li>
+            
+              <li class="waves-block waves-effect">
+                  <a href="/tags"  >
+                    <i class="icon icon-lg icon-tags"></i>
+                    <span>标 签</span><i class="icon icon-lg icon-caret-left"></i>
+                  </a>
+              </li>
+            
+              <li class="waves-block waves-effect">
+                  <a href="/about"  >
+                    <i class="icon icon-lg icon-smile-o"></i>
+                    <span>关 于</span><i class="icon icon-lg icon-caret-left"></i>
+                  </a>
+              </li>
+            
+      <div class="nav2">
+          
+              <a class="nav2item" data-title="Email" href="mailto:848430995@qq.com" target="_parent"title="Email" >
+                <i class="icon icon-lg icon-envelope-o envelope-o"></i>
+              </a>
+          
+              <a class="nav2item" data-title="Github" href="https://github.com/guoziyi666" target="_blank"title="Github" >
+                <i class="icon icon-lg icon-github github"></i>
+              </a>
+          
+
+            </div>
+        
+      </ul>
+        
+    </div>
+  </div>
+ 
+</aside>
+
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">面试总结之网络</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="検索">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        <a href="../../atom.xml" target="_blank" class="header-icon waves-effect waves-circle waves-light" id="Rss">
+            <i class="icon icon-lg icon-rss"></i>
+        </a>
+    </div>
+</header>
+<header class="content-header post-header">
+    
+    
+    <div class="container fade-scale">
+        <div id="myheader">
+            <h1 class="title">
+                
+            </h1>
+            <h5 class="subtitle">
+                
+                
+            </h5>
+        </div>
+    </div>
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#AJAX（异步JavaScript和xml）"><span class="post-toc-number">1.</span> <span class="post-toc-text">AJAX（异步JavaScript和xml）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#处理AJAX并发请求："><span class="post-toc-number">2.</span> <span class="post-toc-text">处理AJAX并发请求：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#get和post的区别："><span class="post-toc-number">3.</span> <span class="post-toc-text">get和post的区别：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#http和https的区别："><span class="post-toc-number">4.</span> <span class="post-toc-text">http和https的区别：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#HTTP1-0-HTTP1-1-HTTP2-0区别："><span class="post-toc-number">5.</span> <span class="post-toc-text">HTTP1.0,HTTP1.1,HTTP2.0区别：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#三次握手："><span class="post-toc-number">6.</span> <span class="post-toc-text">三次握手：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#四次挥手："><span class="post-toc-number">7.</span> <span class="post-toc-text">四次挥手：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#TCP和UDP区别："><span class="post-toc-number">8.</span> <span class="post-toc-text">TCP和UDP区别：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#由于ajax受同源策略的限制："><span class="post-toc-number">9.</span> <span class="post-toc-text">由于ajax受同源策略的限制：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#跨域的几种方法："><span class="post-toc-number">10.</span> <span class="post-toc-text">跨域的几种方法：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#cookie-session："><span class="post-toc-number">11.</span> <span class="post-toc-text">cookie/session：</span></a></li></ol>
+        </nav>
+    </aside>
+   
+<article id="post-前端面试总结2"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">面试总结之网络</h1>
+        <div class="post-meta">
+            <i class="icon icon-lg icon-calendar-o"></i>
+            发表于
+            <time class="post-time" title="2018-04-22 22:03:47" datetime="2018-04-22T14:03:47.000Z"  itemprop="datePublished">2018-04-22</time>
+
+            <br id="mybreak"/>
+            
+	<i class="icon icon-lg icon-folder-o"></i>
+	分类：<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/面试/">面试</a></li></ul>
+
+
+            <i>·</i>
+            
+
+        </div>
+        <div class="post-count-custom">
+            <i class="icon icon-lg icon-comment-o"></i>
+            阅读本文可能花费您&nbsp;<span class="post-count">2</span>&nbsp;分钟
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h3 id="AJAX（异步JavaScript和xml）"><a href="#AJAX（异步JavaScript和xml）" class="headerlink" title="AJAX（异步JavaScript和xml）"></a>AJAX（异步JavaScript和xml）</h3><p>XML 指可扩展标记语言，被设计用来传输和存储数据<br>ajax主要就是利用window.xmlhttprequest对象来判断数据请求的状态<br>首先判断请求方法是get还是post，然后用该对象的open方法发送请求<br>通过该对象的readystatechange方法判断readystate==4和status==200是否成功<br>最后用该对象的send方法发送出去</p>
+<h3 id="处理AJAX并发请求："><a href="#处理AJAX并发请求：" class="headerlink" title="处理AJAX并发请求："></a>处理AJAX并发请求：</h3><p>1.串行<br>2.回调计数<br>3.jquery.$deferred() $when(xx).done(fun)</p>
+<h3 id="get和post的区别："><a href="#get和post的区别：" class="headerlink" title="get和post的区别："></a>get和post的区别：</h3><p>get是请求数据，post是提交数据<br>get大小是1024字节，post没有限制<br>post比get安全性高</p>
+<h3 id="http和https的区别："><a href="#http和https的区别：" class="headerlink" title="http和https的区别："></a>http和https的区别：</h3><p>https比http多了一层ssl安全协议<br>端口号不同<br>https不免费</p>
+<h3 id="HTTP1-0-HTTP1-1-HTTP2-0区别："><a href="#HTTP1-0-HTTP1-1-HTTP2-0区别：" class="headerlink" title="HTTP1.0,HTTP1.1,HTTP2.0区别："></a>HTTP1.0,HTTP1.1,HTTP2.0区别：</h3><p>请求时，1.0只能一个一个发送，1.1串行（长链接），2.0并行（多路复用）<br>1.1和2.0都有首部压缩<br>2.0协议解析为二进制</p>
+<h3 id="三次握手："><a href="#三次握手：" class="headerlink" title="三次握手："></a>三次握手：</h3><p>客户端向服务端发送SYN数据包(服务端确定客户端发送正常)<br>服务端向客户端发送SYN和ACK<br>(客户端确定服务端发送接受正常，自己发送正常，服务端确认客户端发送正常，自己接受正常)<br>客户端向服务端发送ACK(双方接受发送均正常)</p>
+<h3 id="四次挥手："><a href="#四次挥手：" class="headerlink" title="四次挥手："></a>四次挥手：</h3><p>客户端向服务端发送FIN和ACK<br>服务端像客户端发送ACK<br>服务端断开连接，向客户端发送FIN/ACK<br>客户端返回ACK</p>
+<h3 id="TCP和UDP区别："><a href="#TCP和UDP区别：" class="headerlink" title="TCP和UDP区别："></a>TCP和UDP区别：</h3><p>TCP需要建立连接，UDP不需要<br>TCP比UDP可靠<br>UDP比TCP效率高，节约网络开销</p>
+<h3 id="由于ajax受同源策略的限制："><a href="#由于ajax受同源策略的限制：" class="headerlink" title="由于ajax受同源策略的限制："></a>由于ajax受同源策略的限制：</h3><p>即域名，端口号，协议必须相同，所以ajax不能跨域</p>
+<h3 id="跨域的几种方法："><a href="#跨域的几种方法：" class="headerlink" title="跨域的几种方法："></a>跨域的几种方法：</h3><p>1.jsonp的原理：利用标签的src可跨域性，在url载入成功后执行回调函数获取数据<br>2.document.domain结合iframe标签<br>3.window.name结合iframe<br>4.h5的window.postmassage<br>5.资源共享</p>
+<h3 id="cookie-session："><a href="#cookie-session：" class="headerlink" title="cookie/session："></a>cookie/session：</h3><p>因为http是无状态的协议，所以session在服务端记录用户的状态，cookie在客户端记录用户的一些信息，并且不可跨域，定义在http的header字段中。cookie会存储一个sessionid用来识别session，大小有限制，过期了自动清理，localStorage会一直保存，需要手动清理，sessionstorage关闭窗口就没了，他俩只存储不会发送</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最終更新：<time datetime="2018-04-22T14:04:20.291Z" itemprop="dateUpdated">2018-04-22 22:04:20</time>
+</span>
+
+
+        
+    </div>
+    <footer>
+        <div onclick="location.href='http://yoursite.com'">
+            <img src="/img/avatar.jpg" alt="guoziyi">
+            <a>guoziyi</a>
+        </div>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/网络/">网络</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/面试/">面试</a></li></ul>
+
+
+            
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2018/04/22/前端面试总结3/" id="post-prev" class="post-nav-link">
+        <h4 class="title" >
+          上一篇：面试总结之js
+        </h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2018/04/22/前端面试总结1/" id="post-next" class="post-nav-link">
+        <h4 class="title" data-hover="下一篇：面试总结之html/css">下一篇：面试总结之html/css</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+    
+
+    
+
+    
+
+
+</article>
+
+</div>
+
+        <footer class="footer">
+    <div class="footer-content">
+        <span class="power">
+            <i class="icon icon-lg icon-copyright"></i>
+            2018
+            <i class="icon icon-lg icon-heart"></i>
+            <a href="http://yoursite.com">false</a>
+            <br/>
+            Power by
+            <a href="https://hexo.io/" target="_blank" rel="external nofollow">Hexo</a>&nbsp;·&nbsp;
+            Theme
+            <a class="tomotoeslink" href="https://github.com/tomotoes/hexo-theme-tomotoes/" target="_blank" rel="external nofollow">tomotoes</a>
+        </span>
+
+        <br/>
+
+        <span id="RunTime" style="color:#a7a7a2;"></span>
+        <br/>
+
+        <span>
+            
+
+        </span>
+        <br/>
+
+        <span class="license">このブログの内容物は<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ja">クリエイティブ・コモンズ 表示 - 非営利 - 継承 4.0 国際ライセンスの下に提供されています</a></span>
+    </div>
+</footer>
+
+    </main>
+    
+        
+
+    
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+    <!-- waves按钮特效 -->
+<script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+
+<!-- 主题配置脚本 -->
+<script>
+var BLOG = { ROOT: '/', SHARE: false, REWARD: false };
+</script>
+
+<!-- jquery -->
+<script src="/js/jquery.min.js?v=3.0"></script>
+
+<!-- 搜索 -->
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item waves-block waves-effect" onclick="location.href='{path}'">
+    <div class="title ellipsis" title="{title}">{title}</div>
+</li>
+</template>
+
+
+<!-- main博客脚本 -->
+<script src="/js/main.min.js?v=3.0" ></script>
+
+<!-- 动画&配置 -->
+<script src="/js/script.min.js?v=3.0" ></script>
+
+<!-- 脚本管理 -->
+<script>
+
+if(window.innerWidth > 800){
+	/* 3D标题 */
+	$(".content-header").on("mousemove", threedee);
+
+	/* 底部追随鼠标 */
+	$(".footer").hover(2);
+
+	/* gotop键的涟漪 */
+	$("#gotop").hover(1);
+
+	/* 赞赏的粒子雨 */
+	$("#reward").hover(3);
+
+	/* 微信公众号的底部渲染 */
+	$("#wechat").hover(4);
+
+    /* 标题跳动 */
+    $(".archivestitle").bumpyText();
+
+	/* 图片点击放大 */
+	const postimg = jQuery(".post-content img:not(.github-emoji)");
+	postimg.on("click",function(){
+
+		mask.classList.add("in");
+		main.classList.add("Mask");
+		menu.classList.add("Mask");
+		var myimg = this.cloneNode(true);
+		myimg.classList.add("imgShow");
+
+		setTimeout(function(){
+			jQuery(myimg).animate({
+				opacity:"1"
+			},1000);
+		},0);
+
+		document.body.appendChild(myimg);
+
+		myimg.onclick=function(){
+			document.body.removeChild(myimg);
+			mask.classList.remove("in");
+			main.classList.remove("Mask");
+			menu.classList.remove("Mask");
+		};
+
+	});
+
+}
+
+/* 名字跳动 */
+$("#name").bumpyText();
+
+
+/* 网站运行时间 */
+setInterval(function () {
+	setTime("2018/4/21");
+}, 1000);
+
+/* 文章块的淡出 */
+postshow();
+
+/* 座右铭 */
+
+   getHitokoto();
+
+
+
+/* 粘贴提示 */
+G($(".post-content"), location.href, "guoziyi");
+
+
+/* 控制台 */
+if (window.console && window.console.log) {
+	setTimeout(function () {
+		console.log("\n %c 一个坏掉的番茄 %c  © Simon Ma  http://tomotoes.com \n\n", "color:#FFFFFB;background:#1abc9c;padding:5px 0;border-radius:.5rem 0 0 .5rem;", "color:#FFFFFB;background:#080808;padding:5px 0;border-radius:0 .5rem .5rem 0;");
+	}, 0);
+}
+
+</script>
+
+
+
+
+<!-- 公式渲染 -->
+
+
+
+<!-- 不蒜子 -->
+
+
+</body>
+</html>

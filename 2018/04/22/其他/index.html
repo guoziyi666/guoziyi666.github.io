@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Language" content="zh-cn">
+    <meta charset="utf-8">
+    
+    
+    
+    <title>关于框架/设计模式那些 | Welcome</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    
+    <meta name="theme-color" content="#77AAFF">
+    
+    
+    <meta name="keywords" content="其他">
+    
+    
+
+    
+
+    <!-- Baidu Push -->
+<script>
+	(function(){
+		var bp = document.createElement('script');
+		var curProtocol = window.location.protocol.split(':')[0];
+		if (curProtocol === 'https') {
+			bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+		}
+		else {
+			bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+		}
+		var s = document.getElementsByTagName("script")[0];
+		s.parentNode.insertBefore(bp, s);
+	})();
+
+	var _hmt = _hmt || [];
+</script>
+
+
+
+    
+    <meta name="description" content="git:在创建好的文件夹下使用git init创建版本库使用git add xxx添加文件使用git commit -m ‘xxx’ 添加到仓库git clone xxx 指令，克隆一个本地库 webpack:模块化方案通过require import export model.exprot导入导出来构建模块npm install webpack -gnpm initnpm install web">
+<meta name="keywords" content="其他">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于框架&#x2F;设计模式那些">
+<meta property="og:url" content="http://yoursite.com/2018/04/22/其他/index.html">
+<meta property="og:site_name" content="Welcome">
+<meta property="og:description" content="git:在创建好的文件夹下使用git init创建版本库使用git add xxx添加文件使用git commit -m ‘xxx’ 添加到仓库git clone xxx 指令，克隆一个本地库 webpack:模块化方案通过require import export model.exprot导入导出来构建模块npm install webpack -gnpm initnpm install web">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-04-22T14:09:16.392Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="关于框架&#x2F;设计模式那些">
+<meta name="twitter:description" content="git:在创建好的文件夹下使用git init创建版本库使用git add xxx添加文件使用git commit -m ‘xxx’ 添加到仓库git clone xxx 指令，克隆一个本地库 webpack:模块化方案通过require import export model.exprot导入导出来构建模块npm install webpack -gnpm initnpm install web">
+    
+        <link rel="alternate" type="application/atom+xml" title="Welcome" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link id="style" rel="stylesheet" href="/css/style.css?v=3.0">
+    <link rel="stylesheet" href="https://oindk07nf.qnssl.com/atom-one-dark.css"
+media="screen" type="text/css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+            
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+    <aside id="menu"  class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" >
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg" alt="avatar">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname" id="name">guoziyi</h5>
+          
+            <div id="yiyanmotto" class="motto">&nbsp;</div>
+          
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+              <li class="waves-block waves-effect">
+                  <a href="/"  >
+                    <i class="icon icon-lg icon-home"></i>
+                    <span>主 页</span><i class="icon icon-lg icon-caret-left"></i>
+                  </a>
+              </li>
+            
+              <li class="waves-block waves-effect">
+                  <a href="/archives"  >
+                    <i class="icon icon-lg icon-archives"></i>
+                    <span>归 档</span><i class="icon icon-lg icon-caret-left"></i>
+                  </a>
+              </li>
+            
+              <li class="waves-block waves-effect">
+                  <a href="/categories"  >
+                    <i class="icon icon-lg icon-th-list"></i>
+                    <span>分 类</span><i class="icon icon-lg icon-caret-left"></i>
+                  </a>
+              </li>
+            
+              <li class="waves-block waves-effect">
+                  <a href="/tags"  >
+                    <i class="icon icon-lg icon-tags"></i>
+                    <span>标 签</span><i class="icon icon-lg icon-caret-left"></i>
+                  </a>
+              </li>
+            
+              <li class="waves-block waves-effect">
+                  <a href="/about"  >
+                    <i class="icon icon-lg icon-smile-o"></i>
+                    <span>关 于</span><i class="icon icon-lg icon-caret-left"></i>
+                  </a>
+              </li>
+            
+      <div class="nav2">
+          
+              <a class="nav2item" data-title="Email" href="mailto:848430995@qq.com" target="_parent"title="Email" >
+                <i class="icon icon-lg icon-envelope-o envelope-o"></i>
+              </a>
+          
+              <a class="nav2item" data-title="Github" href="https://github.com/guoziyi666" target="_blank"title="Github" >
+                <i class="icon icon-lg icon-github github"></i>
+              </a>
+          
+
+            </div>
+        
+      </ul>
+        
+    </div>
+  </div>
+ 
+</aside>
+
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">关于框架/设计模式那些</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="検索">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        <a href="../../atom.xml" target="_blank" class="header-icon waves-effect waves-circle waves-light" id="Rss">
+            <i class="icon icon-lg icon-rss"></i>
+        </a>
+    </div>
+</header>
+<header class="content-header post-header">
+    
+    
+    <div class="container fade-scale">
+        <div id="myheader">
+            <h1 class="title">
+                
+            </h1>
+            <h5 class="subtitle">
+                
+                
+            </h5>
+        </div>
+    </div>
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#git"><span class="post-toc-number">1.</span> <span class="post-toc-text">git:</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#webpack-模块化方案"><span class="post-toc-number">2.</span> <span class="post-toc-text">webpack:模块化方案</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#gulp：注重工作流程"><span class="post-toc-number">3.</span> <span class="post-toc-text">gulp：注重工作流程</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#设计模式"><span class="post-toc-number">4.</span> <span class="post-toc-text">设计模式:</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#vue："><span class="post-toc-number">5.</span> <span class="post-toc-text">vue：</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#指令："><span class="post-toc-number"></span> <span class="post-toc-text">指令：</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#vue-cli："><span class="post-toc-number"></span> <span class="post-toc-text">vue-cli：</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#vuex："><span class="post-toc-number">1.</span> <span class="post-toc-text">vuex：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#vue-router"><span class="post-toc-number">2.</span> <span class="post-toc-text">vue-router:</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#生命周期"><span class="post-toc-number">3.</span> <span class="post-toc-text">生命周期:</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#MVVM模型："><span class="post-toc-number">4.</span> <span class="post-toc-text">MVVM模型：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#双向数据绑定："><span class="post-toc-number">5.</span> <span class="post-toc-text">双向数据绑定：</span></a></li></ol>
+        </nav>
+    </aside>
+   
+<article id="post-其他"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">关于框架/设计模式那些</h1>
+        <div class="post-meta">
+            <i class="icon icon-lg icon-calendar-o"></i>
+            发表于
+            <time class="post-time" title="2018-04-22 19:14:47" datetime="2018-04-22T11:14:47.000Z"  itemprop="datePublished">2018-04-22</time>
+
+            <br id="mybreak"/>
+            
+	<i class="icon icon-lg icon-folder-o"></i>
+	分类：<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/其他/">其他</a></li></ul>
+
+
+            <i>·</i>
+            
+
+        </div>
+        <div class="post-count-custom">
+            <i class="icon icon-lg icon-comment-o"></i>
+            阅读本文可能花费您&nbsp;<span class="post-count">2</span>&nbsp;分钟
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h3 id="git"><a href="#git" class="headerlink" title="git:"></a>git:</h3><p>在创建好的文件夹下使用git init创建版本库<br>使用git add xxx添加文件<br>使用git commit -m ‘xxx’ 添加到仓库<br>git clone xxx 指令，克隆一个本地库</p>
+<h3 id="webpack-模块化方案"><a href="#webpack-模块化方案" class="headerlink" title="webpack:模块化方案"></a>webpack:模块化方案</h3><p>通过require import export model.exprot导入导出来构建模块<br>npm install webpack -g<br>npm init<br>npm install webpack –save-dev<br>npm run build</p>
+<h3 id="gulp：注重工作流程"><a href="#gulp：注重工作流程" class="headerlink" title="gulp：注重工作流程"></a>gulp：注重工作流程</h3><p>require引入 task分配任务，src引入流，pipe执行流，watch监听，dest写入流<br>npm install global gulp<br>npm install –save -dev gulp<br>gulp</p>
+<h3 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式:"></a>设计模式:</h3><p>工厂模式：定义一个函数，函数中通过传的参数来构造一个对象，并将这个对象返回<br>中介者模式：MVC是中介者模式代表，通过一个中介者将多对多的关系改为一对多的关系<br>观察者模式：发布者和订阅者之间的一对多的关系，当发布者发生变化时，所有订阅者都将受到通知</p>
+<h3 id="vue："><a href="#vue：" class="headerlink" title="vue："></a>vue：</h3><p>el,data,methods,computed,watch,template,props,compoments<br>节点，数据，方法，计算属性，监听，模板，父子传值，组件</p>
+<h2 id="指令："><a href="#指令：" class="headerlink" title="指令："></a>指令：</h2><p>v-bind,v-on,v-model,v-for,v-if，v-once<br>绑定属性，绑定事件，双向绑定，循环dom，判断是否渲染,渲染一次</p>
+<h2 id="vue-cli："><a href="#vue-cli：" class="headerlink" title="vue-cli："></a>vue-cli：</h2><p>官方给的脚手架，用来构建一个vue</p>
+<h3 id="vuex："><a href="#vuex：" class="headerlink" title="vuex："></a>vuex：</h3><p>vue.use(vuex)<br>管理vue之间的行为<br>vuex.store({<br>    state:存放组件共享的数据（响应式）<br>    mutations:操作数据方法<br>    actions:异步执行的方法<br>    getter：获取数据<br>})<br>vue({<br>    store<br>})</p>
+<h3 id="vue-router"><a href="#vue-router" class="headerlink" title="vue-router:"></a>vue-router:</h3><p><router-link to="">跳转</router-link>to是指定页面目录</p>
+<p><router-view></router-view>渲染<br>path：路径,compontents:组件</p>
+<h3 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期:"></a>生命周期:</h3><p>八个阶段：<br>        beforeCreate（创建前）el 和 data 并未初始化<br>        created（创建后）data 数据的初始化，el没有<br>        beforeMount(载入前)    完成了 el 和 data 初始化<br>        mounted（载入后）完成挂载<br>        beforeUpdate（更新前）<br>        updated（更新后）<br>        beforeDestroy（销毁前）<br>        destroyed（销毁后）</p>
+<h3 id="MVVM模型："><a href="#MVVM模型：" class="headerlink" title="MVVM模型："></a>MVVM模型：</h3><p>model view view-model，利用了在view-model层双向数据绑定的方式连接model和view模块，view向view-model请求动作，view-model让model响应更新。</p>
+<h3 id="双向数据绑定："><a href="#双向数据绑定：" class="headerlink" title="双向数据绑定："></a>双向数据绑定：</h3><p>vue是通过数据劫持的方式来做数据绑定的，通过Object.defineProperty()来实现对属性的劫持，达到监听数据变动的目的</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最終更新：<time datetime="2018-04-22T14:09:16.392Z" itemprop="dateUpdated">2018-04-22 22:09:16</time>
+</span>
+
+
+        
+    </div>
+    <footer>
+        <div onclick="location.href='http://yoursite.com'">
+            <img src="/img/avatar.jpg" alt="guoziyi">
+            <a>guoziyi</a>
+        </div>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/其他/">其他</a></li></ul>
+
+
+            
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2018/04/22/前端面试总结1/" id="post-prev" class="post-nav-link">
+        <h4 class="title" >
+          上一篇：面试总结之html/css
+        </h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2018/04/22/事件/" id="post-next" class="post-nav-link">
+        <h4 class="title" data-hover="下一篇：js事件那些事">下一篇：js事件那些事</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+    
+
+    
+
+    
+
+
+</article>
+
+</div>
+
+        <footer class="footer">
+    <div class="footer-content">
+        <span class="power">
+            <i class="icon icon-lg icon-copyright"></i>
+            2018
+            <i class="icon icon-lg icon-heart"></i>
+            <a href="http://yoursite.com">false</a>
+            <br/>
+            Power by
+            <a href="https://hexo.io/" target="_blank" rel="external nofollow">Hexo</a>&nbsp;·&nbsp;
+            Theme
+            <a class="tomotoeslink" href="https://github.com/tomotoes/hexo-theme-tomotoes/" target="_blank" rel="external nofollow">tomotoes</a>
+        </span>
+
+        <br/>
+
+        <span id="RunTime" style="color:#a7a7a2;"></span>
+        <br/>
+
+        <span>
+            
+
+        </span>
+        <br/>
+
+        <span class="license">このブログの内容物は<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ja">クリエイティブ・コモンズ 表示 - 非営利 - 継承 4.0 国際ライセンスの下に提供されています</a></span>
+    </div>
+</footer>
+
+    </main>
+    
+        
+
+    
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+    <!-- waves按钮特效 -->
+<script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+
+<!-- 主题配置脚本 -->
+<script>
+var BLOG = { ROOT: '/', SHARE: false, REWARD: false };
+</script>
+
+<!-- jquery -->
+<script src="/js/jquery.min.js?v=3.0"></script>
+
+<!-- 搜索 -->
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item waves-block waves-effect" onclick="location.href='{path}'">
+    <div class="title ellipsis" title="{title}">{title}</div>
+</li>
+</template>
+
+
+<!-- main博客脚本 -->
+<script src="/js/main.min.js?v=3.0" ></script>
+
+<!-- 动画&配置 -->
+<script src="/js/script.min.js?v=3.0" ></script>
+
+<!-- 脚本管理 -->
+<script>
+
+if(window.innerWidth > 800){
+	/* 3D标题 */
+	$(".content-header").on("mousemove", threedee);
+
+	/* 底部追随鼠标 */
+	$(".footer").hover(2);
+
+	/* gotop键的涟漪 */
+	$("#gotop").hover(1);
+
+	/* 赞赏的粒子雨 */
+	$("#reward").hover(3);
+
+	/* 微信公众号的底部渲染 */
+	$("#wechat").hover(4);
+
+    /* 标题跳动 */
+    $(".archivestitle").bumpyText();
+
+	/* 图片点击放大 */
+	const postimg = jQuery(".post-content img:not(.github-emoji)");
+	postimg.on("click",function(){
+
+		mask.classList.add("in");
+		main.classList.add("Mask");
+		menu.classList.add("Mask");
+		var myimg = this.cloneNode(true);
+		myimg.classList.add("imgShow");
+
+		setTimeout(function(){
+			jQuery(myimg).animate({
+				opacity:"1"
+			},1000);
+		},0);
+
+		document.body.appendChild(myimg);
+
+		myimg.onclick=function(){
+			document.body.removeChild(myimg);
+			mask.classList.remove("in");
+			main.classList.remove("Mask");
+			menu.classList.remove("Mask");
+		};
+
+	});
+
+}
+
+/* 名字跳动 */
+$("#name").bumpyText();
+
+
+/* 网站运行时间 */
+setInterval(function () {
+	setTime("2018/4/21");
+}, 1000);
+
+/* 文章块的淡出 */
+postshow();
+
+/* 座右铭 */
+
+   getHitokoto();
+
+
+
+/* 粘贴提示 */
+G($(".post-content"), location.href, "guoziyi");
+
+
+/* 控制台 */
+if (window.console && window.console.log) {
+	setTimeout(function () {
+		console.log("\n %c 一个坏掉的番茄 %c  © Simon Ma  http://tomotoes.com \n\n", "color:#FFFFFB;background:#1abc9c;padding:5px 0;border-radius:.5rem 0 0 .5rem;", "color:#FFFFFB;background:#080808;padding:5px 0;border-radius:0 .5rem .5rem 0;");
+	}, 0);
+}
+
+</script>
+
+
+
+
+<!-- 公式渲染 -->
+
+
+
+<!-- 不蒜子 -->
+
+
+</body>
+</html>

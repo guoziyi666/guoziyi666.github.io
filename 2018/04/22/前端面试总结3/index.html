@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Language" content="zh-cn">
+    <meta charset="utf-8">
+    
+    
+    
+    <title>面试总结之js | Welcome</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    
+    <meta name="theme-color" content="#77AAFF">
+    
+    
+    <meta name="keywords" content="面试,javascript">
+    
+    
+
+    
+
+    <!-- Baidu Push -->
+<script>
+	(function(){
+		var bp = document.createElement('script');
+		var curProtocol = window.location.protocol.split(':')[0];
+		if (curProtocol === 'https') {
+			bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+		}
+		else {
+			bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+		}
+		var s = document.getElementsByTagName("script")[0];
+		s.parentNode.insertBefore(bp, s);
+	})();
+
+	var _hmt = _hmt || [];
+</script>
+
+
+
+    
+    <meta name="description" content="js的特点：脚本语言解释性单线程 数据类型：基本类型number string undefined null boolen（在栈中，可以直接访问）引用类型object function array date regexp（在堆中，实际存放了一个指针，操作是对引用的操作） 变量声明提升,函数声明提升：在js中所有声明都会提升在顶部，赋值不提升。函数声明提升在变量声明提升之前，变量声明不会覆盖函数声明">
+<meta name="keywords" content="面试,javascript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="面试总结之js">
+<meta property="og:url" content="http://yoursite.com/2018/04/22/前端面试总结3/index.html">
+<meta property="og:site_name" content="Welcome">
+<meta property="og:description" content="js的特点：脚本语言解释性单线程 数据类型：基本类型number string undefined null boolen（在栈中，可以直接访问）引用类型object function array date regexp（在堆中，实际存放了一个指针，操作是对引用的操作） 变量声明提升,函数声明提升：在js中所有声明都会提升在顶部，赋值不提升。函数声明提升在变量声明提升之前，变量声明不会覆盖函数声明">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-04-22T14:06:47.786Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="面试总结之js">
+<meta name="twitter:description" content="js的特点：脚本语言解释性单线程 数据类型：基本类型number string undefined null boolen（在栈中，可以直接访问）引用类型object function array date regexp（在堆中，实际存放了一个指针，操作是对引用的操作） 变量声明提升,函数声明提升：在js中所有声明都会提升在顶部，赋值不提升。函数声明提升在变量声明提升之前，变量声明不会覆盖函数声明">
+    
+        <link rel="alternate" type="application/atom+xml" title="Welcome" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link id="style" rel="stylesheet" href="/css/style.css?v=3.0">
+    <link rel="stylesheet" href="https://oindk07nf.qnssl.com/atom-one-dark.css"
+media="screen" type="text/css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+            
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+    <aside id="menu"  class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" >
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg" alt="avatar">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname" id="name">guoziyi</h5>
+          
+            <div id="yiyanmotto" class="motto">&nbsp;</div>
+          
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+              <li class="waves-block waves-effect">
+                  <a href="/"  >
+                    <i class="icon icon-lg icon-home"></i>
+                    <span>主 页</span><i class="icon icon-lg icon-caret-left"></i>
+                  </a>
+              </li>
+            
+              <li class="waves-block waves-effect">
+                  <a href="/archives"  >
+                    <i class="icon icon-lg icon-archives"></i>
+                    <span>归 档</span><i class="icon icon-lg icon-caret-left"></i>
+                  </a>
+              </li>
+            
+              <li class="waves-block waves-effect">
+                  <a href="/categories"  >
+                    <i class="icon icon-lg icon-th-list"></i>
+                    <span>分 类</span><i class="icon icon-lg icon-caret-left"></i>
+                  </a>
+              </li>
+            
+              <li class="waves-block waves-effect">
+                  <a href="/tags"  >
+                    <i class="icon icon-lg icon-tags"></i>
+                    <span>标 签</span><i class="icon icon-lg icon-caret-left"></i>
+                  </a>
+              </li>
+            
+              <li class="waves-block waves-effect">
+                  <a href="/about"  >
+                    <i class="icon icon-lg icon-smile-o"></i>
+                    <span>关 于</span><i class="icon icon-lg icon-caret-left"></i>
+                  </a>
+              </li>
+            
+      <div class="nav2">
+          
+              <a class="nav2item" data-title="Email" href="mailto:848430995@qq.com" target="_parent"title="Email" >
+                <i class="icon icon-lg icon-envelope-o envelope-o"></i>
+              </a>
+          
+              <a class="nav2item" data-title="Github" href="https://github.com/guoziyi666" target="_blank"title="Github" >
+                <i class="icon icon-lg icon-github github"></i>
+              </a>
+          
+
+            </div>
+        
+      </ul>
+        
+    </div>
+  </div>
+ 
+</aside>
+
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">面试总结之js</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="検索">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        <a href="../../atom.xml" target="_blank" class="header-icon waves-effect waves-circle waves-light" id="Rss">
+            <i class="icon icon-lg icon-rss"></i>
+        </a>
+    </div>
+</header>
+<header class="content-header post-header">
+    
+    
+    <div class="container fade-scale">
+        <div id="myheader">
+            <h1 class="title">
+                
+            </h1>
+            <h5 class="subtitle">
+                
+                
+            </h5>
+        </div>
+    </div>
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#js的特点："><span class="post-toc-number">1.</span> <span class="post-toc-text">js的特点：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#数据类型："><span class="post-toc-number">2.</span> <span class="post-toc-text">数据类型：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#变量声明提升-函数声明提升："><span class="post-toc-number">3.</span> <span class="post-toc-text">变量声明提升,函数声明提升：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#作用域链，闭包"><span class="post-toc-number">4.</span> <span class="post-toc-text">作用域链，闭包</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#闭包的优缺点："><span class="post-toc-number">5.</span> <span class="post-toc-text">闭包的优缺点：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#事件冒泡事件捕获："><span class="post-toc-number">6.</span> <span class="post-toc-text">事件冒泡事件捕获：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#事件监听："><span class="post-toc-number">7.</span> <span class="post-toc-text">事件监听：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#事件对象和目标对象："><span class="post-toc-number">8.</span> <span class="post-toc-text">事件对象和目标对象：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#阻止默认事件："><span class="post-toc-number">9.</span> <span class="post-toc-text">阻止默认事件：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#阻止事件冒泡："><span class="post-toc-number">10.</span> <span class="post-toc-text">阻止事件冒泡：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#自执行函数"><span class="post-toc-number">11.</span> <span class="post-toc-text">自执行函数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#遍历数组的方法："><span class="post-toc-number">12.</span> <span class="post-toc-text">遍历数组的方法：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#合并数组："><span class="post-toc-number">13.</span> <span class="post-toc-text">合并数组：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#深拷贝浅拷贝（-Object-assign-是浅拷贝）"><span class="post-toc-number">14.</span> <span class="post-toc-text">深拷贝浅拷贝（ Object.assign()是浅拷贝）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#箭头函数"><span class="post-toc-number">15.</span> <span class="post-toc-text">箭头函数:</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#匿名函数优缺点："><span class="post-toc-number">16.</span> <span class="post-toc-text">匿名函数优缺点：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#let和const"><span class="post-toc-number">17.</span> <span class="post-toc-text">let和const</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#继承："><span class="post-toc-number">18.</span> <span class="post-toc-text">继承：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#call-apply-bind"><span class="post-toc-number">19.</span> <span class="post-toc-text">call/apply/bind</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#DOM-BOM："><span class="post-toc-number">20.</span> <span class="post-toc-text">DOM/BOM：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#异步方法："><span class="post-toc-number">21.</span> <span class="post-toc-text">异步方法：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#原型："><span class="post-toc-number">22.</span> <span class="post-toc-text">原型：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#promise："><span class="post-toc-number">23.</span> <span class="post-toc-text">promise：</span></a></li></ol>
+        </nav>
+    </aside>
+   
+<article id="post-前端面试总结3"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">面试总结之js</h1>
+        <div class="post-meta">
+            <i class="icon icon-lg icon-calendar-o"></i>
+            发表于
+            <time class="post-time" title="2018-04-22 22:04:47" datetime="2018-04-22T14:04:47.000Z"  itemprop="datePublished">2018-04-22</time>
+
+            <br id="mybreak"/>
+            
+	<i class="icon icon-lg icon-folder-o"></i>
+	分类：<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/面试/">面试</a></li></ul>
+
+
+            <i>·</i>
+            
+
+        </div>
+        <div class="post-count-custom">
+            <i class="icon icon-lg icon-comment-o"></i>
+            阅读本文可能花费您&nbsp;<span class="post-count">4</span>&nbsp;分钟
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h3 id="js的特点："><a href="#js的特点：" class="headerlink" title="js的特点："></a>js的特点：</h3><p>脚本语言解释性单线程</p>
+<h3 id="数据类型："><a href="#数据类型：" class="headerlink" title="数据类型："></a>数据类型：</h3><p>基本类型number string undefined null boolen（在栈中，可以直接访问）<br>引用类型object function array date regexp（在堆中，实际存放了一个指针，操作是对引用的操作）</p>
+<h3 id="变量声明提升-函数声明提升："><a href="#变量声明提升-函数声明提升：" class="headerlink" title="变量声明提升,函数声明提升："></a>变量声明提升,函数声明提升：</h3><p>在js中所有声明都会提升在顶部，赋值不提升。函数声明提升在变量声明提升之前，变量声明不会覆盖函数声明。但是赋值会覆盖。</p>
+<h3 id="作用域链，闭包"><a href="#作用域链，闭包" class="headerlink" title="作用域链，闭包"></a>作用域链，闭包</h3><p>作用域链是指js中内部函数可以访问外部函数中的变量，外部不能访问内部。当一个函数执行之前会创建一个对象存储函数的变量，然后挂载在作用域链中。<br>如果一个内部函数被作为一个返回值返回，那么外部函数虽然被销毁了，内部函数却不会被销毁并且依然会保存外部函数执行器上下文，这样就形成了闭包。</p>
+<h3 id="闭包的优缺点："><a href="#闭包的优缺点：" class="headerlink" title="闭包的优缺点："></a>闭包的优缺点：</h3><p>优点是由于外部不能访问内部，所以可以设计私有的方法和变量。方便调用上下文变量<br>缺点就是会导致内存泄漏</p>
+<h3 id="事件冒泡事件捕获："><a href="#事件冒泡事件捕获：" class="headerlink" title="事件冒泡事件捕获："></a>事件冒泡事件捕获：</h3><p>当一个事件源本身无法处理该事件的时候，会将该事件逐层向外传递就是事件冒泡<br>事件捕获是事件冒泡相反的顺序</p>
+<h3 id="事件监听："><a href="#事件监听：" class="headerlink" title="事件监听："></a>事件监听：</h3><p>标准浏览器：addEventListener()/removeEventListener()<br>ie:attachEvent()/detachEvent()<br>句柄绑定：onclick=function（）{}</p>
+<h3 id="事件对象和目标对象："><a href="#事件对象和目标对象：" class="headerlink" title="事件对象和目标对象："></a>事件对象和目标对象：</h3><p>标准浏览器：event    event.target<br>ie：window.event     window.event.srcElement<br>target指向触发事件的对象，currentTarget指向处理事件的对象</p>
+<h3 id="阻止默认事件："><a href="#阻止默认事件：" class="headerlink" title="阻止默认事件："></a>阻止默认事件：</h3><p>标准：preventDafult<br>ie：returnValue=false</p>
+<h3 id="阻止事件冒泡："><a href="#阻止事件冒泡：" class="headerlink" title="阻止事件冒泡："></a>阻止事件冒泡：</h3><p>标准：event.stopPropagation()<br>ie:window.event.cancelBubble()</p>
+<h3 id="自执行函数"><a href="#自执行函数" class="headerlink" title="自执行函数"></a>自执行函数</h3><p>js中表达式是立即执行的，如果我们把一个函数变成一个表达式，就是自执行函数，不需要调用直接执行。自执行函数内部作用域受保护，所以一般可以用作命名空间，如jquery。也可以用来处理闭包问题</p>
+<h3 id="遍历数组的方法："><a href="#遍历数组的方法：" class="headerlink" title="遍历数组的方法："></a>遍历数组的方法：</h3><p>for,for in,for each(不支持break)</p>
+<h3 id="合并数组："><a href="#合并数组：" class="headerlink" title="合并数组："></a>合并数组：</h3><p>…<br>concat</p>
+<h3 id="深拷贝浅拷贝（-Object-assign-是浅拷贝）"><a href="#深拷贝浅拷贝（-Object-assign-是浅拷贝）" class="headerlink" title="深拷贝浅拷贝（ Object.assign()是浅拷贝）"></a>深拷贝浅拷贝（ Object.assign()是浅拷贝）</h3><p>浅拷贝只复制了一层拷贝，即只复制了简单类型<br>深拷贝是层级赋值，遍历所有对象进行复制</p>
+<h3 id="箭头函数"><a href="#箭头函数" class="headerlink" title="箭头函数:"></a>箭头函数:</h3><p>箭头函数中的this是定义是所在的对象</p>
+<h3 id="匿名函数优缺点："><a href="#匿名函数优缺点：" class="headerlink" title="匿名函数优缺点："></a>匿名函数优缺点：</h3><p>优点：不会污染全局变量<br>缺点：绑定事件时无法解绑</p>
+<h3 id="let和const"><a href="#let和const" class="headerlink" title="let和const"></a>let和const</h3><p>let:块级作用域只在该块区域有效，可以阻止闭包，会导致暂时性死域（如果有全局的变量同名，那么不论在let前后永远都无法访问全局变量），一个区域不接受同名变量<br>const:声明一个只读的常量，如果是一个对象可以正常的进行添加属性</p>
+<h3 id="继承："><a href="#继承：" class="headerlink" title="继承："></a>继承：</h3><p>1.es6中的class extend继承<br>2.原型链：通过new父级构造函数的方式，并且prototype改为父级，这样自己可以访问所有父级的所有属性（浪费）<br>3.用call和apply写构造函数<br>4.共享原型：prototype相同（无法更改，一个改都改了）<br>5.圣杯模型：创建一个空函数，空函数的原型等于父级原型，子级的原型等于new这个空函数。这样两者修改原型不会受影响。修改原型上构造函数为自身，保存一下原型uber为父级</p>
+<h3 id="call-apply-bind"><a href="#call-apply-bind" class="headerlink" title="call/apply/bind"></a>call/apply/bind</h3><p>改变this指向，传参不同（可以实现一个对象调用另一个对象的方法），call一个个传，apply传数组，并且他俩立即执行，bind返回的是一个函数，可以手动执行</p>
+<h3 id="DOM-BOM："><a href="#DOM-BOM：" class="headerlink" title="DOM/BOM："></a>DOM/BOM：</h3><p>dom：文档对象模型。将文档当做对象看，用来获取或设置文档中标签的属性。<br>bom：浏览器对象模型。将浏览器当做对象看，用来获取或设置浏览器的属性。</p>
+<h3 id="异步方法："><a href="#异步方法：" class="headerlink" title="异步方法："></a>异步方法：</h3><p>1.计时器和回调函数，<br>2.jquery的$deferred() when().done()<br>3.promise<br>4.defer/async异步加载脚本<br>5.generator ：用function*创建函数 yield中写每一步的操作。实例对象.next()执行</p>
+<h3 id="原型："><a href="#原型：" class="headerlink" title="原型："></a>原型：</h3><p>prototype是函数的属性，<strong>proto</strong>是对象的属性。</p>
+<h3 id="promise："><a href="#promise：" class="headerlink" title="promise："></a>promise：</h3><p>用同步的方法去写异步，三种状态 进行 成功 失败<br>在构造函数中决定promise对象的状态，然后通过then方法中传的两个函数，成功的函数和失败的函数进行链式调用。<br>promise.all()并行执行多个异步操作，传递一个promise对象实例数组，数组中有一个失败则都失败给catch()处理</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最終更新：<time datetime="2018-04-22T14:06:47.786Z" itemprop="dateUpdated">2018-04-22 22:06:47</time>
+</span>
+
+
+        
+    </div>
+    <footer>
+        <div onclick="location.href='http://yoursite.com'">
+            <img src="/img/avatar.jpg" alt="guoziyi">
+            <a>guoziyi</a>
+        </div>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/面试/">面试</a></li></ul>
+
+
+            
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2018/04/22/前端面试总结2/" id="post-next" class="post-nav-link">
+        <h4 class="title" data-hover="下一篇：面试总结之网络">下一篇：面试总结之网络</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+    
+
+    
+
+    
+
+
+</article>
+
+</div>
+
+        <footer class="footer">
+    <div class="footer-content">
+        <span class="power">
+            <i class="icon icon-lg icon-copyright"></i>
+            2018
+            <i class="icon icon-lg icon-heart"></i>
+            <a href="http://yoursite.com">false</a>
+            <br/>
+            Power by
+            <a href="https://hexo.io/" target="_blank" rel="external nofollow">Hexo</a>&nbsp;·&nbsp;
+            Theme
+            <a class="tomotoeslink" href="https://github.com/tomotoes/hexo-theme-tomotoes/" target="_blank" rel="external nofollow">tomotoes</a>
+        </span>
+
+        <br/>
+
+        <span id="RunTime" style="color:#a7a7a2;"></span>
+        <br/>
+
+        <span>
+            
+
+        </span>
+        <br/>
+
+        <span class="license">このブログの内容物は<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ja">クリエイティブ・コモンズ 表示 - 非営利 - 継承 4.0 国際ライセンスの下に提供されています</a></span>
+    </div>
+</footer>
+
+    </main>
+    
+        
+
+    
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+    <!-- waves按钮特效 -->
+<script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+
+<!-- 主题配置脚本 -->
+<script>
+var BLOG = { ROOT: '/', SHARE: false, REWARD: false };
+</script>
+
+<!-- jquery -->
+<script src="/js/jquery.min.js?v=3.0"></script>
+
+<!-- 搜索 -->
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item waves-block waves-effect" onclick="location.href='{path}'">
+    <div class="title ellipsis" title="{title}">{title}</div>
+</li>
+</template>
+
+
+<!-- main博客脚本 -->
+<script src="/js/main.min.js?v=3.0" ></script>
+
+<!-- 动画&配置 -->
+<script src="/js/script.min.js?v=3.0" ></script>
+
+<!-- 脚本管理 -->
+<script>
+
+if(window.innerWidth > 800){
+	/* 3D标题 */
+	$(".content-header").on("mousemove", threedee);
+
+	/* 底部追随鼠标 */
+	$(".footer").hover(2);
+
+	/* gotop键的涟漪 */
+	$("#gotop").hover(1);
+
+	/* 赞赏的粒子雨 */
+	$("#reward").hover(3);
+
+	/* 微信公众号的底部渲染 */
+	$("#wechat").hover(4);
+
+    /* 标题跳动 */
+    $(".archivestitle").bumpyText();
+
+	/* 图片点击放大 */
+	const postimg = jQuery(".post-content img:not(.github-emoji)");
+	postimg.on("click",function(){
+
+		mask.classList.add("in");
+		main.classList.add("Mask");
+		menu.classList.add("Mask");
+		var myimg = this.cloneNode(true);
+		myimg.classList.add("imgShow");
+
+		setTimeout(function(){
+			jQuery(myimg).animate({
+				opacity:"1"
+			},1000);
+		},0);
+
+		document.body.appendChild(myimg);
+
+		myimg.onclick=function(){
+			document.body.removeChild(myimg);
+			mask.classList.remove("in");
+			main.classList.remove("Mask");
+			menu.classList.remove("Mask");
+		};
+
+	});
+
+}
+
+/* 名字跳动 */
+$("#name").bumpyText();
+
+
+/* 网站运行时间 */
+setInterval(function () {
+	setTime("2018/4/21");
+}, 1000);
+
+/* 文章块的淡出 */
+postshow();
+
+/* 座右铭 */
+
+   getHitokoto();
+
+
+
+/* 粘贴提示 */
+G($(".post-content"), location.href, "guoziyi");
+
+
+/* 控制台 */
+if (window.console && window.console.log) {
+	setTimeout(function () {
+		console.log("\n %c 一个坏掉的番茄 %c  © Simon Ma  http://tomotoes.com \n\n", "color:#FFFFFB;background:#1abc9c;padding:5px 0;border-radius:.5rem 0 0 .5rem;", "color:#FFFFFB;background:#080808;padding:5px 0;border-radius:0 .5rem .5rem 0;");
+	}, 0);
+}
+
+</script>
+
+
+
+
+<!-- 公式渲染 -->
+
+
+
+<!-- 不蒜子 -->
+
+
+</body>
+</html>
