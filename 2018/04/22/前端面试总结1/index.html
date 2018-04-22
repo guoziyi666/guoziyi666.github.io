@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Language" content="zh-cn">
+    <meta charset="utf-8">
+    
+    
+    
+    <title>面试总结之html/css | Welcome</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    
+    <meta name="theme-color" content="#77AAFF">
+    
+    
+    <meta name="keywords" content="html,css,面试">
+    
+    
+
+    
+
+    <!-- Baidu Push -->
+<script>
+	(function(){
+		var bp = document.createElement('script');
+		var curProtocol = window.location.protocol.split(':')[0];
+		if (curProtocol === 'https') {
+			bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+		}
+		else {
+			bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+		}
+		var s = document.getElementsByTagName("script")[0];
+		s.parentNode.insertBefore(bp, s);
+	})();
+
+	var _hmt = _hmt || [];
+</script>
+
+
+
+    
+    <meta name="description" content="行级元素：a b br em span i input 内容决定宽高，不可以改变 块级元素:div ul ol h1-h6 table p  占满整行，可以改变宽高 inline-block：内容决定占位，可以改变宽高 nodetype的值：元素节点：1属性节点：2文本节点：3 兼容h5的方法：创建一个以标签名命名的数组，在一个立即执行函数中构造出来所有标签，并设为块级元素 引入css的几种方式：">
+<meta name="keywords" content="html,css,面试">
+<meta property="og:type" content="article">
+<meta property="og:title" content="面试总结之html&#x2F;css">
+<meta property="og:url" content="http://yoursite.com/2018/04/22/前端面试总结1/index.html">
+<meta property="og:site_name" content="Welcome">
+<meta property="og:description" content="行级元素：a b br em span i input 内容决定宽高，不可以改变 块级元素:div ul ol h1-h6 table p  占满整行，可以改变宽高 inline-block：内容决定占位，可以改变宽高 nodetype的值：元素节点：1属性节点：2文本节点：3 兼容h5的方法：创建一个以标签名命名的数组，在一个立即执行函数中构造出来所有标签，并设为块级元素 引入css的几种方式：">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-04-22T14:02:11.500Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="面试总结之html&#x2F;css">
+<meta name="twitter:description" content="行级元素：a b br em span i input 内容决定宽高，不可以改变 块级元素:div ul ol h1-h6 table p  占满整行，可以改变宽高 inline-block：内容决定占位，可以改变宽高 nodetype的值：元素节点：1属性节点：2文本节点：3 兼容h5的方法：创建一个以标签名命名的数组，在一个立即执行函数中构造出来所有标签，并设为块级元素 引入css的几种方式：">
+    
+        <link rel="alternate" type="application/atom+xml" title="Welcome" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link id="style" rel="stylesheet" href="/css/style.css?v=3.0">
+    <link rel="stylesheet" href="https://oindk07nf.qnssl.com/atom-one-dark.css"
+media="screen" type="text/css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+            
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+    <aside id="menu"  class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" >
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg" alt="avatar">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname" id="name">guoziyi</h5>
+          
+            <div id="yiyanmotto" class="motto">&nbsp;</div>
+          
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+              <li class="waves-block waves-effect">
+                  <a href="/"  >
+                    <i class="icon icon-lg icon-home"></i>
+                    <span>主 页</span><i class="icon icon-lg icon-caret-left"></i>
+                  </a>
+              </li>
+            
+              <li class="waves-block waves-effect">
+                  <a href="/archives"  >
+                    <i class="icon icon-lg icon-archives"></i>
+                    <span>归 档</span><i class="icon icon-lg icon-caret-left"></i>
+                  </a>
+              </li>
+            
+              <li class="waves-block waves-effect">
+                  <a href="/categories"  >
+                    <i class="icon icon-lg icon-th-list"></i>
+                    <span>分 类</span><i class="icon icon-lg icon-caret-left"></i>
+                  </a>
+              </li>
+            
+              <li class="waves-block waves-effect">
+                  <a href="/tags"  >
+                    <i class="icon icon-lg icon-tags"></i>
+                    <span>标 签</span><i class="icon icon-lg icon-caret-left"></i>
+                  </a>
+              </li>
+            
+              <li class="waves-block waves-effect">
+                  <a href="/about"  >
+                    <i class="icon icon-lg icon-smile-o"></i>
+                    <span>关 于</span><i class="icon icon-lg icon-caret-left"></i>
+                  </a>
+              </li>
+            
+      <div class="nav2">
+          
+              <a class="nav2item" data-title="Email" href="mailto:848430995@qq.com" target="_parent"title="Email" >
+                <i class="icon icon-lg icon-envelope-o envelope-o"></i>
+              </a>
+          
+              <a class="nav2item" data-title="Github" href="https://github.com/guoziyi666" target="_blank"title="Github" >
+                <i class="icon icon-lg icon-github github"></i>
+              </a>
+          
+
+            </div>
+        
+      </ul>
+        
+    </div>
+  </div>
+ 
+</aside>
+
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">面试总结之html/css</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        <a href="../../atom.xml" target="_blank" class="header-icon waves-effect waves-circle waves-light" id="Rss">
+            <i class="icon icon-lg icon-rss"></i>
+        </a>
+    </div>
+</header>
+<header class="content-header post-header">
+    
+    
+    <div class="container fade-scale">
+        <div id="myheader">
+            <h1 class="title">
+                
+            </h1>
+            <h5 class="subtitle">
+                
+                
+            </h5>
+        </div>
+    </div>
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#行级元素："><span class="post-toc-number">1.</span> <span class="post-toc-text">行级元素：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#块级元素"><span class="post-toc-number">2.</span> <span class="post-toc-text">块级元素:</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#inline-block："><span class="post-toc-number">3.</span> <span class="post-toc-text">inline-block：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#nodetype的值："><span class="post-toc-number">4.</span> <span class="post-toc-text">nodetype的值：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#兼容h5的方法："><span class="post-toc-number">5.</span> <span class="post-toc-text">兼容h5的方法：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#引入css的几种方式："><span class="post-toc-number">6.</span> <span class="post-toc-text">引入css的几种方式：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#css选择器权重："><span class="post-toc-number">7.</span> <span class="post-toc-text">css选择器权重：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#触发bfc的方式：（块级格式化上下文）"><span class="post-toc-number">8.</span> <span class="post-toc-text">触发bfc的方式：（块级格式化上下文）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#bfc作用："><span class="post-toc-number">9.</span> <span class="post-toc-text">bfc作用：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#margin塌陷合并："><span class="post-toc-number">10.</span> <span class="post-toc-text">margin塌陷合并：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#清除浮动的方法："><span class="post-toc-number">11.</span> <span class="post-toc-text">清除浮动的方法：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#两栏布局："><span class="post-toc-number">12.</span> <span class="post-toc-text">两栏布局：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#三栏布局：-中间的标签在最后"><span class="post-toc-number">13.</span> <span class="post-toc-text">三栏布局：(中间的标签在最后)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#水平垂直居中一个元素："><span class="post-toc-number">14.</span> <span class="post-toc-text">水平垂直居中一个元素：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#position的区别："><span class="post-toc-number">15.</span> <span class="post-toc-text">position的区别：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#重绘："><span class="post-toc-number">16.</span> <span class="post-toc-text">重绘：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#重排："><span class="post-toc-number">17.</span> <span class="post-toc-text">重排：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#优化："><span class="post-toc-number">18.</span> <span class="post-toc-text">优化：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#浏览器渲染过程："><span class="post-toc-number">19.</span> <span class="post-toc-text">浏览器渲染过程：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#响应式布局："><span class="post-toc-number">20.</span> <span class="post-toc-text">响应式布局：</span></a></li></ol>
+        </nav>
+    </aside>
+   
+<article id="post-前端面试总结1"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">面试总结之html/css</h1>
+        <div class="post-meta">
+            <i class="icon icon-lg icon-calendar-o"></i>
+            发表于
+            <time class="post-time" title="2018-04-22 21:57:47" datetime="2018-04-22T13:57:47.000Z"  itemprop="datePublished">2018-04-22</time>
+
+            <br id="mybreak"/>
+            
+	<i class="icon icon-lg icon-folder-o"></i>
+	分类：<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/面试/">面试</a></li></ul>
+
+
+            <i>·</i>
+            
+
+        </div>
+        <div class="post-count-custom">
+            <i class="icon icon-lg icon-comment-o"></i>
+            阅读本文可能花费您&nbsp;<span class="post-count">2</span>&nbsp;分钟
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h3 id="行级元素："><a href="#行级元素：" class="headerlink" title="行级元素："></a>行级元素：</h3><p>a b br em span i input 内容决定宽高，不可以改变</p>
+<h3 id="块级元素"><a href="#块级元素" class="headerlink" title="块级元素:"></a>块级元素:</h3><p>div ul ol h1-h6 table p  占满整行，可以改变宽高</p>
+<h3 id="inline-block："><a href="#inline-block：" class="headerlink" title="inline-block："></a>inline-block：</h3><p>内容决定占位，可以改变宽高</p>
+<h3 id="nodetype的值："><a href="#nodetype的值：" class="headerlink" title="nodetype的值："></a>nodetype的值：</h3><p>元素节点：1<br>属性节点：2<br>文本节点：3</p>
+<h3 id="兼容h5的方法："><a href="#兼容h5的方法：" class="headerlink" title="兼容h5的方法："></a>兼容h5的方法：</h3><p>创建一个以标签名命名的数组，在一个立即执行函数中构造出来所有标签，并设为块级元素</p>
+<h3 id="引入css的几种方式："><a href="#引入css的几种方式：" class="headerlink" title="引入css的几种方式："></a>引入css的几种方式：</h3><p>@import style link 行间</p>
+<h3 id="css选择器权重："><a href="#css选择器权重：" class="headerlink" title="css选择器权重："></a>css选择器权重：</h3><p>！important        无穷<br>行间style          1000<br>id                100<br>class 伪类        10<br>标签 伪元素     1</p>
+<ul>
+<li>0    </li>
+</ul>
+<h3 id="触发bfc的方式：（块级格式化上下文）"><a href="#触发bfc的方式：（块级格式化上下文）" class="headerlink" title="触发bfc的方式：（块级格式化上下文）"></a>触发bfc的方式：（块级格式化上下文）</h3><p>display:inline-block/flex<br>position:absolute/fixed<br>overflow:不为visible<br>float:不为none</p>
+<h3 id="bfc作用："><a href="#bfc作用：" class="headerlink" title="bfc作用："></a>bfc作用：</h3><p>阻止margin塌陷</p>
+<h3 id="margin塌陷合并："><a href="#margin塌陷合并：" class="headerlink" title="margin塌陷合并："></a>margin塌陷合并：</h3><p>垂直合并：上面元素的bottom和下面元素的top会选择大的那个<br>父子塌陷：嵌套元素中，如果设置子元素top，父元素会被top子元素不动</p>
+<h3 id="清除浮动的方法："><a href="#清除浮动的方法：" class="headerlink" title="清除浮动的方法："></a>清除浮动的方法：</h3><p>增加一个空元素clear：both<br>父级加伪类（before、after）clear:both;content:””;display:block;<br>父级：overflow：auto;</p>
+<h3 id="两栏布局："><a href="#两栏布局：" class="headerlink" title="两栏布局："></a>两栏布局：</h3><p>1.左侧固定：左侧左浮动 右侧margin，宽度100%<br>2.右侧固定：左侧左浮动右侧右浮动，左侧margin-的，左侧宽度100%</p>
+<h3 id="三栏布局：-中间的标签在最后"><a href="#三栏布局：-中间的标签在最后" class="headerlink" title="三栏布局：(中间的标签在最后)"></a>三栏布局：(中间的标签在最后)</h3><p>1.左右浮动，中间设margin<br>2.左右absolute为0，中间设margin</p>
+<h3 id="水平垂直居中一个元素："><a href="#水平垂直居中一个元素：" class="headerlink" title="水平垂直居中一个元素："></a>水平垂直居中一个元素：</h3><p>1.position：absolute<br>    left：50%；<br>    top：50%；<br>    margin-left：-宽度一半<br>    margin-top：-高度一半<br>2.position：absolute；<br>    margin:auto;<br>    left:0;<br>    right:0;<br>    top:0;<br>    bottom:0;<br>3.position:absolute;<br>    left:50%;<br>    top:50%;<br>    transform:translate(-50%,-50%);<br>4.父级：display：flex；<br>        justify-content：center；</p>
+<h3 id="position的区别："><a href="#position的区别：" class="headerlink" title="position的区别："></a>position的区别：</h3><p>absolute：基于第一个非static的父级定位<br>relative：基于原来位置定位<br>fiexd：相对于视口进行定位（不兼容的话使用js计算滚动的距离手动实现）</p>
+<h3 id="重绘："><a href="#重绘：" class="headerlink" title="重绘："></a>重绘：</h3><p>当前页面中元素外观发生变化重新渲染</p>
+<h3 id="重排："><a href="#重排：" class="headerlink" title="重排："></a>重排：</h3><p>当前页面dom树结构变化，或者窗口大小变化的，浏览器需要重新排列元素的行为</p>
+<h3 id="优化："><a href="#优化：" class="headerlink" title="优化："></a>优化：</h3><p>将多次重绘重排放到一起</p>
+<h3 id="浏览器渲染过程："><a href="#浏览器渲染过程：" class="headerlink" title="浏览器渲染过程："></a>浏览器渲染过程：</h3><p>获取html，构建dom树<br>根据css构建render树，render树不包含定位和几何信息<br>构建布局树，含有定位和几何信息</p>
+<h3 id="响应式布局："><a href="#响应式布局：" class="headerlink" title="响应式布局："></a>响应式布局：</h3><p><meta name="viewport" content="width=device-width" initial-scale="1"><br>不用绝对宽度用相对的<br>选择加载css <link rel="stylesheet" media="screen and (max-device-with:100px)" href=""><br>@media screen and (max…)</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    Last updated: <time datetime="2018-04-22T14:02:11.500Z" itemprop="dateUpdated">2018-04-22 22:02:11</time>
+</span>
+
+
+        
+    </div>
+    <footer>
+        <div onclick="location.href='http://yoursite.com'">
+            <img src="/img/avatar.jpg" alt="guoziyi">
+            <a>guoziyi</a>
+        </div>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/html/">html</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/面试/">面试</a></li></ul>
+
+
+            
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2018/04/22/事件/" id="post-next" class="post-nav-link">
+        <h4 class="title" data-hover="下一篇：js事件那些事">下一篇：js事件那些事</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+    
+
+    
+
+    
+
+
+</article>
+
+</div>
+
+        <footer class="footer">
+    <div class="footer-content">
+        <span class="power">
+            <i class="icon icon-lg icon-copyright"></i>
+            2018
+            <i class="icon icon-lg icon-heart"></i>
+            <a href="http://yoursite.com">false</a>
+            <br/>
+            Power by
+            <a href="https://hexo.io/" target="_blank" rel="external nofollow">Hexo</a>&nbsp;·&nbsp;
+            Theme
+            <a class="tomotoeslink" href="https://github.com/tomotoes/hexo-theme-tomotoes/" target="_blank" rel="external nofollow">tomotoes</a>
+        </span>
+
+        <br/>
+
+        <span id="RunTime" style="color:#a7a7a2;"></span>
+        <br/>
+
+        <span>
+            
+
+        </span>
+        <br/>
+
+        <span class="license">This blog is licensed under a <a rel="license" rel="external nofollow" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+    </div>
+</footer>
+
+    </main>
+    
+        
+
+    
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+    <!-- waves按钮特效 -->
+<script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+
+<!-- 主题配置脚本 -->
+<script>
+var BLOG = { ROOT: '/', SHARE: false, REWARD: false };
+</script>
+
+<!-- jquery -->
+<script src="/js/jquery.min.js?v=3.0"></script>
+
+<!-- 搜索 -->
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item waves-block waves-effect" onclick="location.href='{path}'">
+    <div class="title ellipsis" title="{title}">{title}</div>
+</li>
+</template>
+
+
+<!-- main博客脚本 -->
+<script src="/js/main.min.js?v=3.0" ></script>
+
+<!-- 动画&配置 -->
+<script src="/js/script.min.js?v=3.0" ></script>
+
+<!-- 脚本管理 -->
+<script>
+
+if(window.innerWidth > 800){
+	/* 3D标题 */
+	$(".content-header").on("mousemove", threedee);
+
+	/* 底部追随鼠标 */
+	$(".footer").hover(2);
+
+	/* gotop键的涟漪 */
+	$("#gotop").hover(1);
+
+	/* 赞赏的粒子雨 */
+	$("#reward").hover(3);
+
+	/* 微信公众号的底部渲染 */
+	$("#wechat").hover(4);
+
+    /* 标题跳动 */
+    $(".archivestitle").bumpyText();
+
+	/* 图片点击放大 */
+	const postimg = jQuery(".post-content img:not(.github-emoji)");
+	postimg.on("click",function(){
+
+		mask.classList.add("in");
+		main.classList.add("Mask");
+		menu.classList.add("Mask");
+		var myimg = this.cloneNode(true);
+		myimg.classList.add("imgShow");
+
+		setTimeout(function(){
+			jQuery(myimg).animate({
+				opacity:"1"
+			},1000);
+		},0);
+
+		document.body.appendChild(myimg);
+
+		myimg.onclick=function(){
+			document.body.removeChild(myimg);
+			mask.classList.remove("in");
+			main.classList.remove("Mask");
+			menu.classList.remove("Mask");
+		};
+
+	});
+
+}
+
+/* 名字跳动 */
+$("#name").bumpyText();
+
+
+/* 网站运行时间 */
+setInterval(function () {
+	setTime("2018/4/21");
+}, 1000);
+
+/* 文章块的淡出 */
+postshow();
+
+/* 座右铭 */
+
+   getHitokoto();
+
+
+
+/* 粘贴提示 */
+G($(".post-content"), location.href, "guoziyi");
+
+
+/* 控制台 */
+if (window.console && window.console.log) {
+	setTimeout(function () {
+		console.log("\n %c 一个坏掉的番茄 %c  © Simon Ma  http://tomotoes.com \n\n", "color:#FFFFFB;background:#1abc9c;padding:5px 0;border-radius:.5rem 0 0 .5rem;", "color:#FFFFFB;background:#080808;padding:5px 0;border-radius:0 .5rem .5rem 0;");
+	}, 0);
+}
+
+</script>
+
+
+
+
+<!-- 公式渲染 -->
+
+
+
+<!-- 不蒜子 -->
+
+
+</body>
+</html>
