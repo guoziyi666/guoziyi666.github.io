@@ -6,13 +6,13 @@
     
     
     
-    <title>面试总结之网络 | Welcome</title>
+    <title>有趣的面试题之 一 | Welcome</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
     
     <meta name="theme-color" content="#77AAFF">
     
     
-    <meta name="keywords" content="面试,网络">
+    <meta name="keywords" content="面试,JavaScript">
     
     
 
@@ -39,18 +39,20 @@
 
 
     
-    <meta name="description" content="AJAX（异步JavaScript和xml）XML 指可扩展标记语言，被设计用来传输和存储数据ajax主要就是利用window.xmlhttprequest对象来判断数据请求的状态首先判断请求方法是get还是post，然后用该对象的open方法发送请求通过该对象的readystatechange方法判断readystate==4和status==200是否成功最后用该对象的send方法发送出去 处">
-<meta name="keywords" content="面试,网络">
+    <meta name="description" content="今天遇到一个这样的面试题1234567891011121314151617var MAP=&amp;#123;		onclick:function () &amp;#123;&amp;#125;,		curry:function (val) &amp;#123;			return function (z) &amp;#123;				return val++ +z			&amp;#125;		&amp;#125;			&amp;#125;	var getInf">
+<meta name="keywords" content="面试,JavaScript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="面试总结之网络">
-<meta property="og:url" content="http://yoursite.com/2018/04/22/前端面试总结2/index.html">
+<meta property="og:title" content="有趣的面试题之 一">
+<meta property="og:url" content="http://yoursite.com/2018/04/22/有趣的面试题之一/index.html">
 <meta property="og:site_name" content="Welcome">
-<meta property="og:description" content="AJAX（异步JavaScript和xml）XML 指可扩展标记语言，被设计用来传输和存储数据ajax主要就是利用window.xmlhttprequest对象来判断数据请求的状态首先判断请求方法是get还是post，然后用该对象的open方法发送请求通过该对象的readystatechange方法判断readystate==4和status==200是否成功最后用该对象的send方法发送出去 处">
+<meta property="og:description" content="今天遇到一个这样的面试题1234567891011121314151617var MAP=&amp;#123;		onclick:function () &amp;#123;&amp;#125;,		curry:function (val) &amp;#123;			return function (z) &amp;#123;				return val++ +z			&amp;#125;		&amp;#125;			&amp;#125;	var getInf">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-04-23T01:08:37.960Z">
+<meta property="og:image" content="http://yoursite.com/2018/04/22/有趣的面试题之一/answer.png">
+<meta property="og:updated_time" content="2018-04-23T11:13:05.754Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="面试总结之网络">
-<meta name="twitter:description" content="AJAX（异步JavaScript和xml）XML 指可扩展标记语言，被设计用来传输和存储数据ajax主要就是利用window.xmlhttprequest对象来判断数据请求的状态首先判断请求方法是get还是post，然后用该对象的open方法发送请求通过该对象的readystatechange方法判断readystate==4和status==200是否成功最后用该对象的send方法发送出去 处">
+<meta name="twitter:title" content="有趣的面试题之 一">
+<meta name="twitter:description" content="今天遇到一个这样的面试题1234567891011121314151617var MAP=&amp;#123;		onclick:function () &amp;#123;&amp;#125;,		curry:function (val) &amp;#123;			return function (z) &amp;#123;				return val++ +z			&amp;#125;		&amp;#125;			&amp;#125;	var getInf">
+<meta name="twitter:image" content="http://yoursite.com/2018/04/22/有趣的面试题之一/answer.png">
     
         <link rel="alternate" type="application/atom+xml" title="Welcome" href="/atom.xml">
     
@@ -150,7 +152,7 @@ media="screen" type="text/css">
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">面试总结之网络</div>
+        <div class="flex-col header-title ellipsis">有趣的面试题之 一</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -187,22 +189,15 @@ media="screen" type="text/css">
 
 <div class="container body-wrap">
     
-    <aside class="post-widget">
-        <nav class="post-toc-wrap" id="post-toc">
-            <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#AJAX（异步JavaScript和xml）"><span class="post-toc-number">1.</span> <span class="post-toc-text">AJAX（异步JavaScript和xml）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#处理AJAX并发请求："><span class="post-toc-number">2.</span> <span class="post-toc-text">处理AJAX并发请求：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#get和post的区别："><span class="post-toc-number">3.</span> <span class="post-toc-text">get和post的区别：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#http和https的区别："><span class="post-toc-number">4.</span> <span class="post-toc-text">http和https的区别：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#HTTP1-0-HTTP1-1-HTTP2-0区别："><span class="post-toc-number">5.</span> <span class="post-toc-text">HTTP1.0,HTTP1.1,HTTP2.0区别：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#三次握手："><span class="post-toc-number">6.</span> <span class="post-toc-text">三次握手：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#四次挥手："><span class="post-toc-number">7.</span> <span class="post-toc-text">四次挥手：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#TCP和UDP区别："><span class="post-toc-number">8.</span> <span class="post-toc-text">TCP和UDP区别：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#由于ajax受同源策略的限制："><span class="post-toc-number">9.</span> <span class="post-toc-text">由于ajax受同源策略的限制：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#跨域的几种方法："><span class="post-toc-number">10.</span> <span class="post-toc-text">跨域的几种方法：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#cookie-session-webstorage："><span class="post-toc-number">11.</span> <span class="post-toc-text">cookie/session/webstorage：</span></a></li></ol>
-        </nav>
-    </aside>
-   
-<article id="post-前端面试总结2"
+<article id="post-有趣的面试题之一"
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">面试总结之网络</h1>
+        <h1 class="post-card-title">有趣的面试题之 一</h1>
         <div class="post-meta">
             <i class="icon icon-lg icon-calendar-o"></i>
             发表于
-            <time class="post-time" title="2018-04-22 22:03:47" datetime="2018-04-22T14:03:47.000Z"  itemprop="datePublished">2018-04-22</time>
+            <time class="post-time" title="2018-04-22 19:14:47" datetime="2018-04-22T11:14:47.000Z"  itemprop="datePublished">2018-04-22</time>
 
             <br id="mybreak"/>
             
@@ -219,17 +214,11 @@ media="screen" type="text/css">
             阅读本文可能花费您&nbsp;<span class="post-count">2</span>&nbsp;分钟
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h3 id="AJAX（异步JavaScript和xml）"><a href="#AJAX（异步JavaScript和xml）" class="headerlink" title="AJAX（异步JavaScript和xml）"></a>AJAX（异步JavaScript和xml）</h3><p>XML 指可扩展标记语言，被设计用来传输和存储数据<br>ajax主要就是利用window.xmlhttprequest对象来判断数据请求的状态<br>首先判断请求方法是get还是post，然后用该对象的open方法发送请求<br>通过该对象的readystatechange方法判断readystate==4和status==200是否成功<br>最后用该对象的send方法发送出去</p>
-<h3 id="处理AJAX并发请求："><a href="#处理AJAX并发请求：" class="headerlink" title="处理AJAX并发请求："></a>处理AJAX并发请求：</h3><p>1.串行<br>2.回调计数<br>3.jquery.$deferred() $when(xx).done(fun)</p>
-<h3 id="get和post的区别："><a href="#get和post的区别：" class="headerlink" title="get和post的区别："></a>get和post的区别：</h3><p>get是请求数据，post是提交数据<br>get大小是1024字节，post没有限制<br>post比get安全性高</p>
-<h3 id="http和https的区别："><a href="#http和https的区别：" class="headerlink" title="http和https的区别："></a>http和https的区别：</h3><p>https比http多了一层ssl安全协议<br>端口号不同<br>https不免费</p>
-<h3 id="HTTP1-0-HTTP1-1-HTTP2-0区别："><a href="#HTTP1-0-HTTP1-1-HTTP2-0区别：" class="headerlink" title="HTTP1.0,HTTP1.1,HTTP2.0区别："></a>HTTP1.0,HTTP1.1,HTTP2.0区别：</h3><p>请求时，1.0只能一个一个发送，1.1串行（长链接），2.0并行（多路复用）<br>1.1和2.0都有首部压缩<br>2.0协议解析为二进制</p>
-<h3 id="三次握手："><a href="#三次握手：" class="headerlink" title="三次握手："></a>三次握手：</h3><p>客户端向服务端发送SYN数据包(服务端确定客户端发送正常)<br>服务端向客户端发送SYN和ACK<br>(客户端确定服务端发送接受正常，自己发送正常，服务端确认客户端发送正常，自己接受正常)<br>客户端向服务端发送ACK(双方接受发送均正常)</p>
-<h3 id="四次挥手："><a href="#四次挥手：" class="headerlink" title="四次挥手："></a>四次挥手：</h3><p>客户端向服务端发送FIN和ACK<br>服务端像客户端发送ACK<br>服务端断开连接，向客户端发送FIN/ACK<br>客户端返回ACK</p>
-<h3 id="TCP和UDP区别："><a href="#TCP和UDP区别：" class="headerlink" title="TCP和UDP区别："></a>TCP和UDP区别：</h3><p>TCP需要建立连接，UDP不需要<br>TCP比UDP可靠<br>UDP比TCP效率高，节约网络开销</p>
-<h3 id="由于ajax受同源策略的限制："><a href="#由于ajax受同源策略的限制：" class="headerlink" title="由于ajax受同源策略的限制："></a>由于ajax受同源策略的限制：</h3><p>即域名，端口号，协议必须相同，所以ajax不能跨域</p>
-<h3 id="跨域的几种方法："><a href="#跨域的几种方法：" class="headerlink" title="跨域的几种方法："></a>跨域的几种方法：</h3><p>1.jsonp的原理：利用标签的src可跨域性，在url载入成功后执行回调函数获取数据<br>2.document.domain结合iframe标签<br>3.window.name结合iframe<br>4.h5的window.postmassage<br>5.资源共享</p>
-<h3 id="cookie-session-webstorage："><a href="#cookie-session-webstorage：" class="headerlink" title="cookie/session/webstorage："></a>cookie/session/webstorage：</h3><p>因为http是无状态的协议，所以session在服务端记录用户的状态，cookie在客户端记录用户的一些信息，并且不可跨域，定义在http的header字段中。cookie会存储一个sessionid用来识别session，大小有限制，过期了自动清理，session可以手动设置时间，localStorage会一直保存，需要手动清理，sessionstorage关闭窗口就没了，他俩只存储不会发送</p>
+            <p>今天遇到一个这样的面试题<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> MAP=&#123;</span><br><span class="line">		onclick:<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;,</span><br><span class="line">		curry:<span class="function"><span class="keyword">function</span> (<span class="params">val</span>) </span>&#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params">z</span>) </span>&#123;</span><br><span class="line">				<span class="keyword">return</span> val++ +z</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;		</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">var</span> getInfo=<span class="function"><span class="keyword">function</span> (<span class="params">val</span>) </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> MAP[val]</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">var</span> fn=getInfo(<span class="string">"curry"</span>)</span><br><span class="line">	<span class="keyword">var</span> a=fn(<span class="number">100</span>)</span><br><span class="line">	<span class="built_in">console</span>.log(a(<span class="number">200</span>))</span><br><span class="line">	<span class="built_in">console</span>.log(a(<span class="number">300</span>))</span><br><span class="line">	<span class="built_in">console</span>.log(fn(<span class="number">100</span>)(<span class="number">200</span>))</span><br><span class="line">	<span class="built_in">console</span>.log(getInfo(<span class="string">"curry"</span>)(<span class="number">300</span>))</span><br></pre></td></tr></table></figure></p>
+<p>第一眼看了之后，哇靠什么玩意儿！<br>耐着性子缕了一下，原来是这样：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> fn=getInfo(<span class="string">"curry"</span>)</span><br><span class="line"><span class="keyword">var</span> a=fn(<span class="number">100</span>)<span class="comment">//a=getInfo("curry")(100)</span></span><br></pre></td></tr></table></figure></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> getInfo=<span class="function"><span class="keyword">function</span> (<span class="params">val</span>) </span>&#123;</span><br><span class="line">		<span class="keyword">return</span> MAP[val]</span><br><span class="line">	&#125;   <span class="comment">//getInfo("curry")=&gt;MAP["curry"]</span></span><br><span class="line">        <span class="comment">//=&gt;fn=MAP.curry</span></span><br><span class="line">        <span class="comment">//=&gt;a=MAP.curry(100)</span></span><br></pre></td></tr></table></figure>
+<p>所以fn就是MAP.curry这个函数<br>a就是MAP.curry(100)<br>接下来我们看MAP.curry这个函数里写了什么<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> MAP=&#123;</span><br><span class="line">		onclick:<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;,</span><br><span class="line">		curry:<span class="function"><span class="keyword">function</span> (<span class="params">val</span>) </span>&#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params">z</span>) </span>&#123;<span class="comment">//很明显的一个闭包啊！</span></span><br><span class="line">				<span class="keyword">return</span> val++ +z<span class="comment">//所以a就是val=100的function (z) &#123;return val++ +z&#125;</span></span><br><span class="line">			&#125;</span><br><span class="line">		&#125;		</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure></p>
+<p>我们知道在运算中会遵循这个规则：<br>a++ +b=&gt;(a+b)++<br>而++在后面，只有执行完这一行才能真正加上去<br>在这道题中我们可以知道在这个++还没来得及加上去之后就已经被return了<br>所以a中保存的这个函数中的val=100<br>当a(200)时我们传的参数为200，加上初始100，等于300，然后还有一个val++，这时val=101了。<br>但是因为被return出去了，所以这个后置加加并没有对返回结果造成影响<br>当a(300)是相当于return (101+300)++所以结果为401 val=102<br>当fn(100)(200)相当于val=100,z=200,结果为300（这里为什么没有闭包呢，就是因为fn()的返回值没有被外部接收呀，所以不构成闭包）<br>getInfo(“curry”)(300)相当于只执行了MAP.curry函数，返回值是这个函数<br>所以答案是：<br><img src="/2018/04/22/有趣的面试题之一/answer.png"></p>
 
         </div>
 
@@ -237,7 +226,7 @@ media="screen" type="text/css">
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2018-04-23T01:08:37.960Z" itemprop="dateUpdated">2018-04-23 09:08:37</time>
+    Last updated: <time datetime="2018-04-23T11:13:05.754Z" itemprop="dateUpdated">2018-04-23 19:13:05</time>
 </span>
 
 
@@ -256,7 +245,7 @@ media="screen" type="text/css">
 
         <div class="post-footer">
             
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/网络/">网络</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/面试/">面试</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/面试/">面试</a></li></ul>
 
 
             
@@ -269,20 +258,14 @@ media="screen" type="text/css">
 <nav class="post-nav flex-row flex-justify-between">
   
     <div class="waves-block waves-effect prev">
-      <a href="/2018/04/22/前端面试总结3/" id="post-prev" class="post-nav-link">
+      <a href="/2018/04/22/其他/" id="post-prev" class="post-nav-link">
         <h4 class="title" >
-          上一篇：面试总结之js
+          上一篇：关于框架/设计模式那些
         </h4>
       </a>
     </div>
   
 
-  
-    <div class="waves-block waves-effect next">
-      <a href="/2018/04/22/前端面试总结1/" id="post-next" class="post-nav-link">
-        <h4 class="title" data-hover="下一篇：面试总结之html/css">下一篇：面试总结之html/css</h4>
-      </a>
-    </div>
   
 </nav>
 

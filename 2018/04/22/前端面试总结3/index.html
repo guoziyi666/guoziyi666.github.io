@@ -47,7 +47,7 @@
 <meta property="og:site_name" content="Welcome">
 <meta property="og:description" content="js的特点：脚本语言解释性单线程 数据类型：基本类型number string undefined null boolen（在栈中，可以直接访问）引用类型object function array date regexp（在堆中，实际存放了一个指针，操作是对引用的操作） 变量声明提升,函数声明提升：在js中所有声明都会提升在顶部，赋值不提升。函数声明提升在变量声明提升之前，变量声明不会覆盖函数声明">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-04-22T14:06:47.786Z">
+<meta property="og:updated_time" content="2018-04-23T01:26:25.603Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="面试总结之js">
 <meta name="twitter:description" content="js的特点：脚本语言解释性单线程 数据类型：基本类型number string undefined null boolen（在栈中，可以直接访问）引用类型object function array date regexp（在堆中，实际存放了一个指针，操作是对引用的操作） 变量声明提升,函数声明提升：在js中所有声明都会提升在顶部，赋值不提升。函数声明提升在变量声明提升之前，变量声明不会覆盖函数声明">
@@ -216,12 +216,12 @@ media="screen" type="text/css">
         </div>
         <div class="post-count-custom">
             <i class="icon icon-lg icon-comment-o"></i>
-            阅读本文可能花费您&nbsp;<span class="post-count">4</span>&nbsp;分钟
+            阅读本文可能花费您&nbsp;<span class="post-count">5</span>&nbsp;分钟
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
             <h3 id="js的特点："><a href="#js的特点：" class="headerlink" title="js的特点："></a>js的特点：</h3><p>脚本语言解释性单线程</p>
 <h3 id="数据类型："><a href="#数据类型：" class="headerlink" title="数据类型："></a>数据类型：</h3><p>基本类型number string undefined null boolen（在栈中，可以直接访问）<br>引用类型object function array date regexp（在堆中，实际存放了一个指针，操作是对引用的操作）</p>
-<h3 id="变量声明提升-函数声明提升："><a href="#变量声明提升-函数声明提升：" class="headerlink" title="变量声明提升,函数声明提升："></a>变量声明提升,函数声明提升：</h3><p>在js中所有声明都会提升在顶部，赋值不提升。函数声明提升在变量声明提升之前，变量声明不会覆盖函数声明。但是赋值会覆盖。</p>
+<h3 id="变量声明提升-函数声明提升："><a href="#变量声明提升-函数声明提升：" class="headerlink" title="变量声明提升,函数声明提升："></a>变量声明提升,函数声明提升：</h3><p>在js中所有声明都会提升在顶部，赋值不提升。函数声明提升在变量声明提升之前，变量声明不会覆盖函数声明。但是赋值会覆盖。判断同名函数声明和变量声明在使用前是否有赋值语句</p>
 <h3 id="作用域链，闭包"><a href="#作用域链，闭包" class="headerlink" title="作用域链，闭包"></a>作用域链，闭包</h3><p>作用域链是指js中内部函数可以访问外部函数中的变量，外部不能访问内部。当一个函数执行之前会创建一个对象存储函数的变量，然后挂载在作用域链中。<br>如果一个内部函数被作为一个返回值返回，那么外部函数虽然被销毁了，内部函数却不会被销毁并且依然会保存外部函数执行器上下文，这样就形成了闭包。</p>
 <h3 id="闭包的优缺点："><a href="#闭包的优缺点：" class="headerlink" title="闭包的优缺点："></a>闭包的优缺点：</h3><p>优点是由于外部不能访问内部，所以可以设计私有的方法和变量。方便调用上下文变量<br>缺点就是会导致内存泄漏</p>
 <h3 id="事件冒泡事件捕获："><a href="#事件冒泡事件捕获：" class="headerlink" title="事件冒泡事件捕获："></a>事件冒泡事件捕获：</h3><p>当一个事件源本身无法处理该事件的时候，会将该事件逐层向外传递就是事件冒泡<br>事件捕获是事件冒泡相反的顺序</p>
@@ -235,7 +235,8 @@ media="screen" type="text/css">
 <h3 id="深拷贝浅拷贝（-Object-assign-是浅拷贝）"><a href="#深拷贝浅拷贝（-Object-assign-是浅拷贝）" class="headerlink" title="深拷贝浅拷贝（ Object.assign()是浅拷贝）"></a>深拷贝浅拷贝（ Object.assign()是浅拷贝）</h3><p>浅拷贝只复制了一层拷贝，即只复制了简单类型<br>深拷贝是层级赋值，遍历所有对象进行复制</p>
 <h3 id="箭头函数"><a href="#箭头函数" class="headerlink" title="箭头函数:"></a>箭头函数:</h3><p>箭头函数中的this是定义是所在的对象</p>
 <h3 id="匿名函数优缺点："><a href="#匿名函数优缺点：" class="headerlink" title="匿名函数优缺点："></a>匿名函数优缺点：</h3><p>优点：不会污染全局变量<br>缺点：绑定事件时无法解绑</p>
-<h3 id="let和const"><a href="#let和const" class="headerlink" title="let和const"></a>let和const</h3><p>let:块级作用域只在该块区域有效，可以阻止闭包，会导致暂时性死域（如果有全局的变量同名，那么不论在let前后永远都无法访问全局变量），一个区域不接受同名变量<br>const:声明一个只读的常量，如果是一个对象可以正常的进行添加属性</p>
+<h3 id="let和const"><a href="#let和const" class="headerlink" title="let和const"></a>let和const</h3><p>let:块级作用域只在该块区域有效，可以阻止闭包，会导致暂时性死域（如果有全局的变量同名，那么不论在let前后永远都无法访问全局变量），一个区域不接受同名变量<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a=<span class="number">3</span></span><br><span class="line">	<span class="function"><span class="keyword">function</span> <span class="title">n</span>(<span class="params">argument</span>) </span>&#123;</span><br><span class="line">		<span class="built_in">console</span>.log(a)</span><br><span class="line">		<span class="keyword">let</span> a=<span class="number">4</span></span><br><span class="line">        <span class="built_in">console</span>.log(a)</span><br><span class="line">	&#125;</span><br><span class="line">    n();<span class="comment">//undefined undefined</span></span><br></pre></td></tr></table></figure></p>
+<p>const:声明一个只读的常量，如果是一个对象可以正常的进行添加属性</p>
 <h3 id="继承："><a href="#继承：" class="headerlink" title="继承："></a>继承：</h3><p>1.es6中的class extend继承<br>2.原型链：通过new父级构造函数的方式，并且prototype改为父级，这样自己可以访问所有父级的所有属性（浪费）<br>3.用call和apply写构造函数<br>4.共享原型：prototype相同（无法更改，一个改都改了）<br>5.圣杯模型：创建一个空函数，空函数的原型等于父级原型，子级的原型等于new这个空函数。这样两者修改原型不会受影响。修改原型上构造函数为自身，保存一下原型uber为父级</p>
 <h3 id="call-apply-bind"><a href="#call-apply-bind" class="headerlink" title="call/apply/bind"></a>call/apply/bind</h3><p>改变this指向，传参不同（可以实现一个对象调用另一个对象的方法），call一个个传，apply传数组，并且他俩立即执行，bind返回的是一个函数，可以手动执行</p>
 <h3 id="DOM-BOM："><a href="#DOM-BOM：" class="headerlink" title="DOM/BOM："></a>DOM/BOM：</h3><p>dom：文档对象模型。将文档当做对象看，用来获取或设置文档中标签的属性。<br>bom：浏览器对象模型。将浏览器当做对象看，用来获取或设置浏览器的属性。</p>
@@ -249,7 +250,7 @@ media="screen" type="text/css">
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2018-04-22T14:06:47.786Z" itemprop="dateUpdated">2018-04-22 22:06:47</time>
+    Last updated: <time datetime="2018-04-23T01:26:25.603Z" itemprop="dateUpdated">2018-04-23 09:26:25</time>
 </span>
 
 
