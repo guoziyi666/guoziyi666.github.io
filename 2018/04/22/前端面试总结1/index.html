@@ -47,7 +47,7 @@
 <meta property="og:site_name" content="Welcome">
 <meta property="og:description" content="行级元素：a b br em span i input 内容决定宽高，不可以改变 块级元素:div ul ol h1-h6 table p  占满整行，可以改变宽高 inline-block：内容决定占位，可以改变宽高 nodetype的值：元素节点：1属性节点：2文本节点：3 兼容h5的方法：创建一个以标签名命名的数组，在一个立即执行函数中构造出来所有标签，并设为块级元素 引入css的几种方式：">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-04-22T14:02:11.500Z">
+<meta property="og:updated_time" content="2018-04-23T00:09:57.353Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="面试总结之html&#x2F;css">
 <meta name="twitter:description" content="行级元素：a b br em span i input 内容决定宽高，不可以改变 块级元素:div ul ol h1-h6 table p  占满整行，可以改变宽高 inline-block：内容决定占位，可以改变宽高 nodetype的值：元素节点：1属性节点：2文本节点：3 兼容h5的方法：创建一个以标签名命名的数组，在一个立即执行函数中构造出来所有标签，并设为块级元素 引入css的几种方式：">
@@ -156,7 +156,7 @@ media="screen" type="text/css">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="検索">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Búsqueda">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -216,7 +216,7 @@ media="screen" type="text/css">
         </div>
         <div class="post-count-custom">
             <i class="icon icon-lg icon-comment-o"></i>
-            阅读本文可能花费您&nbsp;<span class="post-count">2</span>&nbsp;分钟
+            阅读本文可能花费您&nbsp;<span class="post-count">3</span>&nbsp;分钟
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
             <h3 id="行级元素："><a href="#行级元素：" class="headerlink" title="行级元素："></a>行级元素：</h3><p>a b br em span i input 内容决定宽高，不可以改变</p>
@@ -233,7 +233,7 @@ media="screen" type="text/css">
 <h3 id="bfc作用："><a href="#bfc作用：" class="headerlink" title="bfc作用："></a>bfc作用：</h3><p>阻止margin塌陷</p>
 <h3 id="margin塌陷合并："><a href="#margin塌陷合并：" class="headerlink" title="margin塌陷合并："></a>margin塌陷合并：</h3><p>垂直合并：上面元素的bottom和下面元素的top会选择大的那个<br>父子塌陷：嵌套元素中，如果设置子元素top，父元素会被top子元素不动</p>
 <h3 id="清除浮动的方法："><a href="#清除浮动的方法：" class="headerlink" title="清除浮动的方法："></a>清除浮动的方法：</h3><p>增加一个空元素clear：both<br>父级加伪类（before、after）clear:both;content:””;display:block;<br>父级：overflow：auto;</p>
-<h3 id="两栏布局："><a href="#两栏布局：" class="headerlink" title="两栏布局："></a>两栏布局：</h3><p>1.左侧固定：左侧左浮动 右侧margin，宽度100%<br>2.右侧固定：左侧左浮动右侧右浮动，左侧margin-的，左侧宽度100%</p>
+<h3 id="两栏布局："><a href="#两栏布局：" class="headerlink" title="两栏布局："></a>两栏布局：</h3><p>1.左侧固定：左侧左浮动 右侧margin，宽度100%<br>2.右侧固定：左侧左浮动右侧右浮动，左侧margin-的，左侧宽度100%<br>在静态元素 并且固定宽时，top 或left的负值是正常人理解的向上或向左x值，而bottom或right的负值是让其下边的兄弟元素向上x值。</p>
 <h3 id="三栏布局：-中间的标签在最后"><a href="#三栏布局：-中间的标签在最后" class="headerlink" title="三栏布局：(中间的标签在最后)"></a>三栏布局：(中间的标签在最后)</h3><p>1.左右浮动，中间设margin<br>2.左右absolute为0，中间设margin</p>
 <h3 id="水平垂直居中一个元素："><a href="#水平垂直居中一个元素：" class="headerlink" title="水平垂直居中一个元素："></a>水平垂直居中一个元素：</h3><p>1.position：absolute<br>    left：50%；<br>    top：50%；<br>    margin-left：-宽度一半<br>    margin-top：-高度一半<br>2.position：absolute；<br>    margin:auto;<br>    left:0;<br>    right:0;<br>    top:0;<br>    bottom:0;<br>3.position:absolute;<br>    left:50%;<br>    top:50%;<br>    transform:translate(-50%,-50%);<br>4.父级：display：flex；<br>        justify-content：center；</p>
 <h3 id="position的区别："><a href="#position的区别：" class="headerlink" title="position的区别："></a>position的区别：</h3><p>absolute：基于第一个非static的父级定位<br>relative：基于原来位置定位<br>fiexd：相对于视口进行定位（不兼容的话使用js计算滚动的距离手动实现）</p>
@@ -249,7 +249,7 @@ media="screen" type="text/css">
     <div class="content">
         
 <span class="post-time">
-    最終更新：<time datetime="2018-04-22T14:02:11.500Z" itemprop="dateUpdated">2018-04-22 22:02:11</time>
+    Última actualización<time datetime="2018-04-23T00:09:57.353Z" itemprop="dateUpdated">2018-04-23 08:09:57</time>
 </span>
 
 
@@ -337,7 +337,7 @@ media="screen" type="text/css">
         </span>
         <br/>
 
-        <span class="license">このブログの内容物は<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ja">クリエイティブ・コモンズ 表示 - 非営利 - 継承 4.0 国際ライセンスの下に提供されています</a></span>
+        <span class="license">Este blog está licenciado bajo una <a rel="license" rel="external nofollow" href="https://creativecommons.org/licenses/by/4.0/">licencia internacional Creative Commons Attribution 4.0</a>.</span>
     </div>
 </footer>
 
