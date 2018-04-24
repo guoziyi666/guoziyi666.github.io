@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-04-24T08:46:26.681Z</updated>
+  <updated>2018-04-24T11:31:35.359Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,13 +17,39 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>AJAX</title>
+    <link href="http://yoursite.com/2018/04/24/AJAX/"/>
+    <id>http://yoursite.com/2018/04/24/AJAX/</id>
+    <published>2018-04-24T11:29:47.000Z</published>
+    <updated>2018-04-24T11:31:35.359Z</updated>
+    
+    <content type="html"><![CDATA[<p>什么是ajax：<br>AJAX是“Asynchronous JavaScript and XML”的缩写，异步JavaScript和xml</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;什么是ajax：&lt;br&gt;AJAX是“Asynchronous JavaScript and XML”的缩写，异步JavaScript和xml&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+      <category term="AJAX" scheme="http://yoursite.com/categories/AJAX/"/>
+    
+    
+      <category term="AJAX" scheme="http://yoursite.com/tags/AJAX/"/>
+    
+  </entry>
+  
+  <entry>
     <title>面试总结之js</title>
     <link href="http://yoursite.com/2018/04/22/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%933/"/>
     <id>http://yoursite.com/2018/04/22/前端面试总结3/</id>
     <published>2018-04-22T14:04:47.000Z</published>
-    <updated>2018-04-24T08:46:26.681Z</updated>
+    <updated>2018-04-24T11:12:50.597Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="js的特点："><a href="#js的特点：" class="headerlink" title="js的特点："></a>js的特点：</h3><p>脚本语言解释性单线程</p><h3 id="数据类型："><a href="#数据类型：" class="headerlink" title="数据类型："></a>数据类型：</h3><p>基本类型number string undefined null boolen（在栈中，可以直接访问）<br>引用类型object function array date regexp（在堆中，实际存放了一个指针，操作是对引用的操作）</p><h3 id="变量声明提升-函数声明提升："><a href="#变量声明提升-函数声明提升：" class="headerlink" title="变量声明提升,函数声明提升："></a>变量声明提升,函数声明提升：</h3><p>在js中所有声明都会提升在顶部，赋值不提升。函数声明提升在变量声明提升之前，变量声明不会覆盖函数声明。但是赋值会覆盖。判断同名函数声明和变量声明在使用前是否有赋值语句</p><h3 id="作用域链，闭包"><a href="#作用域链，闭包" class="headerlink" title="作用域链，闭包"></a>作用域链，闭包</h3><p>作用域链是指js中内部函数可以访问外部函数中的变量，外部不能访问内部。当一个函数执行之前会创建一个对象存储函数的变量，然后挂载在作用域链中。<br>如果一个内部函数被作为一个返回值返回，那么外部函数虽然被销毁了，内部函数却不会被销毁并且依然会保存外部函数执行器上下文，这样就形成了闭包。</p><h3 id="闭包的优缺点："><a href="#闭包的优缺点：" class="headerlink" title="闭包的优缺点："></a>闭包的优缺点：</h3><p>优点是由于外部不能访问内部，所以可以设计私有的方法和变量。方便调用上下文变量<br>缺点就是会导致内存泄漏</p><h3 id="事件冒泡事件捕获："><a href="#事件冒泡事件捕获：" class="headerlink" title="事件冒泡事件捕获："></a>事件冒泡事件捕获：</h3><p>当一个事件源本身无法处理该事件的时候，会将该事件逐层向外传递就是事件冒泡<br>事件捕获是事件冒泡相反的顺序</p><h3 id="事件监听："><a href="#事件监听：" class="headerlink" title="事件监听："></a>事件监听：</h3><p>标准浏览器：addEventListener()/removeEventListener()<br>ie:attachEvent()/detachEvent()<br>句柄绑定：onclick=function（）{}</p><h3 id="事件对象和目标对象："><a href="#事件对象和目标对象：" class="headerlink" title="事件对象和目标对象："></a>事件对象和目标对象：</h3><p>标准浏览器：event    event.target<br>ie：window.event     window.event.srcElement<br>target指向触发事件的对象，currentTarget指向处理事件的对象</p><h3 id="阻止默认事件："><a href="#阻止默认事件：" class="headerlink" title="阻止默认事件："></a>阻止默认事件：</h3><p>标准：preventDafult<br>ie：returnValue=false</p><h3 id="阻止事件冒泡："><a href="#阻止事件冒泡：" class="headerlink" title="阻止事件冒泡："></a>阻止事件冒泡：</h3><p>标准：event.stopPropagation()<br>ie:window.event.cancelBubble()</p><h3 id="自执行函数"><a href="#自执行函数" class="headerlink" title="自执行函数"></a>自执行函数</h3><p>js中表达式是立即执行的，如果我们把一个函数变成一个表达式，就是自执行函数，不需要调用直接执行。自执行函数内部作用域受保护，所以一般可以用作命名空间，如jquery。也可以用来处理闭包问题</p><h3 id="遍历数组的方法："><a href="#遍历数组的方法：" class="headerlink" title="遍历数组的方法："></a>遍历数组的方法：</h3><p>for,for in,for each(不支持break)</p><h3 id="合并数组："><a href="#合并数组：" class="headerlink" title="合并数组："></a>合并数组：</h3><p>…<br>concat</p><h3 id="深拷贝浅拷贝（-Object-assign-是浅拷贝）"><a href="#深拷贝浅拷贝（-Object-assign-是浅拷贝）" class="headerlink" title="深拷贝浅拷贝（ Object.assign()是浅拷贝）"></a>深拷贝浅拷贝（ Object.assign()是浅拷贝）</h3><p>浅拷贝只复制了一层拷贝，即只复制了简单类型<br>深拷贝是层级赋值，遍历所有对象进行复制</p><h3 id="箭头函数"><a href="#箭头函数" class="headerlink" title="箭头函数:"></a>箭头函数:</h3><p>箭头函数中的this是定义是所在的对象</p><h3 id="匿名函数优缺点："><a href="#匿名函数优缺点：" class="headerlink" title="匿名函数优缺点："></a>匿名函数优缺点：</h3><p>优点：不会污染全局变量<br>缺点：绑定事件时无法解绑</p><h3 id="let和const"><a href="#let和const" class="headerlink" title="let和const"></a>let和const</h3><p>let:块级作用域只在该块区域有效，可以阻止闭包，会导致暂时性死域（如果有全局的变量同名，那么不论在let前后永远都无法访问全局变量），一个区域不接受同名变量<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a=<span class="number">3</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">n</span>(<span class="params">argument</span>) </span>&#123;</span><br><span class="line"><span class="built_in">console</span>.log(a)</span><br><span class="line"><span class="keyword">let</span> a=<span class="number">4</span></span><br><span class="line">        <span class="built_in">console</span>.log(a)</span><br><span class="line">&#125;</span><br><span class="line">    n();<span class="comment">//undefined undefined</span></span><br></pre></td></tr></table></figure></p><p>const:声明一个只读的常量，如果是一个对象可以正常的进行添加属性</p><h3 id="继承："><a href="#继承：" class="headerlink" title="继承："></a>继承：</h3><p>1.es6中的class extend继承<br>2.原型链：通过new父级构造函数的方式，并且prototype改为父级，这样自己可以访问所有父级的所有属性（浪费）<br>3.用call和apply写构造函数<br>4.共享原型：prototype相同（无法更改，一个改都改了）<br>5.圣杯模型：创建一个空函数，空函数的原型等于父级原型，子级的原型等于new这个空函数。这样两者修改原型不会受影响。修改原型上构造函数为自身，保存一下原型uber为父级</p><h3 id="call-apply-bind"><a href="#call-apply-bind" class="headerlink" title="call/apply/bind"></a>call/apply/bind</h3><p>改变this指向，传参不同（可以实现一个对象调用另一个对象的方法），call一个个传，apply传数组，并且他俩立即执行，bind返回的是一个函数，可以手动执行</p><h3 id="DOM-BOM："><a href="#DOM-BOM：" class="headerlink" title="DOM/BOM："></a>DOM/BOM：</h3><p>dom：文档对象模型。将文档当做对象看，用来获取或设置文档中标签的属性。<br>bom：浏览器对象模型。将浏览器当做对象看，用来获取或设置浏览器的属性。</p><h3 id="异步方法："><a href="#异步方法：" class="headerlink" title="异步方法："></a>异步方法：</h3><p>1.计时器和回调函数，<br>2.jquery的$deferred() when().done()<br>3.promise<br>4.defer/async异步加载脚本<br>5.generator ：用function*创建函数 yield中写每一步的操作。实例对象.next()执行</p><h3 id="原型："><a href="#原型：" class="headerlink" title="原型："></a>原型：</h3><p>prototype是函数特有的属性，<strong>proto</strong>是所有对象的属性。<br>js中万物皆对象，所以一切对象都有这个隐式原型<strong>proto</strong><br>隐式原型指向构造该对象的构造函数的原型</p><h3 id="promise："><a href="#promise：" class="headerlink" title="promise："></a>promise：</h3><p>用同步的方法去写异步，三种状态 进行 成功 失败<br>在构造函数中决定promise对象的状态，然后通过then方法中传的两个函数，成功的函数和失败的函数进行链式调用。<br>promise.all()并行执行多个异步操作，传递一个promise对象实例数组，数组中有一个失败则都失败给catch()处理</p>]]></content>
+    <content type="html"><![CDATA[<h3 id="js的特点："><a href="#js的特点：" class="headerlink" title="js的特点："></a>js的特点：</h3><p>脚本语言解释性单线程</p><h3 id="数据类型："><a href="#数据类型：" class="headerlink" title="数据类型："></a>数据类型：</h3><p>基本类型number string undefined null boolen（在栈中，可以直接访问）<br>引用类型object function array date regexp（在堆中，实际存放了一个指针，操作是对引用的操作）</p><h3 id="变量声明提升-函数声明提升："><a href="#变量声明提升-函数声明提升：" class="headerlink" title="变量声明提升,函数声明提升："></a>变量声明提升,函数声明提升：</h3><p>在js中所有声明都会提升在顶部，赋值不提升。函数声明提升在变量声明提升之前，变量声明不会覆盖函数声明。但是赋值会覆盖。判断同名函数声明和变量声明在使用前是否有赋值语句</p><h3 id="作用域链，闭包"><a href="#作用域链，闭包" class="headerlink" title="作用域链，闭包"></a>作用域链，闭包</h3><p>作用域链是指js中内部函数可以访问外部函数中的变量，外部不能访问内部。当一个函数执行之前会创建一个对象存储函数的变量，然后挂载在作用域链中。<br>如果一个内部函数被作为一个返回值返回，那么外部函数虽然被销毁了，内部函数却不会被销毁并且依然会保存外部函数执行器上下文，这样就形成了闭包。如果这个函数被返回后但是没有被接收，那么这个闭包也没有意义。</p><h3 id="闭包的优缺点："><a href="#闭包的优缺点：" class="headerlink" title="闭包的优缺点："></a>闭包的优缺点：</h3><p>优点是由于外部不能访问内部，所以可以设计私有的方法和变量。方便调用上下文变量<br>缺点就是会导致内存泄漏</p><h3 id="事件冒泡事件捕获："><a href="#事件冒泡事件捕获：" class="headerlink" title="事件冒泡事件捕获："></a>事件冒泡事件捕获：</h3><p>当一个事件源本身无法处理该事件的时候，会将该事件逐层向外传递就是事件冒泡<br>事件捕获是事件冒泡相反的顺序</p><h3 id="事件监听："><a href="#事件监听：" class="headerlink" title="事件监听："></a>事件监听：</h3><p>标准浏览器：addEventListener()/removeEventListener()<br>ie:attachEvent()/detachEvent()<br>句柄绑定：onclick=function（）{}</p><h3 id="事件对象和目标对象："><a href="#事件对象和目标对象：" class="headerlink" title="事件对象和目标对象："></a>事件对象和目标对象：</h3><p>标准浏览器：event    event.target<br>ie：window.event     window.event.srcElement<br>target指向触发事件的对象，currentTarget指向处理事件的对象</p><h3 id="阻止默认事件："><a href="#阻止默认事件：" class="headerlink" title="阻止默认事件："></a>阻止默认事件：</h3><p>标准：preventDafult<br>ie：returnValue=false</p><h3 id="阻止事件冒泡："><a href="#阻止事件冒泡：" class="headerlink" title="阻止事件冒泡："></a>阻止事件冒泡：</h3><p>标准：event.stopPropagation()<br>ie:window.event.cancelBubble()</p><h3 id="自执行函数"><a href="#自执行函数" class="headerlink" title="自执行函数"></a>自执行函数</h3><p>js中表达式是立即执行的，如果我们把一个函数变成一个表达式，就是自执行函数，不需要调用直接执行。自执行函数内部作用域受保护，所以一般可以用作命名空间，如jquery。也可以用来处理闭包问题</p><h3 id="遍历数组的方法："><a href="#遍历数组的方法：" class="headerlink" title="遍历数组的方法："></a>遍历数组的方法：</h3><p>for,for in,for each(不支持break)</p><h3 id="合并数组："><a href="#合并数组：" class="headerlink" title="合并数组："></a>合并数组：</h3><p>…<br>concat</p><h3 id="深拷贝浅拷贝（-Object-assign-是浅拷贝）"><a href="#深拷贝浅拷贝（-Object-assign-是浅拷贝）" class="headerlink" title="深拷贝浅拷贝（ Object.assign()是浅拷贝）"></a>深拷贝浅拷贝（ Object.assign()是浅拷贝）</h3><p>浅拷贝只复制了一层拷贝，即只复制了简单类型<br>深拷贝是层级赋值，遍历所有对象进行复制</p><h3 id="箭头函数"><a href="#箭头函数" class="headerlink" title="箭头函数:"></a>箭头函数:</h3><p>箭头函数中的this是定义是所在的对象，箭头函数是匿名函数的，所以要注意变量声明提升的问题哦</p><h3 id="匿名函数优缺点："><a href="#匿名函数优缺点：" class="headerlink" title="匿名函数优缺点："></a>匿名函数优缺点：</h3><p>优点：不会污染全局变量<br>缺点：绑定事件时无法解绑</p><h3 id="let和const"><a href="#let和const" class="headerlink" title="let和const"></a>let和const</h3><p>let:块级作用域只在该块区域有效，可以阻止闭包，会导致暂时性死域（如果有全局的变量同名，那么不论在let前后永远都无法访问全局变量），一个区域不接受同名变量<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a=<span class="number">3</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">n</span>(<span class="params">argument</span>) </span>&#123;</span><br><span class="line"><span class="built_in">console</span>.log(a)</span><br><span class="line"><span class="keyword">let</span> a=<span class="number">4</span></span><br><span class="line">        <span class="built_in">console</span>.log(a)</span><br><span class="line">&#125;</span><br><span class="line">    n();<span class="comment">//undefined undefined</span></span><br></pre></td></tr></table></figure></p><p>const:声明一个只读的常量，如果是一个对象可以正常的进行添加属性</p><h3 id="继承："><a href="#继承：" class="headerlink" title="继承："></a>继承：</h3><p>1.es6中的class extend继承<br>2.原型链：通过new父级构造函数的方式，并且prototype改为父级，这样自己可以访问所有父级的所有属性（浪费）<br>3.用call和apply写构造函数<br>4.共享原型：prototype相同（无法更改，一个改都改了）<br>5.圣杯模型：创建一个空函数，空函数的原型等于父级原型，子级的原型等于new这个空函数。这样两者修改原型不会受影响。修改原型上构造函数为自身，保存一下原型uber为父级</p><h3 id="call-apply-bind"><a href="#call-apply-bind" class="headerlink" title="call/apply/bind"></a>call/apply/bind</h3><p>改变this指向，传参不同（可以实现一个对象调用另一个对象的方法），call一个个传，apply传数组，并且他俩立即执行，bind返回的是一个函数，可以手动执行</p><h3 id="DOM-BOM："><a href="#DOM-BOM：" class="headerlink" title="DOM/BOM："></a>DOM/BOM：</h3><p>dom：文档对象模型。将文档当做对象看，用来获取或设置文档中标签的属性。<br>bom：浏览器对象模型。将浏览器当做对象看，用来获取或设置浏览器的属性。</p><h3 id="异步方法："><a href="#异步方法：" class="headerlink" title="异步方法："></a>异步方法：</h3><p>1.计时器和回调函数，<br>2.jquery的$deferred() when().done()<br>3.promise<br>4.defer/async异步加载脚本<br>5.generator ：用function*创建函数 yield中写每一步的操作。实例对象.next()执行</p><h3 id="原型："><a href="#原型：" class="headerlink" title="原型："></a>原型：</h3><p>prototype是函数特有的属性，<strong>proto</strong>是所有对象的属性。<br>js中万物皆对象，所以一切对象都有这个隐式原型<strong>proto</strong><br>隐式原型指向构造该对象的构造函数的原型</p><h3 id="解构赋值："><a href="#解构赋值：" class="headerlink" title="解构赋值："></a>解构赋值：</h3><p>es6允许按照一定的模式，从数组和对象中提取值，对变量进行赋值，这被称之为解构赋值。</p><h3 id="数组的解构赋值："><a href="#数组的解构赋值：" class="headerlink" title="数组的解构赋值："></a>数组的解构赋值：</h3><p>只要按照对应的位置进行赋值，我们可以任意嵌套。当然如果等式右边不是数组则会报错，如果解构失败的话，值为undefined</p><h3 id="解构赋值与允许执行默认值"><a href="#解构赋值与允许执行默认值" class="headerlink" title="解构赋值与允许执行默认值"></a>解构赋值与允许执行默认值</h3><p>只有数组的值严格等于undefined，才会被赋予默认值，否则即使是null和false也会被正常赋值。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> [a,b=<span class="number">2</span>] = [<span class="number">1</span>];</span><br></pre></td></tr></table></figure></p><h3 id="对象的解构赋值："><a href="#对象的解构赋值：" class="headerlink" title="对象的解构赋值："></a>对象的解构赋值：</h3><p>对象的解构赋值和数组的解构赋值的区别在于：数组的元素是按照次序排序的，因此它们赋值也是按照顺序赋值的，但是对象的属性是没有次序的，变量必须与属性同名，才会被赋值。<br>{a:demo} = {a:123};</p><h3 id="解构赋值的作用："><a href="#解构赋值的作用：" class="headerlink" title="解构赋值的作用："></a>解构赋值的作用：</h3><p>1.交换变量：[a,b]=[b,a]<br>2.函数可以有多个返回值：return [1,2,3]<br>3.函数参数的定义：function a({x,y}){}<br>4.获取json数据：let { id, status, data: number } = json;</p><h3 id="promise："><a href="#promise：" class="headerlink" title="promise："></a>promise：</h3><p>用同步的方法去写异步，三种状态 进行 成功 失败<br>在构造函数中决定promise对象的状态，然后通过then方法中传的两个函数，成功的函数和失败的函数进行链式调用。<br>promise.all()并行执行多个异步操作，传递一个promise对象实例数组，数组中有一个失败则都失败给catch()处理</p><h3 id="generator："><a href="#generator：" class="headerlink" title="generator："></a>generator：</h3><p>es6新增的生成器，也是一种异步实现的方案<br>创建 generator 函数，会得到一个 iterator 的 遍历器，可以调用 next() 方法<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> * <span class="title">a</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="keyword">yield</span> <span class="number">1</span>;</span><br><span class="line"><span class="keyword">yield</span> <span class="number">2</span>;</span><br><span class="line"><span class="keyword">yield</span> <span class="number">3</span>;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> test=<span class="keyword">new</span> a();</span><br><span class="line"><span class="built_in">console</span>.log(text.next())<span class="comment">//1</span></span><br><span class="line"><span class="built_in">console</span>.log(text.next())<span class="comment">//2</span></span><br><span class="line"><span class="built_in">console</span>.log(text.next())<span class="comment">//3</span></span><br><span class="line"><span class="built_in">console</span>.log(text.next())<span class="comment">//0</span></span><br><span class="line"><span class="built_in">console</span>.log(text.next())<span class="comment">//undefined</span></span><br></pre></td></tr></table></figure></p><h3 id="iterator"><a href="#iterator" class="headerlink" title="iterator:"></a>iterator:</h3><p>es6新增的遍历器。可以遍历数组，map，set这些结构<br>数组：arrIterator<br>arr<a href="">Symbol.iterator</a><br>map:mapIterator<br>map<a href="">Symbol.iterator</a><br>set:setIterator<br>set<a href="">Symbol.iterator</a><br>注意：数组使用iterator时使用的是实例的对象<a href="">Symbol.iterator</a><br>map和set是使用map，set类型<a href="">Symbol.iterator</a></p>]]></content>
     
     <summary type="html">
     
@@ -38,9 +64,9 @@
       <category term="面试" scheme="http://yoursite.com/categories/%E9%9D%A2%E8%AF%95/"/>
     
     
-      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
-    
       <category term="面试" scheme="http://yoursite.com/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
     
   </entry>
   
@@ -93,11 +119,64 @@
       <category term="面试" scheme="http://yoursite.com/categories/%E9%9D%A2%E8%AF%95/"/>
     
     
+      <category term="面试" scheme="http://yoursite.com/tags/%E9%9D%A2%E8%AF%95/"/>
+    
       <category term="html" scheme="http://yoursite.com/tags/html/"/>
     
       <category term="css" scheme="http://yoursite.com/tags/css/"/>
     
+  </entry>
+  
+  <entry>
+    <title>关于框架/设计模式那些</title>
+    <link href="http://yoursite.com/2018/04/22/%E5%85%B6%E4%BB%96/"/>
+    <id>http://yoursite.com/2018/04/22/其他/</id>
+    <published>2018-04-22T11:14:47.000Z</published>
+    <updated>2018-04-22T14:09:16.392Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="git"><a href="#git" class="headerlink" title="git:"></a>git:</h3><p>在创建好的文件夹下使用git init创建版本库<br>使用git add xxx添加文件<br>使用git commit -m ‘xxx’ 添加到仓库<br>git clone xxx 指令，克隆一个本地库</p><h3 id="webpack-模块化方案"><a href="#webpack-模块化方案" class="headerlink" title="webpack:模块化方案"></a>webpack:模块化方案</h3><p>通过require import export model.exprot导入导出来构建模块<br>npm install webpack -g<br>npm init<br>npm install webpack –save-dev<br>npm run build</p><h3 id="gulp：注重工作流程"><a href="#gulp：注重工作流程" class="headerlink" title="gulp：注重工作流程"></a>gulp：注重工作流程</h3><p>require引入 task分配任务，src引入流，pipe执行流，watch监听，dest写入流<br>npm install global gulp<br>npm install –save -dev gulp<br>gulp</p><h3 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式:"></a>设计模式:</h3><p>工厂模式：定义一个函数，函数中通过传的参数来构造一个对象，并将这个对象返回<br>中介者模式：MVC是中介者模式代表，通过一个中介者将多对多的关系改为一对多的关系<br>观察者模式：发布者和订阅者之间的一对多的关系，当发布者发生变化时，所有订阅者都将受到通知</p><h3 id="vue："><a href="#vue：" class="headerlink" title="vue："></a>vue：</h3><p>el,data,methods,computed,watch,template,props,compoments<br>节点，数据，方法，计算属性，监听，模板，父子传值，组件</p><h2 id="指令："><a href="#指令：" class="headerlink" title="指令："></a>指令：</h2><p>v-bind,v-on,v-model,v-for,v-if，v-once<br>绑定属性，绑定事件，双向绑定，循环dom，判断是否渲染,渲染一次</p><h2 id="vue-cli："><a href="#vue-cli：" class="headerlink" title="vue-cli："></a>vue-cli：</h2><p>官方给的脚手架，用来构建一个vue</p><h3 id="vuex："><a href="#vuex：" class="headerlink" title="vuex："></a>vuex：</h3><p>vue.use(vuex)<br>管理vue之间的行为<br>vuex.store({<br>    state:存放组件共享的数据（响应式）<br>    mutations:操作数据方法<br>    actions:异步执行的方法<br>    getter：获取数据<br>})<br>vue({<br>    store<br>})</p><h3 id="vue-router"><a href="#vue-router" class="headerlink" title="vue-router:"></a>vue-router:</h3><p><router-link to="">跳转</router-link>to是指定页面目录</p><p><router-view></router-view>渲染<br>path：路径,compontents:组件</p><h3 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期:"></a>生命周期:</h3><p>八个阶段：<br>        beforeCreate（创建前）el 和 data 并未初始化<br>        created（创建后）data 数据的初始化，el没有<br>        beforeMount(载入前)    完成了 el 和 data 初始化<br>        mounted（载入后）完成挂载<br>        beforeUpdate（更新前）<br>        updated（更新后）<br>        beforeDestroy（销毁前）<br>        destroyed（销毁后）</p><h3 id="MVVM模型："><a href="#MVVM模型：" class="headerlink" title="MVVM模型："></a>MVVM模型：</h3><p>model view view-model，利用了在view-model层双向数据绑定的方式连接model和view模块，view向view-model请求动作，view-model让model响应更新。</p><h3 id="双向数据绑定："><a href="#双向数据绑定：" class="headerlink" title="双向数据绑定："></a>双向数据绑定：</h3><p>vue是通过数据劫持的方式来做数据绑定的，通过Object.defineProperty()来实现对属性的劫持，达到监听数据变动的目的</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;git&quot;&gt;&lt;a href=&quot;#git&quot; class=&quot;headerlink&quot; title=&quot;git:&quot;&gt;&lt;/a&gt;git:&lt;/h3&gt;&lt;p&gt;在创建好的文件夹下使用git init创建版本库&lt;br&gt;使用git add xxx添加文件&lt;br&gt;使用git commit -m
+      
+    
+    </summary>
+    
+      <category term="其他" scheme="http://yoursite.com/categories/%E5%85%B6%E4%BB%96/"/>
+    
+    
+      <category term="其他" scheme="http://yoursite.com/tags/%E5%85%B6%E4%BB%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于bootstrap</title>
+    <link href="http://yoursite.com/2018/04/22/%E5%85%B3%E4%BA%8Ebootstrap/"/>
+    <id>http://yoursite.com/2018/04/22/关于bootstrap/</id>
+    <published>2018-04-22T11:14:47.000Z</published>
+    <updated>2018-04-24T10:35:11.246Z</updated>
+    
+    <content type="html"><![CDATA[<p>1、为什么使用bootstrap？<br>bootstrap是为了移动端而开发的框架，并且可以兼容流行的浏览器，它由规范的CSS，JavaScript插件构成，使用起来非常简单，其最大的优势是响应式布局，CSS媒体查询的功能</p><p>2、什么是bootstrap栅格系统？<br>栅格系统的实现原理，是通过定义容器大小，平分12份，再调整内外边距，最后结合媒体查询，就制作出了强大的响应式网格系统(觉得bootstrap主要就是这个栅格系统了，其他的基本上现用现看文档吧……)</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;1、为什么使用bootstrap？&lt;br&gt;bootstrap是为了移动端而开发的框架，并且可以兼容流行的浏览器，它由规范的CSS，JavaScript插件构成，使用起来非常简单，其最大的优势是响应式布局，CSS媒体查询的功能&lt;/p&gt;
+&lt;p&gt;2、什么是bootstrap栅格系
+      
+    
+    </summary>
+    
+      <category term="面试" scheme="http://yoursite.com/categories/%E9%9D%A2%E8%AF%95/"/>
+    
+    
       <category term="面试" scheme="http://yoursite.com/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+      <category term="bootstrap" scheme="http://yoursite.com/tags/bootstrap/"/>
     
   </entry>
   
@@ -124,31 +203,6 @@
     
     
       <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>关于框架/设计模式那些</title>
-    <link href="http://yoursite.com/2018/04/22/%E5%85%B6%E4%BB%96/"/>
-    <id>http://yoursite.com/2018/04/22/其他/</id>
-    <published>2018-04-22T11:14:47.000Z</published>
-    <updated>2018-04-22T14:09:16.392Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="git"><a href="#git" class="headerlink" title="git:"></a>git:</h3><p>在创建好的文件夹下使用git init创建版本库<br>使用git add xxx添加文件<br>使用git commit -m ‘xxx’ 添加到仓库<br>git clone xxx 指令，克隆一个本地库</p><h3 id="webpack-模块化方案"><a href="#webpack-模块化方案" class="headerlink" title="webpack:模块化方案"></a>webpack:模块化方案</h3><p>通过require import export model.exprot导入导出来构建模块<br>npm install webpack -g<br>npm init<br>npm install webpack –save-dev<br>npm run build</p><h3 id="gulp：注重工作流程"><a href="#gulp：注重工作流程" class="headerlink" title="gulp：注重工作流程"></a>gulp：注重工作流程</h3><p>require引入 task分配任务，src引入流，pipe执行流，watch监听，dest写入流<br>npm install global gulp<br>npm install –save -dev gulp<br>gulp</p><h3 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式:"></a>设计模式:</h3><p>工厂模式：定义一个函数，函数中通过传的参数来构造一个对象，并将这个对象返回<br>中介者模式：MVC是中介者模式代表，通过一个中介者将多对多的关系改为一对多的关系<br>观察者模式：发布者和订阅者之间的一对多的关系，当发布者发生变化时，所有订阅者都将受到通知</p><h3 id="vue："><a href="#vue：" class="headerlink" title="vue："></a>vue：</h3><p>el,data,methods,computed,watch,template,props,compoments<br>节点，数据，方法，计算属性，监听，模板，父子传值，组件</p><h2 id="指令："><a href="#指令：" class="headerlink" title="指令："></a>指令：</h2><p>v-bind,v-on,v-model,v-for,v-if，v-once<br>绑定属性，绑定事件，双向绑定，循环dom，判断是否渲染,渲染一次</p><h2 id="vue-cli："><a href="#vue-cli：" class="headerlink" title="vue-cli："></a>vue-cli：</h2><p>官方给的脚手架，用来构建一个vue</p><h3 id="vuex："><a href="#vuex：" class="headerlink" title="vuex："></a>vuex：</h3><p>vue.use(vuex)<br>管理vue之间的行为<br>vuex.store({<br>    state:存放组件共享的数据（响应式）<br>    mutations:操作数据方法<br>    actions:异步执行的方法<br>    getter：获取数据<br>})<br>vue({<br>    store<br>})</p><h3 id="vue-router"><a href="#vue-router" class="headerlink" title="vue-router:"></a>vue-router:</h3><p><router-link to="">跳转</router-link>to是指定页面目录</p><p><router-view></router-view>渲染<br>path：路径,compontents:组件</p><h3 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期:"></a>生命周期:</h3><p>八个阶段：<br>        beforeCreate（创建前）el 和 data 并未初始化<br>        created（创建后）data 数据的初始化，el没有<br>        beforeMount(载入前)    完成了 el 和 data 初始化<br>        mounted（载入后）完成挂载<br>        beforeUpdate（更新前）<br>        updated（更新后）<br>        beforeDestroy（销毁前）<br>        destroyed（销毁后）</p><h3 id="MVVM模型："><a href="#MVVM模型：" class="headerlink" title="MVVM模型："></a>MVVM模型：</h3><p>model view view-model，利用了在view-model层双向数据绑定的方式连接model和view模块，view向view-model请求动作，view-model让model响应更新。</p><h3 id="双向数据绑定："><a href="#双向数据绑定：" class="headerlink" title="双向数据绑定："></a>双向数据绑定：</h3><p>vue是通过数据劫持的方式来做数据绑定的，通过Object.defineProperty()来实现对属性的劫持，达到监听数据变动的目的</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;git&quot;&gt;&lt;a href=&quot;#git&quot; class=&quot;headerlink&quot; title=&quot;git:&quot;&gt;&lt;/a&gt;git:&lt;/h3&gt;&lt;p&gt;在创建好的文件夹下使用git init创建版本库&lt;br&gt;使用git add xxx添加文件&lt;br&gt;使用git commit -m
-      
-    
-    </summary>
-    
-      <category term="其他" scheme="http://yoursite.com/categories/%E5%85%B6%E4%BB%96/"/>
-    
-    
-      <category term="其他" scheme="http://yoursite.com/tags/%E5%85%B6%E4%BB%96/"/>
     
   </entry>
   
