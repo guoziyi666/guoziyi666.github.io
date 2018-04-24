@@ -47,7 +47,7 @@
 <meta property="og:site_name" content="Welcome">
 <meta property="og:description" content="js的特点：脚本语言解释性单线程 数据类型：基本类型number string undefined null boolen（在栈中，可以直接访问）引用类型object function array date regexp（在堆中，实际存放了一个指针，操作是对引用的操作） 变量声明提升,函数声明提升：在js中所有声明都会提升在顶部，赋值不提升。函数声明提升在变量声明提升之前，变量声明不会覆盖函数声明">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-04-23T01:26:25.603Z">
+<meta property="og:updated_time" content="2018-04-24T08:46:26.681Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="面试总结之js">
 <meta name="twitter:description" content="js的特点：脚本语言解释性单线程 数据类型：基本类型number string undefined null boolen（在栈中，可以直接访问）引用类型object function array date regexp（在堆中，实际存放了一个指针，操作是对引用的操作） 变量声明提升,函数声明提升：在js中所有声明都会提升在顶部，赋值不提升。函数声明提升在变量声明提升之前，变量声明不会覆盖函数声明">
@@ -156,7 +156,7 @@ media="screen" type="text/css">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Búsqueda">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -241,7 +241,7 @@ media="screen" type="text/css">
 <h3 id="call-apply-bind"><a href="#call-apply-bind" class="headerlink" title="call/apply/bind"></a>call/apply/bind</h3><p>改变this指向，传参不同（可以实现一个对象调用另一个对象的方法），call一个个传，apply传数组，并且他俩立即执行，bind返回的是一个函数，可以手动执行</p>
 <h3 id="DOM-BOM："><a href="#DOM-BOM：" class="headerlink" title="DOM/BOM："></a>DOM/BOM：</h3><p>dom：文档对象模型。将文档当做对象看，用来获取或设置文档中标签的属性。<br>bom：浏览器对象模型。将浏览器当做对象看，用来获取或设置浏览器的属性。</p>
 <h3 id="异步方法："><a href="#异步方法：" class="headerlink" title="异步方法："></a>异步方法：</h3><p>1.计时器和回调函数，<br>2.jquery的$deferred() when().done()<br>3.promise<br>4.defer/async异步加载脚本<br>5.generator ：用function*创建函数 yield中写每一步的操作。实例对象.next()执行</p>
-<h3 id="原型："><a href="#原型：" class="headerlink" title="原型："></a>原型：</h3><p>prototype是函数的属性，<strong>proto</strong>是对象的属性。</p>
+<h3 id="原型："><a href="#原型：" class="headerlink" title="原型："></a>原型：</h3><p>prototype是函数特有的属性，<strong>proto</strong>是所有对象的属性。<br>js中万物皆对象，所以一切对象都有这个隐式原型<strong>proto</strong><br>隐式原型指向构造该对象的构造函数的原型</p>
 <h3 id="promise："><a href="#promise：" class="headerlink" title="promise："></a>promise：</h3><p>用同步的方法去写异步，三种状态 进行 成功 失败<br>在构造函数中决定promise对象的状态，然后通过then方法中传的两个函数，成功的函数和失败的函数进行链式调用。<br>promise.all()并行执行多个异步操作，传递一个promise对象实例数组，数组中有一个失败则都失败给catch()处理</p>
 
         </div>
@@ -250,7 +250,7 @@ media="screen" type="text/css">
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2018-04-23T01:26:25.603Z" itemprop="dateUpdated">2018-04-23 09:26:25</time>
+    Última actualización<time datetime="2018-04-24T08:46:26.681Z" itemprop="dateUpdated">2018-04-24 16:46:26</time>
 </span>
 
 
@@ -330,7 +330,7 @@ media="screen" type="text/css">
         </span>
         <br/>
 
-        <span class="license">This blog is licensed under a <a rel="license" rel="external nofollow" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+        <span class="license">Este blog está licenciado bajo una <a rel="license" rel="external nofollow" href="https://creativecommons.org/licenses/by/4.0/">licencia internacional Creative Commons Attribution 4.0</a>.</span>
     </div>
 </footer>
 
