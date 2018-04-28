@@ -47,7 +47,7 @@
 <meta property="og:site_name" content="Welcome">
 <meta property="og:description" content="git:在创建好的文件夹下使用git init创建版本库使用git add xxx添加文件使用git commit -m ‘xxx’ 添加到仓库git clone xxx 指令，克隆一个本地库 webpack:模块化方案通过require import export model.exprot导入导出来构建模块npm install webpack -gnpm initnpm install web">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-04-22T14:09:16.392Z">
+<meta property="og:updated_time" content="2018-04-28T07:05:18.930Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于框架&#x2F;设计模式那些">
 <meta name="twitter:description" content="git:在创建好的文件夹下使用git init创建版本库使用git add xxx添加文件使用git commit -m ‘xxx’ 添加到仓库git clone xxx 指令，克隆一个本地库 webpack:模块化方案通过require import export model.exprot导入导出来构建模块npm install webpack -gnpm initnpm install web">
@@ -216,22 +216,22 @@ media="screen" type="text/css">
         </div>
         <div class="post-count-custom">
             <i class="icon icon-lg icon-comment-o"></i>
-            阅读本文可能花费您&nbsp;<span class="post-count">2</span>&nbsp;分钟
+            阅读本文可能花费您&nbsp;<span class="post-count">3</span>&nbsp;分钟
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
             <h3 id="git"><a href="#git" class="headerlink" title="git:"></a>git:</h3><p>在创建好的文件夹下使用git init创建版本库<br>使用git add xxx添加文件<br>使用git commit -m ‘xxx’ 添加到仓库<br>git clone xxx 指令，克隆一个本地库</p>
 <h3 id="webpack-模块化方案"><a href="#webpack-模块化方案" class="headerlink" title="webpack:模块化方案"></a>webpack:模块化方案</h3><p>通过require import export model.exprot导入导出来构建模块<br>npm install webpack -g<br>npm init<br>npm install webpack –save-dev<br>npm run build</p>
 <h3 id="gulp：注重工作流程"><a href="#gulp：注重工作流程" class="headerlink" title="gulp：注重工作流程"></a>gulp：注重工作流程</h3><p>require引入 task分配任务，src引入流，pipe执行流，watch监听，dest写入流<br>npm install global gulp<br>npm install –save -dev gulp<br>gulp</p>
-<h3 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式:"></a>设计模式:</h3><p>工厂模式：定义一个函数，函数中通过传的参数来构造一个对象，并将这个对象返回<br>中介者模式：MVC是中介者模式代表，通过一个中介者将多对多的关系改为一对多的关系<br>观察者模式：发布者和订阅者之间的一对多的关系，当发布者发生变化时，所有订阅者都将受到通知</p>
+<h3 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式:"></a>设计模式:</h3><p>工厂模式：定义一个函数，函数中通过传的参数来构造一个对象，并将这个对象返回<br>中介者模式：MVC是中介者模式代表，通过一个中介者将多对多的关系改为一对多的关系<br>强制性的使应用程序的输入、处理和输出分开。使用MVC应用程序被分成三个核心部件：模型、视图、控制器<br>观察者模式：发布者和订阅者之间的一对多的关系，当发布者发生变化时，所有订阅者都将受到通知</p>
 <h3 id="vue："><a href="#vue：" class="headerlink" title="vue："></a>vue：</h3><p>el,data,methods,computed,watch,template,props,compoments<br>节点，数据，方法，计算属性，监听，模板，父子传值，组件</p>
 <h2 id="指令："><a href="#指令：" class="headerlink" title="指令："></a>指令：</h2><p>v-bind,v-on,v-model,v-for,v-if，v-once<br>绑定属性，绑定事件，双向绑定，循环dom，判断是否渲染,渲染一次</p>
 <h2 id="vue-cli："><a href="#vue-cli：" class="headerlink" title="vue-cli："></a>vue-cli：</h2><p>官方给的脚手架，用来构建一个vue</p>
-<h3 id="vuex："><a href="#vuex：" class="headerlink" title="vuex："></a>vuex：</h3><p>vue.use(vuex)<br>管理vue之间的行为<br>vuex.store({<br>    state:存放组件共享的数据（响应式）<br>    mutations:操作数据方法<br>    actions:异步执行的方法<br>    getter：获取数据<br>})<br>vue({<br>    store<br>})</p>
+<h3 id="vuex："><a href="#vuex：" class="headerlink" title="vuex："></a>vuex：</h3><p>vue.use(vuex)<br>管理vue组件之间的行为<br>vuex.store({<br>    state:存放组件共享的数据（响应式）<br>    mutations:操作数据方法<br>    actions:异步执行的方法<br>    getter：获取数据<br>})<br>vue({<br>    store<br>})</p>
 <h3 id="vue-router"><a href="#vue-router" class="headerlink" title="vue-router:"></a>vue-router:</h3><p><router-link to="">跳转</router-link>to是指定页面目录</p>
 <p><router-view></router-view>渲染<br>path：路径,compontents:组件</p>
 <h3 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期:"></a>生命周期:</h3><p>八个阶段：<br>        beforeCreate（创建前）el 和 data 并未初始化<br>        created（创建后）data 数据的初始化，el没有<br>        beforeMount(载入前)    完成了 el 和 data 初始化<br>        mounted（载入后）完成挂载<br>        beforeUpdate（更新前）<br>        updated（更新后）<br>        beforeDestroy（销毁前）<br>        destroyed（销毁后）</p>
 <h3 id="MVVM模型："><a href="#MVVM模型：" class="headerlink" title="MVVM模型："></a>MVVM模型：</h3><p>model view view-model，利用了在view-model层双向数据绑定的方式连接model和view模块，view向view-model请求动作，view-model让model响应更新。</p>
-<h3 id="双向数据绑定："><a href="#双向数据绑定：" class="headerlink" title="双向数据绑定："></a>双向数据绑定：</h3><p>vue是通过数据劫持的方式来做数据绑定的，通过Object.defineProperty()来实现对属性的劫持，达到监听数据变动的目的</p>
+<h3 id="双向数据绑定："><a href="#双向数据绑定：" class="headerlink" title="双向数据绑定："></a>双向数据绑定：</h3><p>vue是通过数据劫持的方式来做数据绑定的，getter、setter对属性进行劫持，当属性值改变是就会notify通知watch对象，而watch对象则会notify到view上对应的位置进行更新（这个地方还没讲清下面再讲），然后我们就看到了视图的更新了，反过来当在视图(如input)输入数据时，也会触发订阅者watch，更新最新的数据到data里面,这样model数据就能实时响应view上的数据变化了，这样一个过程就是数据的双向绑定了。通过Object.defineProperty()来实现对属性的劫持，达到监听数据变动的目的</p>
 
         </div>
 
@@ -239,7 +239,7 @@ media="screen" type="text/css">
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2018-04-22T14:09:16.392Z" itemprop="dateUpdated">2018-04-22 22:09:16</time>
+    Last updated: <time datetime="2018-04-28T07:05:18.930Z" itemprop="dateUpdated">2018-04-28 15:05:18</time>
 </span>
 
 
