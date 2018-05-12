@@ -39,18 +39,20 @@
 
 
     
-    <meta name="description" content="行级元素：a b br em span i input 内容决定宽高，不可以改变 块级元素:div ul ol h1-h6 table p  占满整行，可以改变宽高 inline-block：内容决定占位，可以改变宽高 nodetype的值：元素节点：1属性节点：2文本节点：3 兼容h5的方法：创建一个以标签名命名的数组，在一个立即执行函数中构造出来所有标签，并设为块级元素 引入css的几种方式：">
+    <meta name="description" content="行级元素：a b br em span i input 内容决定宽高，不可以改变 块级元素:div ul ol h1-h6 table p  占满整行，可以改变宽高 空元素（void）：area base col command embed link meta keygen param source track wbr 没有关闭的标签（没有/ 没有内容） 标签的含义html告知浏览器其自身是一个">
 <meta name="keywords" content="面试,html,css">
 <meta property="og:type" content="article">
 <meta property="og:title" content="面试总结之html&#x2F;css">
 <meta property="og:url" content="http://yoursite.com/2018/04/22/前端面试总结1/index.html">
 <meta property="og:site_name" content="Welcome">
-<meta property="og:description" content="行级元素：a b br em span i input 内容决定宽高，不可以改变 块级元素:div ul ol h1-h6 table p  占满整行，可以改变宽高 inline-block：内容决定占位，可以改变宽高 nodetype的值：元素节点：1属性节点：2文本节点：3 兼容h5的方法：创建一个以标签名命名的数组，在一个立即执行函数中构造出来所有标签，并设为块级元素 引入css的几种方式：">
+<meta property="og:description" content="行级元素：a b br em span i input 内容决定宽高，不可以改变 块级元素:div ul ol h1-h6 table p  占满整行，可以改变宽高 空元素（void）：area base col command embed link meta keygen param source track wbr 没有关闭的标签（没有/ 没有内容） 标签的含义html告知浏览器其自身是一个">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-04-23T00:39:53.900Z">
+<meta property="og:image" content="http://yoursite.com/2018/04/22/前端面试总结1/index1.png">
+<meta property="og:updated_time" content="2018-05-12T02:52:29.022Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="面试总结之html&#x2F;css">
-<meta name="twitter:description" content="行级元素：a b br em span i input 内容决定宽高，不可以改变 块级元素:div ul ol h1-h6 table p  占满整行，可以改变宽高 inline-block：内容决定占位，可以改变宽高 nodetype的值：元素节点：1属性节点：2文本节点：3 兼容h5的方法：创建一个以标签名命名的数组，在一个立即执行函数中构造出来所有标签，并设为块级元素 引入css的几种方式：">
+<meta name="twitter:description" content="行级元素：a b br em span i input 内容决定宽高，不可以改变 块级元素:div ul ol h1-h6 table p  占满整行，可以改变宽高 空元素（void）：area base col command embed link meta keygen param source track wbr 没有关闭的标签（没有/ 没有内容） 标签的含义html告知浏览器其自身是一个">
+<meta name="twitter:image" content="http://yoursite.com/2018/04/22/前端面试总结1/index1.png">
     
         <link rel="alternate" type="application/atom+xml" title="Welcome" href="/atom.xml">
     
@@ -156,7 +158,7 @@ media="screen" type="text/css">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Búsqueda">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -190,7 +192,7 @@ media="screen" type="text/css">
     <aside class="post-widget">
         <nav class="post-toc-wrap" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#行级元素："><span class="post-toc-number">1.</span> <span class="post-toc-text">行级元素：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#块级元素"><span class="post-toc-number">2.</span> <span class="post-toc-text">块级元素:</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#inline-block："><span class="post-toc-number">3.</span> <span class="post-toc-text">inline-block：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#nodetype的值："><span class="post-toc-number">4.</span> <span class="post-toc-text">nodetype的值：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#兼容h5的方法："><span class="post-toc-number">5.</span> <span class="post-toc-text">兼容h5的方法：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#引入css的几种方式："><span class="post-toc-number">6.</span> <span class="post-toc-text">引入css的几种方式：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#css选择器权重："><span class="post-toc-number">7.</span> <span class="post-toc-text">css选择器权重：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#触发bfc的方式：（块级格式化上下文）"><span class="post-toc-number">8.</span> <span class="post-toc-text">触发bfc的方式：（块级格式化上下文）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#bfc作用："><span class="post-toc-number">9.</span> <span class="post-toc-text">bfc作用：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#margin塌陷合并："><span class="post-toc-number">10.</span> <span class="post-toc-text">margin塌陷合并：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#清除浮动的方法："><span class="post-toc-number">11.</span> <span class="post-toc-text">清除浮动的方法：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#两栏布局："><span class="post-toc-number">12.</span> <span class="post-toc-text">两栏布局：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#三栏布局：-中间的标签在最后"><span class="post-toc-number">13.</span> <span class="post-toc-text">三栏布局：(中间的标签在最后)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#水平垂直居中一个元素："><span class="post-toc-number">14.</span> <span class="post-toc-text">水平垂直居中一个元素：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#position的区别："><span class="post-toc-number">15.</span> <span class="post-toc-text">position的区别：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#重绘："><span class="post-toc-number">16.</span> <span class="post-toc-text">重绘：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#重排："><span class="post-toc-number">17.</span> <span class="post-toc-text">重排：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#优化："><span class="post-toc-number">18.</span> <span class="post-toc-text">优化：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#浏览器渲染过程："><span class="post-toc-number">19.</span> <span class="post-toc-text">浏览器渲染过程：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#响应式布局："><span class="post-toc-number">20.</span> <span class="post-toc-text">响应式布局：</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#行级元素："><span class="post-toc-number">1.</span> <span class="post-toc-text">行级元素：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#块级元素"><span class="post-toc-number">2.</span> <span class="post-toc-text">块级元素:</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#空元素（void）："><span class="post-toc-number">3.</span> <span class="post-toc-text">空元素（void）：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#标签的含义"><span class="post-toc-number">4.</span> <span class="post-toc-text">标签的含义</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#inline-block："><span class="post-toc-number">5.</span> <span class="post-toc-text">inline-block：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#nodetype的值："><span class="post-toc-number">6.</span> <span class="post-toc-text">nodetype的值：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#兼容h5的方法："><span class="post-toc-number">7.</span> <span class="post-toc-text">兼容h5的方法：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#引入css的几种方式："><span class="post-toc-number">8.</span> <span class="post-toc-text">引入css的几种方式：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#css选择器权重："><span class="post-toc-number">9.</span> <span class="post-toc-text">css选择器权重：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#触发bfc的方式：（块级格式化上下文）"><span class="post-toc-number">10.</span> <span class="post-toc-text">触发bfc的方式：（块级格式化上下文）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#bfc作用："><span class="post-toc-number">11.</span> <span class="post-toc-text">bfc作用：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#margin塌陷合并："><span class="post-toc-number">12.</span> <span class="post-toc-text">margin塌陷合并：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#清除浮动的方法："><span class="post-toc-number">13.</span> <span class="post-toc-text">清除浮动的方法：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#两栏布局："><span class="post-toc-number">14.</span> <span class="post-toc-text">两栏布局：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#line-height"><span class="post-toc-number">15.</span> <span class="post-toc-text">line-height:</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#text-align"><span class="post-toc-number">16.</span> <span class="post-toc-text">text-align:</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#三栏布局：-中间的标签在最后"><span class="post-toc-number">17.</span> <span class="post-toc-text">三栏布局：(中间的标签在最后)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#水平垂直居中一个元素："><span class="post-toc-number">18.</span> <span class="post-toc-text">水平垂直居中一个元素：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#position的区别："><span class="post-toc-number">19.</span> <span class="post-toc-text">position的区别：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#盒模型："><span class="post-toc-number">20.</span> <span class="post-toc-text">盒模型：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#flex布局（弹性布局）："><span class="post-toc-number">21.</span> <span class="post-toc-text">flex布局（弹性布局）：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#重绘："><span class="post-toc-number">22.</span> <span class="post-toc-text">重绘：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#重排："><span class="post-toc-number">23.</span> <span class="post-toc-text">重排：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#优化："><span class="post-toc-number">24.</span> <span class="post-toc-text">优化：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#浏览器渲染过程："><span class="post-toc-number">25.</span> <span class="post-toc-text">浏览器渲染过程：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#响应式布局："><span class="post-toc-number">26.</span> <span class="post-toc-text">响应式布局：</span></a></li></ol>
         </nav>
     </aside>
    
@@ -216,11 +218,13 @@ media="screen" type="text/css">
         </div>
         <div class="post-count-custom">
             <i class="icon icon-lg icon-comment-o"></i>
-            阅读本文可能花费您&nbsp;<span class="post-count">3</span>&nbsp;分钟
+            阅读本文可能花费您&nbsp;<span class="post-count">6</span>&nbsp;分钟
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
             <h3 id="行级元素："><a href="#行级元素：" class="headerlink" title="行级元素："></a>行级元素：</h3><p>a b br em span i input 内容决定宽高，不可以改变</p>
 <h3 id="块级元素"><a href="#块级元素" class="headerlink" title="块级元素:"></a>块级元素:</h3><p>div ul ol h1-h6 table p  占满整行，可以改变宽高</p>
+<h3 id="空元素（void）："><a href="#空元素（void）：" class="headerlink" title="空元素（void）："></a>空元素（void）：</h3><p>area base col command embed link meta keygen param source track wbr 没有关闭的标签（没有/ 没有内容）</p>
+<h3 id="标签的含义"><a href="#标签的含义" class="headerlink" title="标签的含义"></a>标签的含义</h3><p>html告知浏览器其自身是一个 HTML 文档。<br>html标签限定了文档的开始点和结束点，在它们之间是文档的头部和主体。文档的头部由head标签定义，而主体由body标签定义。<br>!DOCTYPE声明了文档类型：<br>html5:!DOCTYPE html<br>html:有很多取值<br>document：代表给定浏览器窗口中的html文档。<br>Document 对象是 Window 对象的一部分，可通过 window.document 属性对其进行访问。</p>
 <h3 id="inline-block："><a href="#inline-block：" class="headerlink" title="inline-block："></a>inline-block：</h3><p>内容决定占位，可以改变宽高</p>
 <h3 id="nodetype的值："><a href="#nodetype的值：" class="headerlink" title="nodetype的值："></a>nodetype的值：</h3><p>元素节点：1<br>属性节点：2<br>文本节点：3</p>
 <h3 id="兼容h5的方法："><a href="#兼容h5的方法：" class="headerlink" title="兼容h5的方法："></a>兼容h5的方法：</h3><p>创建一个以标签名命名的数组，在一个立即执行函数中构造出来所有标签，并设为块级元素</p>
@@ -233,10 +237,16 @@ media="screen" type="text/css">
 <h3 id="bfc作用："><a href="#bfc作用：" class="headerlink" title="bfc作用："></a>bfc作用：</h3><p>阻止margin塌陷</p>
 <h3 id="margin塌陷合并："><a href="#margin塌陷合并：" class="headerlink" title="margin塌陷合并："></a>margin塌陷合并：</h3><p>垂直合并：上面元素的bottom和下面元素的top会选择大的那个<br>父子塌陷：嵌套元素中，如果设置子元素top，父元素会被top子元素不动</p>
 <h3 id="清除浮动的方法："><a href="#清除浮动的方法：" class="headerlink" title="清除浮动的方法："></a>清除浮动的方法：</h3><p>增加一个空元素clear：both<br>父级加伪类（before、after）clear:both;content:””;display:block;<br>父级：overflow：auto;</p>
-<h3 id="两栏布局："><a href="#两栏布局：" class="headerlink" title="两栏布局："></a>两栏布局：</h3><p>1.左侧固定：左侧左浮动 右侧margin，宽度100%<br>2.右侧固定：左侧左浮动右侧右浮动，左侧margin-的，左侧宽度100%<br>在静态元素 并且固定宽时，top 或left的负值是正常人理解的向上或向左x值，而bottom或right的负值是让其下边的兄弟元素向上x值。</p>
+<h3 id="两栏布局："><a href="#两栏布局：" class="headerlink" title="两栏布局："></a>两栏布局：</h3><p>1.左侧固定：左侧左浮动 右侧margin，宽度100%<br>2.右侧固定：左侧左浮动右侧右浮动，左侧margin-的，左侧宽度100%<br>(在静态元素 并且固定宽时，top 或left的负值是正常人理解的向上或向左x值，而bottom或right的负值是让其下边的兄弟元素向上x值。)</p>
+<h3 id="line-height"><a href="#line-height" class="headerlink" title="line-height:"></a>line-height:</h3><p>1.对于字号为 16px 的元素，设定 1.5 和 150% 时都会得到 16 × 1.5 = 24px的行高。注意，这里把 font-size 和 line-height 定义在了相同的元素上。<br>2.父元素 div 和子元素 p 被定义了不同的 font-size，而只有父元素 div 被定义了 line-height。<br>当 line-height 取值为百分数时，行高是在 line-height 被定义时计算的，计算成绝对单位值后再被子元素继承。所以在上面的例子中，父元素字号为 16px，相应的子元素行高就是 16 × 1.5 = 24px。因为 24px &lt; 36px，子元素 p 的行高不足，当它以多行显示时会出现文字重叠的现象。<br>当 line-height 取值为小数时，行高是在 font-size 被定义时计算的，计算成绝对单位值后被当前元素应用（不会向下继承）。所以在上面的例子中，父元素字号为 16px，而子元素字号为 36px，相应的行高为 36 × 1.5 = 54px。因为 54px &gt; 36px，子元素 p 的行高大于字号，不会出现多行文字重叠的现象。<br><img src="/2018/04/22/前端面试总结1/index1.png"><br>基线（base line）并不是汉字文字的下端沿，而是英文字母“x”的下端沿</p>
+<h3 id="text-align"><a href="#text-align" class="headerlink" title="text-align:"></a>text-align:</h3><p>text-align 属性规定元素中的文本的水平对齐方式。<br>可能的值:<br>left    把文本排列到左边。默认值：由浏览器决定。<br>right    把文本排列到右边。<br>center    把文本排列到中间。<br>justify    实现两端对齐文本效果。<br>inherit    规定应该从父元素继承 text-align 属性的值。</p>
 <h3 id="三栏布局：-中间的标签在最后"><a href="#三栏布局：-中间的标签在最后" class="headerlink" title="三栏布局：(中间的标签在最后)"></a>三栏布局：(中间的标签在最后)</h3><p>1.左右浮动，中间设margin<br>2.左右absolute为0，中间设margin</p>
-<h3 id="水平垂直居中一个元素："><a href="#水平垂直居中一个元素：" class="headerlink" title="水平垂直居中一个元素："></a>水平垂直居中一个元素：</h3><p>1.position：absolute<br>    left：50%；<br>    top：50%；<br>    margin-left：-宽度一半<br>    margin-top：-高度一半<br>2.position：absolute；<br>    margin:auto;<br>    left:0;<br>    right:0;<br>    top:0;<br>    bottom:0;<br>3.position:absolute;<br>    left:50%;<br>    top:50%;<br>    transform:translate(-50%,-50%);<br>4.父级：display：flex；<br>        justify-content：center；</p>
+<h3 id="水平垂直居中一个元素："><a href="#水平垂直居中一个元素：" class="headerlink" title="水平垂直居中一个元素："></a>水平垂直居中一个元素：</h3><p>1.position：absolute<br>    left：50%；<br>    top：50%；<br>    margin-left：-宽度一半<br>    margin-top：-高度一半<br>2.position：absolute；<br>    margin:auto;<br>    left:0;<br>    right:0;<br>    top:0;<br>    bottom:0;<br>3.position:absolute;<br>    left:50%;<br>    top:50%;<br>    transform:translate(-50%,-50%);<br>4.父级：display：flex；<br>    justify-content：center；</p>
 <h3 id="position的区别："><a href="#position的区别：" class="headerlink" title="position的区别："></a>position的区别：</h3><p>absolute：基于第一个非static的父级定位<br>relative：基于原来位置定位<br>fiexd：相对于视口进行定位（不兼容的话使用js计算滚动的距离手动实现）</p>
+<h3 id="盒模型："><a href="#盒模型：" class="headerlink" title="盒模型："></a>盒模型：</h3><p>1.box-sizing:content-box<br>在标准模式下，一个块的总宽度= width + margin(左右) + padding(左右) + border(左右)<br>2.box-sizing:border-box<br>在怪异模式下，一个块的总宽度= width + margin(左右)（即width已经包含了padding和border值）</p>
+<h3 id="flex布局（弹性布局）："><a href="#flex布局（弹性布局）：" class="headerlink" title="flex布局（弹性布局）："></a>flex布局（弹性布局）：</h3><p>注意，设为 Flex 布局以后，子元素的float、clear和vertical-align属性将失效<br>采用 Flex 布局的元素，称为 Flex 容器（flex container），简称”容器”。它的所有子元素自动成为容器成员<br>父级元素属性:<br>1.display: flex<br>2.flex-wrap: no-wrap // 超出部分不换行,会压缩子元素<br>3.flex-direction: row（横向排列） || row-reverse（横向倒序排列） || column（纵向排列） || column-reverse（纵向倒序排列）<br>4.flex-flow 为 lex-direction 和 flex-wrap 的复合属性</p>
+<p>子级元素属性:<br>1.flex-grow // 按比例分配剩余空间<br>2.flex-shrink // 按比例收缩超出空间<br>3.flex-basis // 设置伸缩基准值,相当于 width，会覆盖 width。 若基准值总和大于容器宽度，flex-basis 就等于 basis/(basis的总和) * 容器的宽度</p>
+<p>问题：弹性盒子内元素如何水平垂直居中？<br>答案：<br>父级设置以下三个属性<br>1.display: flex;<br>1.justify-content: center;<br>2.align-items: center;</p>
 <h3 id="重绘："><a href="#重绘：" class="headerlink" title="重绘："></a>重绘：</h3><p>当前页面中元素外观发生变化重新渲染</p>
 <h3 id="重排："><a href="#重排：" class="headerlink" title="重排："></a>重排：</h3><p>当前页面dom树结构变化，或者窗口大小变化的，浏览器需要重新排列元素的行为</p>
 <h3 id="优化："><a href="#优化：" class="headerlink" title="优化："></a>优化：</h3><p>将多次重绘重排放到一起</p>
@@ -250,7 +260,7 @@ media="screen" type="text/css">
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2018-04-23T00:39:53.900Z" itemprop="dateUpdated">2018-04-23 08:39:53</time>
+    Última actualización<time datetime="2018-05-12T02:52:29.022Z" itemprop="dateUpdated">2018-05-12 10:52:29</time>
 </span>
 
 
@@ -338,7 +348,7 @@ media="screen" type="text/css">
         </span>
         <br/>
 
-        <span class="license">This blog is licensed under a <a rel="license" rel="external nofollow" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
+        <span class="license">Este blog está licenciado bajo una <a rel="license" rel="external nofollow" href="https://creativecommons.org/licenses/by/4.0/">licencia internacional Creative Commons Attribution 4.0</a>.</span>
     </div>
 </footer>
 
