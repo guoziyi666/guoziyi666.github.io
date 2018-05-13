@@ -12,7 +12,7 @@
     <meta name="theme-color" content="#77AAFF">
     
     
-    <meta name="keywords" content="网络,面试">
+    <meta name="keywords" content="面试,网络">
     
     
 
@@ -40,14 +40,14 @@
 
     
     <meta name="description" content="AJAX（异步JavaScript和xml）XML 指可扩展标记语言，被设计用来传输和存储数据ajax主要就是利用window.xmlhttprequest对象来判断数据请求的状态首先判断请求方法是get还是post，然后用该对象的open方法发送请求通过该对象的readystatechange方法判断readystate==4和status==200是否成功最后用该对象的send方法发送出去 处">
-<meta name="keywords" content="网络,面试">
+<meta name="keywords" content="面试,网络">
 <meta property="og:type" content="article">
 <meta property="og:title" content="面试总结之网络">
 <meta property="og:url" content="http://yoursite.com/2018/04/22/前端面试总结2/index.html">
 <meta property="og:site_name" content="Welcome">
 <meta property="og:description" content="AJAX（异步JavaScript和xml）XML 指可扩展标记语言，被设计用来传输和存储数据ajax主要就是利用window.xmlhttprequest对象来判断数据请求的状态首先判断请求方法是get还是post，然后用该对象的open方法发送请求通过该对象的readystatechange方法判断readystate==4和status==200是否成功最后用该对象的send方法发送出去 处">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-04-23T01:08:37.960Z">
+<meta property="og:updated_time" content="2018-05-13T09:48:52.236Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="面试总结之网络">
 <meta name="twitter:description" content="AJAX（异步JavaScript和xml）XML 指可扩展标记语言，被设计用来传输和存储数据ajax主要就是利用window.xmlhttprequest对象来判断数据请求的状态首先判断请求方法是get还是post，然后用该对象的open方法发送请求通过该对象的readystatechange方法判断readystate==4和status==200是否成功最后用该对象的send方法发送出去 处">
@@ -156,7 +156,7 @@ media="screen" type="text/css">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
                 <i class="icon icon-lg icon-chevron-left"></i>
             </a>
-            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Búsqueda">
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="Search">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
                 <i class="icon icon-lg icon-search"></i>
             </a>
@@ -190,7 +190,7 @@ media="screen" type="text/css">
     <aside class="post-widget">
         <nav class="post-toc-wrap" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#AJAX（异步JavaScript和xml）"><span class="post-toc-number">1.</span> <span class="post-toc-text">AJAX（异步JavaScript和xml）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#处理AJAX并发请求："><span class="post-toc-number">2.</span> <span class="post-toc-text">处理AJAX并发请求：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#get和post的区别："><span class="post-toc-number">3.</span> <span class="post-toc-text">get和post的区别：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#http和https的区别："><span class="post-toc-number">4.</span> <span class="post-toc-text">http和https的区别：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#HTTP1-0-HTTP1-1-HTTP2-0区别："><span class="post-toc-number">5.</span> <span class="post-toc-text">HTTP1.0,HTTP1.1,HTTP2.0区别：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#三次握手："><span class="post-toc-number">6.</span> <span class="post-toc-text">三次握手：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#四次挥手："><span class="post-toc-number">7.</span> <span class="post-toc-text">四次挥手：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#TCP和UDP区别："><span class="post-toc-number">8.</span> <span class="post-toc-text">TCP和UDP区别：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#由于ajax受同源策略的限制："><span class="post-toc-number">9.</span> <span class="post-toc-text">由于ajax受同源策略的限制：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#跨域的几种方法："><span class="post-toc-number">10.</span> <span class="post-toc-text">跨域的几种方法：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#cookie-session-webstorage："><span class="post-toc-number">11.</span> <span class="post-toc-text">cookie/session/webstorage：</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#AJAX（异步JavaScript和xml）"><span class="post-toc-number">1.</span> <span class="post-toc-text">AJAX（异步JavaScript和xml）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#处理AJAX并发请求："><span class="post-toc-number">2.</span> <span class="post-toc-text">处理AJAX并发请求：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#get和post的区别："><span class="post-toc-number">3.</span> <span class="post-toc-text">get和post的区别：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#http和https的区别："><span class="post-toc-number">4.</span> <span class="post-toc-text">http和https的区别：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#HTTP1-0-HTTP1-1-HTTP2-0区别："><span class="post-toc-number">5.</span> <span class="post-toc-text">HTTP1.0,HTTP1.1,HTTP2.0区别：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#三次握手："><span class="post-toc-number">6.</span> <span class="post-toc-text">三次握手：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#四次挥手："><span class="post-toc-number">7.</span> <span class="post-toc-text">四次挥手：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#TCP和UDP区别："><span class="post-toc-number">8.</span> <span class="post-toc-text">TCP和UDP区别：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#由于ajax受同源策略的限制："><span class="post-toc-number">9.</span> <span class="post-toc-text">由于ajax受同源策略的限制：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#跨域的几种方法："><span class="post-toc-number">10.</span> <span class="post-toc-text">跨域的几种方法：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#jsonp优缺点："><span class="post-toc-number">11.</span> <span class="post-toc-text">jsonp优缺点：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如何实现jsonp的post请求："><span class="post-toc-number">12.</span> <span class="post-toc-text">如何实现jsonp的post请求：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#cookie-session-webstorage："><span class="post-toc-number">13.</span> <span class="post-toc-text">cookie/session/webstorage：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#http状态码"><span class="post-toc-number">14.</span> <span class="post-toc-text">http状态码</span></a></li></ol>
         </nav>
     </aside>
    
@@ -216,7 +216,7 @@ media="screen" type="text/css">
         </div>
         <div class="post-count-custom">
             <i class="icon icon-lg icon-comment-o"></i>
-            阅读本文可能花费您&nbsp;<span class="post-count">2</span>&nbsp;分钟
+            阅读本文可能花费您&nbsp;<span class="post-count">5</span>&nbsp;分钟
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
             <h3 id="AJAX（异步JavaScript和xml）"><a href="#AJAX（异步JavaScript和xml）" class="headerlink" title="AJAX（异步JavaScript和xml）"></a>AJAX（异步JavaScript和xml）</h3><p>XML 指可扩展标记语言，被设计用来传输和存储数据<br>ajax主要就是利用window.xmlhttprequest对象来判断数据请求的状态<br>首先判断请求方法是get还是post，然后用该对象的open方法发送请求<br>通过该对象的readystatechange方法判断readystate==4和status==200是否成功<br>最后用该对象的send方法发送出去</p>
@@ -229,7 +229,11 @@ media="screen" type="text/css">
 <h3 id="TCP和UDP区别："><a href="#TCP和UDP区别：" class="headerlink" title="TCP和UDP区别："></a>TCP和UDP区别：</h3><p>TCP需要建立连接，UDP不需要<br>TCP比UDP可靠<br>UDP比TCP效率高，节约网络开销</p>
 <h3 id="由于ajax受同源策略的限制："><a href="#由于ajax受同源策略的限制：" class="headerlink" title="由于ajax受同源策略的限制："></a>由于ajax受同源策略的限制：</h3><p>即域名，端口号，协议必须相同，所以ajax不能跨域</p>
 <h3 id="跨域的几种方法："><a href="#跨域的几种方法：" class="headerlink" title="跨域的几种方法："></a>跨域的几种方法：</h3><p>1.jsonp的原理：利用标签的src可跨域性，在url载入成功后执行回调函数获取数据<br>2.document.domain结合iframe标签<br>3.window.name结合iframe<br>4.h5的window.postmassage<br>5.资源共享</p>
+<h3 id="jsonp优缺点："><a href="#jsonp优缺点：" class="headerlink" title="jsonp优缺点："></a>jsonp优缺点：</h3><p>优点：它不像XMLHttpRequest对象实现的Ajax请求那样受到同源策略的限制；它的兼容性更好，在更加古老的浏览器中都 可以运行，不需要XMLHttpRequest或ActiveX的支持；并且在请求完毕后可以通过调用callback的方式回传结果。<br>缺点：它只支持GET请求而不支持POST等其它类型的HTTP请求；它只支持跨域HTTP请求这种情况，不能解决不同域的两个页面之间如何进行JavaScript调用的问题。</p>
+<h3 id="如何实现jsonp的post请求："><a href="#如何实现jsonp的post请求：" class="headerlink" title="如何实现jsonp的post请求："></a>如何实现jsonp的post请求：</h3><p>服务端设置支持跨域<br>主要是Access-Control-Allow-Origin头参数，该参数用来指定允许哪个来源的域请求。服务端代码如下：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">header(<span class="string">'Access-Control-Allow-Origin:*'</span>);<span class="comment">// 表示支持所有来源的域进行请求</span></span><br><span class="line">$data = json_encode(array(<span class="string">"id"</span> =&gt; <span class="string">"1"</span>, <span class="string">"name"</span> =&gt; <span class="string">"tom"</span>));<span class="comment">// 实际在操作过程中可以设置为指定域</span></span><br><span class="line">echo $data;</span><br></pre></td></tr></table></figure></p>
 <h3 id="cookie-session-webstorage："><a href="#cookie-session-webstorage：" class="headerlink" title="cookie/session/webstorage："></a>cookie/session/webstorage：</h3><p>因为http是无状态的协议，所以session在服务端记录用户的状态，cookie在客户端记录用户的一些信息，并且不可跨域，定义在http的header字段中。cookie会存储一个sessionid用来识别session，大小有限制，过期了自动清理，session可以手动设置时间，localStorage会一直保存，需要手动清理，sessionstorage关闭窗口就没了，他俩只存储不会发送</p>
+<h3 id="http状态码"><a href="#http状态码" class="headerlink" title="http状态码"></a>http状态码</h3><p>http状态码是表示服务器对请求的响应状态，主要分为以下几个部分<br>1<strong>：这类响应是临时响应，只包含状态行和某些可选的响应头信息，并以空行结束<br>2</strong>:表示请求成功<br>3<strong>：表示重定向<br>4</strong>：表示客户端错误<br>5**：表示服务器端错误</p>
+<p>100（continue），客户端应当继续发送请求。这个临时响应是用来通知客户端它的部分请求已经被服务器接收<br>200（OK），表示请求成功，请求所希望的响应头或数据体将随此响应返回。<br>202（Accepted），服务器已接受请求，但尚未处理。<br>204（No-Content），服务器成功处理了请求，但不需要返回任何实体内容<br>205（Reset-Content），服务器成功处理了请求，且没有返回任何内容。但是与204响应不同，返回此状态码的响应要求请求者重置文档视图。该响应主要是被用于接受用户输入后，立即重置表单，以便用户能够轻松地开始另一次输入。<br>206（Partial-Content），服务器已经成功处理了部分 GET 请求。<br>301（Moved-Permanently），永久性重定向<br>302（Moved-Temporarily），暂时性重定向<br>304（Not-Modified），浏览器端缓存的资源依然有效<br>400（Bad-Reques），请求有误，当前请求无法被服务器理解。<br>401（Unauthorized），当前请求需要用户验证。<br>403（Forbidden），服务器已经理解请求，但是拒绝执行它。<br>404（Not-Found），请求的资源没有被找到<br>500（Interval Server Error），服务器内部错误<br>502（Bad GateWay），网关出错<br>503（Service Unavailable），由于临时的服务器维护或者过载，服务器当前无法处理请求。<br>504（Gateway Timeout），作为网关或者代理工作的服务器尝试执行请求时，未能及时从上游服务器（URI标识出的服务器，例如HTTP、FTP、LDAP）或者辅助服务器（例如DNS）收到响应。</p>
 
         </div>
 
@@ -237,7 +241,7 @@ media="screen" type="text/css">
     <div class="content">
         
 <span class="post-time">
-    Última actualización<time datetime="2018-04-23T01:08:37.960Z" itemprop="dateUpdated">2018-04-23 09:08:37</time>
+    Last updated: <time datetime="2018-05-13T09:48:52.236Z" itemprop="dateUpdated">2018-05-13 17:48:52</time>
 </span>
 
 
@@ -325,7 +329,7 @@ media="screen" type="text/css">
         </span>
         <br/>
 
-        <span class="license">Este blog está licenciado bajo una <a rel="license" rel="external nofollow" href="https://creativecommons.org/licenses/by/4.0/">licencia internacional Creative Commons Attribution 4.0</a>.</span>
+        <span class="license">This blog is licensed under a <a rel="license" rel="external nofollow" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</span>
     </div>
 </footer>
 
