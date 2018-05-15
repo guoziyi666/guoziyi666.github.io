@@ -49,7 +49,7 @@
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://yoursite.com/2018/04/22/前端面试总结1/index2.png">
 <meta property="og:image" content="http://yoursite.com/2018/04/22/前端面试总结1/index1.png">
-<meta property="og:updated_time" content="2018-05-14T07:05:33.063Z">
+<meta property="og:updated_time" content="2018-05-15T04:21:07.332Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="面试总结之html&#x2F;css">
 <meta name="twitter:description" content="行级元素：a b br em span i input 内容决定宽高，不可以改变 块级元素:div ul ol h1-h6 table p  占满整行，可以改变宽高 空元素（void）：area base col command embed link meta keygen param source track wbr 没有关闭的标签（没有/ 没有内容） 标签的含义html告知浏览器其自身是一个">
@@ -249,7 +249,8 @@ media="screen" type="text/css">
 <h3 id="三栏布局：-中间的标签在最后"><a href="#三栏布局：-中间的标签在最后" class="headerlink" title="三栏布局：(中间的标签在最后)"></a>三栏布局：(中间的标签在最后)</h3><p>1.左右浮动，中间设margin<br>2.左右absolute为0，中间设margin</p>
 <h3 id="水平垂直居中一个元素："><a href="#水平垂直居中一个元素：" class="headerlink" title="水平垂直居中一个元素："></a>水平垂直居中一个元素：</h3><p>1.position：absolute<br>    left：50%；<br>    top：50%；<br>    margin-left：-宽度一半<br>    margin-top：-高度一半<br>2.position：absolute；<br>    margin:auto;<br>    left:0;<br>    right:0;<br>    top:0;<br>    bottom:0;<br>3.position:absolute;<br>    left:50%;<br>    top:50%;<br>    transform:translate(-50%,-50%);<br>4.父级：display：flex；<br>    justify-content：center；</p>
 <h3 id="position的区别："><a href="#position的区别：" class="headerlink" title="position的区别："></a>position的区别：</h3><p>absolute：基于第一个非static的父级定位<br>relative：基于原来位置定位<br>fiexd：相对于视口进行定位（不兼容的话使用js计算滚动的距离手动实现）</p>
-<h3 id="盒模型："><a href="#盒模型：" class="headerlink" title="盒模型："></a>盒模型：</h3><p>1.box-sizing:content-box<br>在标准模式下，一个块的总宽度= width + margin(左右) + padding(左右) + border(左右)<br>2.box-sizing:border-box<br>在怪异模式下，一个块的总宽度= width + margin(左右)（即width已经包含了padding和border值）</p>
+<h3 id="盒模型："><a href="#盒模型：" class="headerlink" title="盒模型："></a>盒模型：</h3><p>1.box-sizing:content-box<br>标准盒模型：<br>width=content的宽度<br>height=content的高度</p>
+<p>2.box-sizing:border-box<br>IE盒子模型特点：<br>width=(border+padding+content)的宽度<br>height=(border+padding+content)的高度</p>
 <h3 id="flex布局（弹性布局）："><a href="#flex布局（弹性布局）：" class="headerlink" title="flex布局（弹性布局）："></a>flex布局（弹性布局）：</h3><p>注意，设为 Flex 布局以后，子元素的float、clear和vertical-align属性将失效<br>采用 Flex 布局的元素，称为 Flex 容器（flex container），简称”容器”。它的所有子元素自动成为容器成员<br>父级元素属性:<br>1.display: flex<br>2.flex-wrap: no-wrap // 超出部分不换行,会压缩子元素<br>3.flex-direction: row（横向排列） || row-reverse（横向倒序排列） || column（纵向排列） || column-reverse（纵向倒序排列）<br>4.flex-flow 为 lex-direction 和 flex-wrap 的复合属性</p>
 <p>子级元素属性:<br>1.flex-grow // 按比例分配剩余空间<br>2.flex-shrink // 按比例收缩超出空间<br>3.flex-basis // 设置伸缩基准值,相当于 width，会覆盖 width。 若基准值总和大于容器宽度，flex-basis 就等于 basis/(basis的总和) * 容器的宽度</p>
 <p>问题：弹性盒子内元素如何水平垂直居中？<br>答案：<br>父级设置以下三个属性<br>1.display: flex;<br>1.justify-content: center;<br>2.align-items: center;</p>
@@ -270,7 +271,7 @@ media="screen" type="text/css">
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2018-05-14T07:05:33.063Z" itemprop="dateUpdated">2018-05-14 15:05:33</time>
+    Last updated: <time datetime="2018-05-15T04:21:07.332Z" itemprop="dateUpdated">2018-05-15 12:21:07</time>
 </span>
 
 

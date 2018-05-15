@@ -39,19 +39,19 @@
 
 
     
-    <meta name="description" content="js的特点：脚本语言解释性单线程 数据类型：基本类型number string undefined null boolen（在栈中，可以直接访问）引用类型object function array date regexp（在堆中，实际存放了一个指针，操作是对引用的操作） 变量声明提升,函数声明提升：在js中所有声明都会提升在顶部，赋值不提升。函数声明提升在变量声明提升之前，变量声明不会覆盖函数声明">
+    <meta name="description" content="js的特点：脚本语言解释性单线程采用了二进制浮点数表示法，并不能精准的表示0.1这样的简单数字 数据类型：基本类型number string undefined null boolen（在栈中，可以直接访问）引用类型object function array date regexp（在堆中，实际存放了一个指针，操作是对引用的操作） 变量声明提升,函数声明提升：在js中所有声明都会提升在顶部，赋值不">
 <meta name="keywords" content="面试,javascript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="面试总结之js">
 <meta property="og:url" content="http://yoursite.com/2018/04/22/前端面试总结3/index.html">
 <meta property="og:site_name" content="Welcome">
-<meta property="og:description" content="js的特点：脚本语言解释性单线程 数据类型：基本类型number string undefined null boolen（在栈中，可以直接访问）引用类型object function array date regexp（在堆中，实际存放了一个指针，操作是对引用的操作） 变量声明提升,函数声明提升：在js中所有声明都会提升在顶部，赋值不提升。函数声明提升在变量声明提升之前，变量声明不会覆盖函数声明">
+<meta property="og:description" content="js的特点：脚本语言解释性单线程采用了二进制浮点数表示法，并不能精准的表示0.1这样的简单数字 数据类型：基本类型number string undefined null boolen（在栈中，可以直接访问）引用类型object function array date regexp（在堆中，实际存放了一个指针，操作是对引用的操作） 变量声明提升,函数声明提升：在js中所有声明都会提升在顶部，赋值不">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://yoursite.com/2018/04/22/前端面试总结3/index.png">
-<meta property="og:updated_time" content="2018-05-14T01:35:05.669Z">
+<meta property="og:updated_time" content="2018-05-15T04:11:58.876Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="面试总结之js">
-<meta name="twitter:description" content="js的特点：脚本语言解释性单线程 数据类型：基本类型number string undefined null boolen（在栈中，可以直接访问）引用类型object function array date regexp（在堆中，实际存放了一个指针，操作是对引用的操作） 变量声明提升,函数声明提升：在js中所有声明都会提升在顶部，赋值不提升。函数声明提升在变量声明提升之前，变量声明不会覆盖函数声明">
+<meta name="twitter:description" content="js的特点：脚本语言解释性单线程采用了二进制浮点数表示法，并不能精准的表示0.1这样的简单数字 数据类型：基本类型number string undefined null boolen（在栈中，可以直接访问）引用类型object function array date regexp（在堆中，实际存放了一个指针，操作是对引用的操作） 变量声明提升,函数声明提升：在js中所有声明都会提升在顶部，赋值不">
 <meta name="twitter:image" content="http://yoursite.com/2018/04/22/前端面试总结3/index.png">
     
         <link rel="alternate" type="application/atom+xml" title="Welcome" href="/atom.xml">
@@ -221,11 +221,11 @@ media="screen" type="text/css">
             阅读本文可能花费您&nbsp;<span class="post-count">12</span>&nbsp;分钟
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h3 id="js的特点："><a href="#js的特点：" class="headerlink" title="js的特点："></a>js的特点：</h3><p>脚本语言解释性单线程</p>
+            <h3 id="js的特点："><a href="#js的特点：" class="headerlink" title="js的特点："></a>js的特点：</h3><p>脚本语言解释性单线程<br>采用了二进制浮点数表示法，并不能精准的表示0.1这样的简单数字</p>
 <h3 id="数据类型："><a href="#数据类型：" class="headerlink" title="数据类型："></a>数据类型：</h3><p>基本类型number string undefined null boolen（在栈中，可以直接访问）<br>引用类型object function array date regexp（在堆中，实际存放了一个指针，操作是对引用的操作）</p>
 <h3 id="变量声明提升-函数声明提升："><a href="#变量声明提升-函数声明提升：" class="headerlink" title="变量声明提升,函数声明提升："></a>变量声明提升,函数声明提升：</h3><p>在js中所有声明都会提升在顶部，赋值不提升。函数声明提升在变量声明提升之前，变量声明不会覆盖函数声明。但是赋值会覆盖。判断同名函数声明和变量声明在使用前是否有赋值语句</p>
 <h3 id="作用域链，闭包"><a href="#作用域链，闭包" class="headerlink" title="作用域链，闭包"></a>作用域链，闭包</h3><p>作用域链是指js中内部函数可以访问外部函数中的变量，外部不能访问内部。当一个函数执行之前会创建一个对象存储函数的变量，然后挂载在作用域链中。<br>如果一个内部函数被作为一个返回值返回，那么外部函数虽然被销毁了，内部函数却不会被销毁并且依然会保存外部函数执行器上下文，这样就形成了闭包。如果这个函数被返回后但是没有被接收，那么这个闭包也没有意义。</p>
-<h3 id="闭包的优缺点："><a href="#闭包的优缺点：" class="headerlink" title="闭包的优缺点："></a>闭包的优缺点：</h3><p>优点是由于外部不能访问内部，所以可以设计私有的方法和变量。方便调用上下文变量<br>缺点就是会导致内存泄漏</p>
+<h3 id="闭包的优缺点："><a href="#闭包的优缺点：" class="headerlink" title="闭包的优缺点："></a>闭包的优缺点：</h3><p>优点是由于外部不能访问内部，所以可以设计私有的方法和变量。方便调用上下文变量<br>缺点就是会导致内存泄漏(采用立即执行函数解决闭包)</p>
 <h3 id="事件冒泡事件捕获："><a href="#事件冒泡事件捕获：" class="headerlink" title="事件冒泡事件捕获："></a>事件冒泡事件捕获：</h3><p>当一个事件源本身无法处理该事件的时候，会将该事件逐层向外传递就是事件冒泡<br>事件捕获是事件冒泡相反的顺序</p>
 <h3 id="事件监听："><a href="#事件监听：" class="headerlink" title="事件监听："></a>事件监听：</h3><p>标准浏览器：addEventListener()/removeEventListener()<br>第一个参数是事件类型，第二个参数是回调函数（即用来执行的代码），第三个参数默认为false，当改为true时，代表事件捕获；<br>ie:attachEvent()/detachEvent()<br>句柄绑定：onclick=function（）{}</p>
 <h3 id="事件对象和目标对象："><a href="#事件对象和目标对象：" class="headerlink" title="事件对象和目标对象："></a>事件对象和目标对象：</h3><p>标准浏览器：event    event.target<br>ie：window.event     window.event.srcElement<br>target指向触发事件的对象，currentTarget指向处理事件的对象</p>
@@ -274,7 +274,7 @@ media="screen" type="text/css">
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2018-05-14T01:35:05.669Z" itemprop="dateUpdated">2018-05-14 09:35:05</time>
+    Last updated: <time datetime="2018-05-15T04:11:58.876Z" itemprop="dateUpdated">2018-05-15 12:11:58</time>
 </span>
 
 
