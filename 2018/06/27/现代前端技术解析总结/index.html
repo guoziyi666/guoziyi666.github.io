@@ -47,7 +47,7 @@
 <meta property="og:site_name" content="Welcome">
 <meta property="og:description" content="从我们打开浏览器输入一个网址到页面展示网页内容的这段时间内，浏览器和服务端都发生了什么？ 在接收到用户输入的网址后，浏览器会开启一个线程来处理这个请求，对用户输入的url进行分析判断，如果是http就按照http方式处理 调用浏览器引擎中得对应方法，比如WebView中的loadUrl方法，分析并加载这个URL 通过DNS解析获取该网站地址对应的IP地址，查询完成后连同浏览器的Cookie，use">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-06-27T09:03:40.079Z">
+<meta property="og:updated_time" content="2018-06-28T11:35:38.069Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="《现代前端技术解析》阅读总结">
 <meta name="twitter:description" content="从我们打开浏览器输入一个网址到页面展示网页内容的这段时间内，浏览器和服务端都发生了什么？ 在接收到用户输入的网址后，浏览器会开启一个线程来处理这个请求，对用户输入的url进行分析判断，如果是http就按照http方式处理 调用浏览器引擎中得对应方法，比如WebView中的loadUrl方法，分析并加载这个URL 通过DNS解析获取该网站地址对应的IP地址，查询完成后连同浏览器的Cookie，use">
@@ -190,7 +190,7 @@ media="screen" type="text/css">
     <aside class="post-widget">
         <nav class="post-toc-wrap" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#从我们打开浏览器输入一个网址到页面展示网页内容的这段时间内，浏览器和服务端都发生了什么？"><span class="post-toc-number">1.</span> <span class="post-toc-text">从我们打开浏览器输入一个网址到页面展示网页内容的这段时间内，浏览器和服务端都发生了什么？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#页面内容多而复杂，怎样保证开发效率："><span class="post-toc-number">2.</span> <span class="post-toc-text">页面内容多而复杂，怎样保证开发效率：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#页面内容多且复杂，项目的管理和维护该如何去做？"><span class="post-toc-number">3.</span> <span class="post-toc-text">页面内容多且复杂，项目的管理和维护该如何去做？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#页面加载的内容很多，怎样保证尽快将网页内容显示给用户？"><span class="post-toc-number">4.</span> <span class="post-toc-text">页面加载的内容很多，怎样保证尽快将网页内容显示给用户？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如何限制页面图片的大小以保证页面快速显示？"><span class="post-toc-number">5.</span> <span class="post-toc-text">如何限制页面图片的大小以保证页面快速显示？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#重复打开的页面，能否让浏览器不再向服务器请求重复内容？"><span class="post-toc-number">6.</span> <span class="post-toc-text">重复打开的页面，能否让浏览器不再向服务器请求重复内容？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如果页面在移动端打开应该如何处理？"><span class="post-toc-number">7.</span> <span class="post-toc-text">如果页面在移动端打开应该如何处理？</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#从我们打开浏览器输入一个网址到页面展示网页内容的这段时间内，浏览器和服务端都发生了什么？"><span class="post-toc-number">1.</span> <span class="post-toc-text">从我们打开浏览器输入一个网址到页面展示网页内容的这段时间内，浏览器和服务端都发生了什么？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#页面内容多而复杂，怎样保证开发效率："><span class="post-toc-number">2.</span> <span class="post-toc-text">页面内容多而复杂，怎样保证开发效率：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#页面内容多且复杂，项目的管理和维护该如何去做？"><span class="post-toc-number">3.</span> <span class="post-toc-text">页面内容多且复杂，项目的管理和维护该如何去做？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#页面加载的内容很多，怎样保证尽快将网页内容显示给用户？"><span class="post-toc-number">4.</span> <span class="post-toc-text">页面加载的内容很多，怎样保证尽快将网页内容显示给用户？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如何限制页面图片的大小以保证页面快速显示？"><span class="post-toc-number">5.</span> <span class="post-toc-text">如何限制页面图片的大小以保证页面快速显示？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#重复打开的页面，能否让浏览器不再向服务器请求重复内容？"><span class="post-toc-number">6.</span> <span class="post-toc-text">重复打开的页面，能否让浏览器不再向服务器请求重复内容？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如果页面在移动端打开应该如何处理？"><span class="post-toc-number">7.</span> <span class="post-toc-text">如果页面在移动端打开应该如何处理？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#浏览器8种缓存机制"><span class="post-toc-number">8.</span> <span class="post-toc-text">浏览器8种缓存机制</span></a></li></ol>
         </nav>
     </aside>
    
@@ -216,7 +216,7 @@ media="screen" type="text/css">
         </div>
         <div class="post-count-custom">
             <i class="icon icon-lg icon-comment-o"></i>
-            阅读本文可能花费您&nbsp;<span class="post-count">3</span>&nbsp;分钟
+            阅读本文可能花费您&nbsp;<span class="post-count">5</span>&nbsp;分钟
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
             <h3 id="从我们打开浏览器输入一个网址到页面展示网页内容的这段时间内，浏览器和服务端都发生了什么？"><a href="#从我们打开浏览器输入一个网址到页面展示网页内容的这段时间内，浏览器和服务端都发生了什么？" class="headerlink" title="从我们打开浏览器输入一个网址到页面展示网页内容的这段时间内，浏览器和服务端都发生了什么？"></a>从我们打开浏览器输入一个网址到页面展示网页内容的这段时间内，浏览器和服务端都发生了什么？</h3><ol>
@@ -237,6 +237,26 @@ media="screen" type="text/css">
 <h3 id="如何限制页面图片的大小以保证页面快速显示？"><a href="#如何限制页面图片的大小以保证页面快速显示？" class="headerlink" title="如何限制页面图片的大小以保证页面快速显示？"></a>如何限制页面图片的大小以保证页面快速显示？</h3><p>使用图片优化处理，如webp格式的图片</p>
 <h3 id="重复打开的页面，能否让浏览器不再向服务器请求重复内容？"><a href="#重复打开的页面，能否让浏览器不再向服务器请求重复内容？" class="headerlink" title="重复打开的页面，能否让浏览器不再向服务器请求重复内容？"></a>重复打开的页面，能否让浏览器不再向服务器请求重复内容？</h3><p>合理利用文件缓存，浏览器默认支持文件缓存，一段时间内浏览器重复请求，服务器可能会返回304状态码(浏览器端缓存的资源依然有效)或不发送请求，让浏览器直接读取本地内容</p>
 <h3 id="如果页面在移动端打开应该如何处理？"><a href="#如果页面在移动端打开应该如何处理？" class="headerlink" title="如果页面在移动端打开应该如何处理？"></a>如果页面在移动端打开应该如何处理？</h3><p>考虑打开一个更简洁的页面，如自动跳转至手机端的页面</p>
+<h3 id="浏览器8种缓存机制"><a href="#浏览器8种缓存机制" class="headerlink" title="浏览器8种缓存机制"></a>浏览器8种缓存机制</h3><ol>
+<li>HTTP文件缓存:</li>
+</ol>
+<p>在文件重复请求的情况下，浏览器可以根据http响应的协议头信息判断是从服务器请求文件还是本地读取文件。<br>浏览器会先查询Cache-Control来判断内容是否过期，未过期则读取本地缓存文件。<br>否则判断上次文件返回头中是否有Etag信息（服务器生成的代表请求资源的哈希值），如果有则连同If-None-Match（浏览器端生成的和Etag一样的值）一起向服务器发送请求，服务端判断Etag未修改返回304，修改返回200。<br>如果没有则浏览器判断上次文件返回头中是否有Last-Modified（表示响应资源在服务器最后修改时间）信息，有则连同If-Modified-Since一起向服务器发送请求，服务端判断Last-Modeified是否失效，失效返回200，未失效返回304。<br>如果都不存在，直接请求</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta http-equiv=<span class="string">"Expires"</span> content=<span class="string">"时间"</span>/&gt;</span><br><span class="line">&lt;meta http-equiv=<span class="string">"Cache-Control"</span> content=<span class="string">"max-age=毫秒数"</span>/&gt;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">static</span>=<span class="built_in">require</span>(<span class="string">'koa-static'</span>)</span><br><span class="line"><span class="keyword">const</span> app=koa()</span><br><span class="line">app.use(<span class="keyword">static</span>(<span class="string">'./pages'</span>,&#123;</span><br><span class="line">  maxage:毫秒数</span><br><span class="line">&#125;))</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>LocalStorage:</li>
+</ol>
+<p>主要用于浏览器端存储体积较大的数据（如AJAX返回结果等）单个域名下大小有限制，可以使用iframe方式突破单页面限制<br>localStorage.setItem(key,value)<br>localStorage.getItem(key)<br>localStorage.removeItem(key)<br>localStorage.clear()</p>
+<ol start="3">
+<li>SessionStorage</li>
+</ol>
+<p>和localStorage类似，但是SessionStorage在浏览器关闭时会自动清空</p>
+<ol start="4">
+<li>indexDB</li>
+<li>WebSQL</li>
+<li>Cookie</li>
+<li>CacheStorage</li>
+<li>ApplicationCache</li>
+</ol>
 
         </div>
 
@@ -244,7 +264,7 @@ media="screen" type="text/css">
     <div class="content">
         
 <span class="post-time">
-    Last updated: <time datetime="2018-06-27T09:03:40.079Z" itemprop="dateUpdated">2018-06-27 17:03:40</time>
+    Last updated: <time datetime="2018-06-28T11:35:38.069Z" itemprop="dateUpdated">2018-06-28 19:35:38</time>
 </span>
 
 

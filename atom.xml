@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-06-27T09:03:40.079Z</updated>
+  <updated>2018-06-28T11:35:38.069Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://yoursite.com/2018/06/27/%E7%8E%B0%E4%BB%A3%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF%E8%A7%A3%E6%9E%90%E6%80%BB%E7%BB%93/"/>
     <id>http://yoursite.com/2018/06/27/现代前端技术解析总结/</id>
     <published>2018-06-27T09:03:47.000Z</published>
-    <updated>2018-06-27T09:03:40.079Z</updated>
+    <updated>2018-06-28T11:35:38.069Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="从我们打开浏览器输入一个网址到页面展示网页内容的这段时间内，浏览器和服务端都发生了什么？"><a href="#从我们打开浏览器输入一个网址到页面展示网页内容的这段时间内，浏览器和服务端都发生了什么？" class="headerlink" title="从我们打开浏览器输入一个网址到页面展示网页内容的这段时间内，浏览器和服务端都发生了什么？"></a>从我们打开浏览器输入一个网址到页面展示网页内容的这段时间内，浏览器和服务端都发生了什么？</h3><ol><li>在接收到用户输入的网址后，浏览器会开启一个线程来处理这个请求，对用户输入的url进行分析判断，如果是http就按照http方式处理</li><li>调用浏览器引擎中得对应方法，比如WebView中的loadUrl方法，分析并加载这个URL</li><li>通过DNS解析获取该网站地址对应的IP地址，查询完成后连同浏览器的Cookie，userAgent等信息向网站目的IP发出GET请求</li><li>进行http协议会话，浏览器客户端向web服务器发送报文</li><li>进入网站后台上的web服务器处理请求，如Apache，Tomcat，Nodejs等</li><li>进入部署好的后端应用，如PHP,JAVA,JS,Python等，找到对应的请求处理逻辑（可能会读取服务器缓存或查询数据库等）</li><li>服务器处理请求并返回响应报文，此时如果浏览器访问过该页面，缓存上有对应资源会与服务器最后修改记录对比，一致则返回304（浏览器端缓存的资源依然有效），否则返回200和对应内容</li><li>浏览器开始下载html文档（响应报头状态码为200时）或者从本地缓存读取文件内容（响应报头状态码为304时）</li><li>浏览器根据下载收到的html文件解析结构建立dom文档树，并根据html中的标记请求下载指定的类型文件（如css，js脚本等）同时设置缓存等内容</li><li>页面开始解析渲染dom，css根据规则解析并结合dom文档树进行网页内容布局和绘制渲染，js根据dom api操作dom，并读取浏览器缓存，执行事件绑定等，页面整个展示过程完成</li></ol><h3 id="页面内容多而复杂，怎样保证开发效率："><a href="#页面内容多而复杂，怎样保证开发效率：" class="headerlink" title="页面内容多而复杂，怎样保证开发效率："></a>页面内容多而复杂，怎样保证开发效率：</h3><p>通常使用框架提高效率，如jQuery,MVVM等开发框架 对常用的DOM操作进行封装，简化工作量</p><h3 id="页面内容多且复杂，项目的管理和维护该如何去做？"><a href="#页面内容多且复杂，项目的管理和维护该如何去做？" class="headerlink" title="页面内容多且复杂，项目的管理和维护该如何去做？"></a>页面内容多且复杂，项目的管理和维护该如何去做？</h3><p>使用模块化和组件化的思路管理，采用代码管理中分治的思想，将复杂的代码结构拆分成多个独立，简单，解耦合的结构或文件分开管理，使项目结构更加清晰</p><h3 id="页面加载的内容很多，怎样保证尽快将网页内容显示给用户？"><a href="#页面加载的内容很多，怎样保证尽快将网页内容显示给用户？" class="headerlink" title="页面加载的内容很多，怎样保证尽快将网页内容显示给用户？"></a>页面加载的内容很多，怎样保证尽快将网页内容显示给用户？</h3><p>我们可以通过异步的方式实现，先展示一部分，异步加载其他内容</p><h3 id="如何限制页面图片的大小以保证页面快速显示？"><a href="#如何限制页面图片的大小以保证页面快速显示？" class="headerlink" title="如何限制页面图片的大小以保证页面快速显示？"></a>如何限制页面图片的大小以保证页面快速显示？</h3><p>使用图片优化处理，如webp格式的图片</p><h3 id="重复打开的页面，能否让浏览器不再向服务器请求重复内容？"><a href="#重复打开的页面，能否让浏览器不再向服务器请求重复内容？" class="headerlink" title="重复打开的页面，能否让浏览器不再向服务器请求重复内容？"></a>重复打开的页面，能否让浏览器不再向服务器请求重复内容？</h3><p>合理利用文件缓存，浏览器默认支持文件缓存，一段时间内浏览器重复请求，服务器可能会返回304状态码(浏览器端缓存的资源依然有效)或不发送请求，让浏览器直接读取本地内容</p><h3 id="如果页面在移动端打开应该如何处理？"><a href="#如果页面在移动端打开应该如何处理？" class="headerlink" title="如果页面在移动端打开应该如何处理？"></a>如果页面在移动端打开应该如何处理？</h3><p>考虑打开一个更简洁的页面，如自动跳转至手机端的页面</p>]]></content>
+    <content type="html"><![CDATA[<h3 id="从我们打开浏览器输入一个网址到页面展示网页内容的这段时间内，浏览器和服务端都发生了什么？"><a href="#从我们打开浏览器输入一个网址到页面展示网页内容的这段时间内，浏览器和服务端都发生了什么？" class="headerlink" title="从我们打开浏览器输入一个网址到页面展示网页内容的这段时间内，浏览器和服务端都发生了什么？"></a>从我们打开浏览器输入一个网址到页面展示网页内容的这段时间内，浏览器和服务端都发生了什么？</h3><ol><li>在接收到用户输入的网址后，浏览器会开启一个线程来处理这个请求，对用户输入的url进行分析判断，如果是http就按照http方式处理</li><li>调用浏览器引擎中得对应方法，比如WebView中的loadUrl方法，分析并加载这个URL</li><li>通过DNS解析获取该网站地址对应的IP地址，查询完成后连同浏览器的Cookie，userAgent等信息向网站目的IP发出GET请求</li><li>进行http协议会话，浏览器客户端向web服务器发送报文</li><li>进入网站后台上的web服务器处理请求，如Apache，Tomcat，Nodejs等</li><li>进入部署好的后端应用，如PHP,JAVA,JS,Python等，找到对应的请求处理逻辑（可能会读取服务器缓存或查询数据库等）</li><li>服务器处理请求并返回响应报文，此时如果浏览器访问过该页面，缓存上有对应资源会与服务器最后修改记录对比，一致则返回304（浏览器端缓存的资源依然有效），否则返回200和对应内容</li><li>浏览器开始下载html文档（响应报头状态码为200时）或者从本地缓存读取文件内容（响应报头状态码为304时）</li><li>浏览器根据下载收到的html文件解析结构建立dom文档树，并根据html中的标记请求下载指定的类型文件（如css，js脚本等）同时设置缓存等内容</li><li>页面开始解析渲染dom，css根据规则解析并结合dom文档树进行网页内容布局和绘制渲染，js根据dom api操作dom，并读取浏览器缓存，执行事件绑定等，页面整个展示过程完成</li></ol><h3 id="页面内容多而复杂，怎样保证开发效率："><a href="#页面内容多而复杂，怎样保证开发效率：" class="headerlink" title="页面内容多而复杂，怎样保证开发效率："></a>页面内容多而复杂，怎样保证开发效率：</h3><p>通常使用框架提高效率，如jQuery,MVVM等开发框架 对常用的DOM操作进行封装，简化工作量</p><h3 id="页面内容多且复杂，项目的管理和维护该如何去做？"><a href="#页面内容多且复杂，项目的管理和维护该如何去做？" class="headerlink" title="页面内容多且复杂，项目的管理和维护该如何去做？"></a>页面内容多且复杂，项目的管理和维护该如何去做？</h3><p>使用模块化和组件化的思路管理，采用代码管理中分治的思想，将复杂的代码结构拆分成多个独立，简单，解耦合的结构或文件分开管理，使项目结构更加清晰</p><h3 id="页面加载的内容很多，怎样保证尽快将网页内容显示给用户？"><a href="#页面加载的内容很多，怎样保证尽快将网页内容显示给用户？" class="headerlink" title="页面加载的内容很多，怎样保证尽快将网页内容显示给用户？"></a>页面加载的内容很多，怎样保证尽快将网页内容显示给用户？</h3><p>我们可以通过异步的方式实现，先展示一部分，异步加载其他内容</p><h3 id="如何限制页面图片的大小以保证页面快速显示？"><a href="#如何限制页面图片的大小以保证页面快速显示？" class="headerlink" title="如何限制页面图片的大小以保证页面快速显示？"></a>如何限制页面图片的大小以保证页面快速显示？</h3><p>使用图片优化处理，如webp格式的图片</p><h3 id="重复打开的页面，能否让浏览器不再向服务器请求重复内容？"><a href="#重复打开的页面，能否让浏览器不再向服务器请求重复内容？" class="headerlink" title="重复打开的页面，能否让浏览器不再向服务器请求重复内容？"></a>重复打开的页面，能否让浏览器不再向服务器请求重复内容？</h3><p>合理利用文件缓存，浏览器默认支持文件缓存，一段时间内浏览器重复请求，服务器可能会返回304状态码(浏览器端缓存的资源依然有效)或不发送请求，让浏览器直接读取本地内容</p><h3 id="如果页面在移动端打开应该如何处理？"><a href="#如果页面在移动端打开应该如何处理？" class="headerlink" title="如果页面在移动端打开应该如何处理？"></a>如果页面在移动端打开应该如何处理？</h3><p>考虑打开一个更简洁的页面，如自动跳转至手机端的页面</p><h3 id="浏览器8种缓存机制"><a href="#浏览器8种缓存机制" class="headerlink" title="浏览器8种缓存机制"></a>浏览器8种缓存机制</h3><ol><li>HTTP文件缓存:</li></ol><p>在文件重复请求的情况下，浏览器可以根据http响应的协议头信息判断是从服务器请求文件还是本地读取文件。<br>浏览器会先查询Cache-Control来判断内容是否过期，未过期则读取本地缓存文件。<br>否则判断上次文件返回头中是否有Etag信息（服务器生成的代表请求资源的哈希值），如果有则连同If-None-Match（浏览器端生成的和Etag一样的值）一起向服务器发送请求，服务端判断Etag未修改返回304，修改返回200。<br>如果没有则浏览器判断上次文件返回头中是否有Last-Modified（表示响应资源在服务器最后修改时间）信息，有则连同If-Modified-Since一起向服务器发送请求，服务端判断Last-Modeified是否失效，失效返回200，未失效返回304。<br>如果都不存在，直接请求</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta http-equiv=<span class="string">"Expires"</span> content=<span class="string">"时间"</span>/&gt;</span><br><span class="line">&lt;meta http-equiv=<span class="string">"Cache-Control"</span> content=<span class="string">"max-age=毫秒数"</span>/&gt;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">static</span>=<span class="built_in">require</span>(<span class="string">'koa-static'</span>)</span><br><span class="line"><span class="keyword">const</span> app=koa()</span><br><span class="line">app.use(<span class="keyword">static</span>(<span class="string">'./pages'</span>,&#123;</span><br><span class="line">  maxage:毫秒数</span><br><span class="line">&#125;))</span><br></pre></td></tr></table></figure><ol start="2"><li>LocalStorage:</li></ol><p>主要用于浏览器端存储体积较大的数据（如AJAX返回结果等）单个域名下大小有限制，可以使用iframe方式突破单页面限制<br>localStorage.setItem(key,value)<br>localStorage.getItem(key)<br>localStorage.removeItem(key)<br>localStorage.clear()</p><ol start="3"><li>SessionStorage</li></ol><p>和localStorage类似，但是SessionStorage在浏览器关闭时会自动清空</p><ol start="4"><li>indexDB</li><li>WebSQL</li><li>Cookie</li><li>CacheStorage</li><li>ApplicationCache</li></ol>]]></content>
     
     <summary type="html">
     
@@ -91,9 +91,9 @@
       <category term="面试" scheme="http://yoursite.com/categories/%E9%9D%A2%E8%AF%95/"/>
     
     
-      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
-    
       <category term="面试" scheme="http://yoursite.com/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+      <category term="javascript" scheme="http://yoursite.com/tags/javascript/"/>
     
   </entry>
   
@@ -146,11 +146,39 @@
       <category term="面试" scheme="http://yoursite.com/categories/%E9%9D%A2%E8%AF%95/"/>
     
     
+      <category term="面试" scheme="http://yoursite.com/tags/%E9%9D%A2%E8%AF%95/"/>
+    
       <category term="html" scheme="http://yoursite.com/tags/html/"/>
     
       <category term="css" scheme="http://yoursite.com/tags/css/"/>
     
+  </entry>
+  
+  <entry>
+    <title>关于bootstrap</title>
+    <link href="http://yoursite.com/2018/04/22/%E5%85%B3%E4%BA%8Ebootstrap/"/>
+    <id>http://yoursite.com/2018/04/22/关于bootstrap/</id>
+    <published>2018-04-22T11:14:47.000Z</published>
+    <updated>2018-04-24T10:35:11.246Z</updated>
+    
+    <content type="html"><![CDATA[<p>1、为什么使用bootstrap？<br>bootstrap是为了移动端而开发的框架，并且可以兼容流行的浏览器，它由规范的CSS，JavaScript插件构成，使用起来非常简单，其最大的优势是响应式布局，CSS媒体查询的功能</p><p>2、什么是bootstrap栅格系统？<br>栅格系统的实现原理，是通过定义容器大小，平分12份，再调整内外边距，最后结合媒体查询，就制作出了强大的响应式网格系统(觉得bootstrap主要就是这个栅格系统了，其他的基本上现用现看文档吧……)</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;1、为什么使用bootstrap？&lt;br&gt;bootstrap是为了移动端而开发的框架，并且可以兼容流行的浏览器，它由规范的CSS，JavaScript插件构成，使用起来非常简单，其最大的优势是响应式布局，CSS媒体查询的功能&lt;/p&gt;
+&lt;p&gt;2、什么是bootstrap栅格系
+      
+    
+    </summary>
+    
+      <category term="面试" scheme="http://yoursite.com/categories/%E9%9D%A2%E8%AF%95/"/>
+    
+    
       <category term="面试" scheme="http://yoursite.com/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+      <category term="bootstrap" scheme="http://yoursite.com/tags/bootstrap/"/>
     
   </entry>
   
@@ -206,20 +234,19 @@
   </entry>
   
   <entry>
-    <title>关于bootstrap</title>
-    <link href="http://yoursite.com/2018/04/22/%E5%85%B3%E4%BA%8Ebootstrap/"/>
-    <id>http://yoursite.com/2018/04/22/关于bootstrap/</id>
+    <title>有趣的面试题之 二</title>
+    <link href="http://yoursite.com/2018/04/22/%E6%9C%89%E8%B6%A3%E7%9A%84%E9%9D%A2%E8%AF%95%E9%A2%98%E4%B9%8B%E4%BA%8C/"/>
+    <id>http://yoursite.com/2018/04/22/有趣的面试题之二/</id>
     <published>2018-04-22T11:14:47.000Z</published>
-    <updated>2018-04-24T10:35:11.246Z</updated>
+    <updated>2018-04-24T08:53:24.370Z</updated>
     
-    <content type="html"><![CDATA[<p>1、为什么使用bootstrap？<br>bootstrap是为了移动端而开发的框架，并且可以兼容流行的浏览器，它由规范的CSS，JavaScript插件构成，使用起来非常简单，其最大的优势是响应式布局，CSS媒体查询的功能</p><p>2、什么是bootstrap栅格系统？<br>栅格系统的实现原理，是通过定义容器大小，平分12份，再调整内外边距，最后结合媒体查询，就制作出了强大的响应式网格系统(觉得bootstrap主要就是这个栅格系统了，其他的基本上现用现看文档吧……)</p>]]></content>
+    <content type="html"><![CDATA[<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">var</span> name=<span class="string">"oop"</span></span><br><span class="line"><span class="keyword">var</span> Person=<span class="function"><span class="keyword">function</span> (<span class="params">options</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.name=options.name</span><br><span class="line">&#125;</span><br><span class="line">Person.prototype.name = <span class="string">"Person"</span></span><br><span class="line">Person.prototype.getname = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.name</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">var</span> p=<span class="keyword">new</span> Person(&#123;<span class="attr">name</span>:<span class="string">"jnke"</span>&#125;)</span><br><span class="line"><span class="built_in">console</span>.log(p.constructor)</span><br><span class="line"><span class="built_in">console</span>.log(p <span class="keyword">instanceof</span> Person)</span><br><span class="line"><span class="built_in">console</span>.log(p.__proto__)</span><br><span class="line"><span class="built_in">console</span>.log(p.hasOwnProperty(<span class="string">"name"</span>))</span><br><span class="line"><span class="built_in">console</span>.log(p.hasOwnProperty(<span class="string">"getName"</span>))</span><br><span class="line"><span class="keyword">var</span> getname=p.getname</span><br><span class="line"><span class="built_in">console</span>.log(getname===Person.prototype.getname)</span><br><span class="line"><span class="built_in">console</span>.log(getname())</span><br><span class="line"><span class="built_in">console</span>.log(Person.prototype.getname())</span><br><span class="line"><span class="built_in">console</span>.log(p.getname())</span><br></pre></td></tr></table></figure><p>这是一个继承问题<br>由于p是由Person构造的，所以p 的构造函数肯定是Person<br>instanceof可以判断一个对象是否是一个类型的实例，也可以判断这个对象的父级中是否继承了一个类型<br>在这里我们通过Person实例的p，所以输出一定是true<br><strong>proto</strong>隐式原型指向构造该对象的构造函数的原型，所以就是person<br>hasOwnProperty判断对象自有属性，name是构造时构造的自有属性，getName是父级共享的<br>p.getname不是自有属性是继承自父级，所以赋值给getname也是引用，所以二者是绝对相等的<br>es5中this指向执行期上下文，window，name=oop<br>由构造函数new出来的对象调用的方法，this指向该对象<br>所以答案：<br><img src="/2018/04/22/有趣的面试题之二/index.png"></p><p>关于变量声明提升的题：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(fn)</span><br><span class="line"><span class="keyword">var</span> fn=<span class="function"><span class="params">()</span>=&gt;</span>&#123;&#125;<span class="comment">//箭头函数是匿名函数 属于赋值</span></span><br><span class="line"><span class="keyword">var</span> fn</span><br><span class="line"><span class="built_in">console</span>.log(fn)</span><br><span class="line"><span class="keyword">var</span> fn=<span class="number">2</span></span><br><span class="line"><span class="built_in">console</span>.log(fn)</span><br></pre></td></tr></table></figure><p>过程是这样的：<br>fn变量声明提升=undefined<br>输出为undefined<br>箭头函数是匿名函数 属于赋值<br>所以输出后fn=()=&gt;{}<br>此时输出为function(){}<br>之后又进行了赋值fn=2<br>输出2<br><img src="/2018/04/22/有趣的面试题之二/index1.png"><br>注意:函数声明不会被变量声明覆盖，但是会被赋值覆盖，所以这里最后输出的fn=2</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;1、为什么使用bootstrap？&lt;br&gt;bootstrap是为了移动端而开发的框架，并且可以兼容流行的浏览器，它由规范的CSS，JavaScript插件构成，使用起来非常简单，其最大的优势是响应式布局，CSS媒体查询的功能&lt;/p&gt;
-&lt;p&gt;2、什么是bootstrap栅格系
+        &lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;l
       
     
     </summary>
@@ -229,7 +256,7 @@
     
       <category term="面试" scheme="http://yoursite.com/tags/%E9%9D%A2%E8%AF%95/"/>
     
-      <category term="bootstrap" scheme="http://yoursite.com/tags/bootstrap/"/>
+      <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
     
   </entry>
   
@@ -247,33 +274,6 @@
       
       
         &lt;p&gt;今天遇到一个这样的面试题&lt;br&gt;&lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span
-      
-    
-    </summary>
-    
-      <category term="面试" scheme="http://yoursite.com/categories/%E9%9D%A2%E8%AF%95/"/>
-    
-    
-      <category term="面试" scheme="http://yoursite.com/tags/%E9%9D%A2%E8%AF%95/"/>
-    
-      <category term="JavaScript" scheme="http://yoursite.com/tags/JavaScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>有趣的面试题之 二</title>
-    <link href="http://yoursite.com/2018/04/22/%E6%9C%89%E8%B6%A3%E7%9A%84%E9%9D%A2%E8%AF%95%E9%A2%98%E4%B9%8B%E4%BA%8C/"/>
-    <id>http://yoursite.com/2018/04/22/有趣的面试题之二/</id>
-    <published>2018-04-22T11:14:47.000Z</published>
-    <updated>2018-04-24T08:53:24.370Z</updated>
-    
-    <content type="html"><![CDATA[<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">var</span> name=<span class="string">"oop"</span></span><br><span class="line"><span class="keyword">var</span> Person=<span class="function"><span class="keyword">function</span> (<span class="params">options</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.name=options.name</span><br><span class="line">&#125;</span><br><span class="line">Person.prototype.name = <span class="string">"Person"</span></span><br><span class="line">Person.prototype.getname = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.name</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">var</span> p=<span class="keyword">new</span> Person(&#123;<span class="attr">name</span>:<span class="string">"jnke"</span>&#125;)</span><br><span class="line"><span class="built_in">console</span>.log(p.constructor)</span><br><span class="line"><span class="built_in">console</span>.log(p <span class="keyword">instanceof</span> Person)</span><br><span class="line"><span class="built_in">console</span>.log(p.__proto__)</span><br><span class="line"><span class="built_in">console</span>.log(p.hasOwnProperty(<span class="string">"name"</span>))</span><br><span class="line"><span class="built_in">console</span>.log(p.hasOwnProperty(<span class="string">"getName"</span>))</span><br><span class="line"><span class="keyword">var</span> getname=p.getname</span><br><span class="line"><span class="built_in">console</span>.log(getname===Person.prototype.getname)</span><br><span class="line"><span class="built_in">console</span>.log(getname())</span><br><span class="line"><span class="built_in">console</span>.log(Person.prototype.getname())</span><br><span class="line"><span class="built_in">console</span>.log(p.getname())</span><br></pre></td></tr></table></figure><p>这是一个继承问题<br>由于p是由Person构造的，所以p 的构造函数肯定是Person<br>instanceof可以判断一个对象是否是一个类型的实例，也可以判断这个对象的父级中是否继承了一个类型<br>在这里我们通过Person实例的p，所以输出一定是true<br><strong>proto</strong>隐式原型指向构造该对象的构造函数的原型，所以就是person<br>hasOwnProperty判断对象自有属性，name是构造时构造的自有属性，getName是父级共享的<br>p.getname不是自有属性是继承自父级，所以赋值给getname也是引用，所以二者是绝对相等的<br>es5中this指向执行期上下文，window，name=oop<br>由构造函数new出来的对象调用的方法，this指向该对象<br>所以答案：<br><img src="/2018/04/22/有趣的面试题之二/index.png"></p><p>关于变量声明提升的题：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(fn)</span><br><span class="line"><span class="keyword">var</span> fn=<span class="function"><span class="params">()</span>=&gt;</span>&#123;&#125;<span class="comment">//箭头函数是匿名函数 属于赋值</span></span><br><span class="line"><span class="keyword">var</span> fn</span><br><span class="line"><span class="built_in">console</span>.log(fn)</span><br><span class="line"><span class="keyword">var</span> fn=<span class="number">2</span></span><br><span class="line"><span class="built_in">console</span>.log(fn)</span><br></pre></td></tr></table></figure><p>过程是这样的：<br>fn变量声明提升=undefined<br>输出为undefined<br>箭头函数是匿名函数 属于赋值<br>所以输出后fn=()=&gt;{}<br>此时输出为function(){}<br>之后又进行了赋值fn=2<br>输出2<br><img src="/2018/04/22/有趣的面试题之二/index1.png"><br>注意:函数声明不会被变量声明覆盖，但是会被赋值覆盖，所以这里最后输出的fn=2</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;figure class=&quot;highlight js&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;l
       
     
     </summary>
