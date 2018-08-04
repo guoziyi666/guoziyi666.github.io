@@ -6,13 +6,13 @@
     
     
     
-    <title>标签: 技术 | Welcome</title>
+    <title>Nginx那些事 | Welcome</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
     
     <meta name="theme-color" content="#77AAFF">
     
     
-    <meta name="keywords" content="">
+    <meta name="keywords" content="技术,服务器">
     
     
 
@@ -39,13 +39,18 @@
 
 
     
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Welcome">
-<meta property="og:url" content="http://yoursite.com/tags/技术/index.html">
+    <meta name="description" content="Nginx是什么？Nginx是一个高性能的HTTP和反向代理服务器，因其稳定性，丰富的功能集，示例配置文件和低系统资源的消耗而闻名。是一款轻量级的Web服务器、反向代理服务器。由c语言编写而成 Nginx的特点？ 占有内存少 并发力强  Nginx的优点？可以在大多数Unix Linux OS上编译运行 并有windows移植版是一个很强大的高性能web和反向代理服务器（适用于连接高并发的情况）">
+<meta name="keywords" content="技术,服务器">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Nginx那些事">
+<meta property="og:url" content="http://yoursite.com/2018/07/30/nginx/index.html">
 <meta property="og:site_name" content="Welcome">
+<meta property="og:description" content="Nginx是什么？Nginx是一个高性能的HTTP和反向代理服务器，因其稳定性，丰富的功能集，示例配置文件和低系统资源的消耗而闻名。是一款轻量级的Web服务器、反向代理服务器。由c语言编写而成 Nginx的特点？ 占有内存少 并发力强  Nginx的优点？可以在大多数Unix Linux OS上编译运行 并有windows移植版是一个很强大的高性能web和反向代理服务器（适用于连接高并发的情况）">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-07-30T14:42:39.271Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Welcome">
+<meta name="twitter:title" content="Nginx那些事">
+<meta name="twitter:description" content="Nginx是什么？Nginx是一个高性能的HTTP和反向代理服务器，因其稳定性，丰富的功能集，示例配置文件和低系统资源的消耗而闻名。是一款轻量级的Web服务器、反向代理服务器。由c语言编写而成 Nginx的特点？ 占有内存少 并发力强  Nginx的优点？可以在大多数Unix Linux OS上编译运行 并有windows移植版是一个很强大的高性能web和反向代理服务器（适用于连接高并发的情况）">
     
         <link rel="alternate" type="application/atom+xml" title="Welcome" href="/atom.xml">
     
@@ -62,7 +67,7 @@ media="screen" type="text/css">
 
 <body>
     <div id="loading" class="active"></div>
-    <aside id="menu"   >
+    <aside id="menu"  class="hide" >
   <div class="inner flex-row-vertical">
     <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
         <i class="icon icon-lg icon-close"></i>
@@ -104,7 +109,7 @@ media="screen" type="text/css">
                   </a>
               </li>
             
-              <li class="waves-block waves-effect active">
+              <li class="waves-block waves-effect">
                   <a href="/tags"  >
                     <i class="icon icon-lg icon-tags"></i>
                     <span>标 签</span><i class="icon icon-lg icon-caret-left"></i>
@@ -145,7 +150,7 @@ media="screen" type="text/css">
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">标签: 技术</div>
+        <div class="flex-col header-title ellipsis">Nginx那些事</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -162,7 +167,7 @@ media="screen" type="text/css">
         </a>
     </div>
 </header>
-<header class="content-header tags-header">
+<header class="content-header post-header">
     
     
     <div class="container fade-scale">
@@ -172,19 +177,6 @@ media="screen" type="text/css">
             </h1>
             <h5 class="subtitle">
                 
-                    <h1 id="pagetitle" class="archivestitle"></h1>
-                    <script>
-                        if(location.href.indexOf('about')!=-1){
-                            pagetitle.textContent = '果果的小窝';
-                        }else if(location.href.indexOf('tags')!=-1||location.href.indexOf('categories')!=-1){
-                            var a=location.href.substring(location.href.length-5,location.href.length-1);
-                            if(a==='tags'){
-                                pagetitle.textContent = '一定会有狗的';
-                            }else if(a==='ries'){
-                                pagetitle.textContent = '一定会有狗的';
-                            }
-                        }
-                    </script>
                 
             </h5>
         </div>
@@ -193,74 +185,122 @@ media="screen" type="text/css">
 </header>
 
 
-    <div class="container body-wrap fade">
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Nginx是什么？"><span class="post-toc-number">1.</span> <span class="post-toc-text">Nginx是什么？</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Nginx的特点？"><span class="post-toc-number">2.</span> <span class="post-toc-text">Nginx的特点？</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Nginx的优点？"><span class="post-toc-number">3.</span> <span class="post-toc-text">Nginx的优点？</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#处理IO的几种机制"><span class="post-toc-number">4.</span> <span class="post-toc-text">处理IO的几种机制</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Nginx的组织结构："><span class="post-toc-number">5.</span> <span class="post-toc-text">Nginx的组织结构：</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Nginx能处理的最大并发数是多少？"><span class="post-toc-number">6.</span> <span class="post-toc-text">Nginx能处理的最大并发数是多少？</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#负载均衡："><span class="post-toc-number">7.</span> <span class="post-toc-text">负载均衡：</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#服务器检查算法（权重）："><span class="post-toc-number">8.</span> <span class="post-toc-text">服务器检查算法（权重）：</span></a></li></ol>
+        </nav>
+    </aside>
+   
+<article id="post-nginx"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">Nginx那些事</h1>
+        <div class="post-meta">
+            <i class="icon icon-lg icon-calendar-o"></i>
+            发表于
+            <time class="post-time" title="2018-07-30 21:38:47" datetime="2018-07-30T13:38:47.000Z"  itemprop="datePublished">2018-07-30</time>
+
+            <br id="mybreak"/>
+            
+	<i class="icon icon-lg icon-folder-o"></i>
+	分类：<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/服务器/">服务器</a></li></ul>
+
+
+            <i>·</i>
+            
+
+        </div>
+        <div class="post-count-custom">
+            <i class="icon icon-lg icon-comment-o"></i>
+            阅读本文可能花费您&nbsp;<span class="post-count">2</span>&nbsp;分钟
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="Nginx是什么？"><a href="#Nginx是什么？" class="headerlink" title="Nginx是什么？"></a>Nginx是什么？</h1><p>Nginx是一个高性能的HTTP和反向代理服务器，因其稳定性，丰富的功能集，示例配置文件和低系统资源的消耗而闻名。<br>是一款轻量级的Web服务器、反向代理服务器。由c语言编写而成</p>
+<h1 id="Nginx的特点？"><a href="#Nginx的特点？" class="headerlink" title="Nginx的特点？"></a>Nginx的特点？</h1><ol>
+<li>占有内存少</li>
+<li>并发力强</li>
+</ol>
+<h1 id="Nginx的优点？"><a href="#Nginx的优点？" class="headerlink" title="Nginx的优点？"></a>Nginx的优点？</h1><p>可以在大多数Unix Linux OS上编译运行 并有windows移植版<br>是一个很强大的高性能web和反向代理服务器（适用于连接高并发的情况）</p>
+<h1 id="处理IO的几种机制"><a href="#处理IO的几种机制" class="headerlink" title="处理IO的几种机制"></a>处理IO的几种机制</h1><p>IO操作：磁盘读写，网络通信等</p>
+<ol>
+<li>阻塞：<br>如果没有数据则会一直等待数据（使用多线程的方式能提高吞吐量）</li>
+<li>非阻塞：<br>如果没数据会返回并告诉现在没有数据（可以利用多核cpu的多核）</li>
+<li>同步：<br>通知他要接收数据，不管他是否接收到数据，等待他弄完</li>
+<li>异步：<br>通知他要接收数据，然后进行其他的事，等他接收或失败后会回应你</li>
+<li>同步非阻塞（轮询）<br>主进程轮询查看其他进程是否完成（主进程频繁切换，浪费资源但是确保了数据的完整性）</li>
+<li>异步非阻塞（回调）：<br>主进程继续进行当前工作，当数据接收后会被告知</li>
+</ol>
+<h1 id="Nginx的组织结构："><a href="#Nginx的组织结构：" class="headerlink" title="Nginx的组织结构："></a>Nginx的组织结构：</h1><p>一个master进程分发信号给多个woker进程，不同的设备连接到worker进程中<br>有多少个cpu建立多少个worker，多了消耗性能，少了浪费资源</p>
+<h1 id="Nginx能处理的最大并发数是多少？"><a href="#Nginx能处理的最大并发数是多少？" class="headerlink" title="Nginx能处理的最大并发数是多少？"></a>Nginx能处理的最大并发数是多少？</h1><p>worker_connection*worker_process/2</p>
+<h1 id="负载均衡："><a href="#负载均衡：" class="headerlink" title="负载均衡："></a>负载均衡：</h1><ol>
+<li>轮询</li>
+<li>iphash（根据ip分配服务器）</li>
+<li>附加参数（服务器能者多劳，性能高的分配任务多）</li>
+</ol>
+<h1 id="服务器检查算法（权重）："><a href="#服务器检查算法（权重）：" class="headerlink" title="服务器检查算法（权重）："></a>服务器检查算法（权重）：</h1><p>weight：初始权重<br>effective_weight: 服务器出错后减少权重，初始值为weight<br>current_weight: 当前权重，初始为0。weight_total+current_weight</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
         
-            
-            
-            <h5 class="tag-tip">
-                <i class="icon icon-tag"></i>
-                关于
-                <span style="color:rgb(100, 100, 100)">技术</span>
-                共2篇文章
-            </h5>
-            <div class="waterfall">
-            
-                <article class="archive-article" onclick="location.href='/2018/07/30/nginx/'">
-    <div class="archive-article-date">
-      
-      <time class="my-post-time">
-        <i class="icon icon-lg icon-file-text-o"></i>
-        &nbsp;
-          2018-07-30
-      </time>
+<span class="post-time">
+    Last updated: <time datetime="2018-07-30T14:42:39.271Z" itemprop="dateUpdated">2018-07-30 22:42:39</time>
+</span>
+
+
+        
     </div>
-    <div class="archive-article-inner">
-      
+    <footer>
+        <div onclick="location.href='http://yoursite.com'">
+            <img src="/img/avatar.jpg" alt="guoziyi">
+            <a>guoziyi</a>
+        </div>
+    </footer>
+</blockquote>
+
+        
 
 
-  
-    <h3 class="post-title" itemprop="name">
-      <a href="/2018/07/30/nginx/">Nginx那些事</a>
-    </h3>
-  
-
-
-
-      
+        <div class="post-footer">
+            
 	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术/">技术</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/服务器/">服务器</a></li></ul>
 
-    </div>
-  </article>
+
             
-                <article class="archive-article" onclick="location.href='/2018/06/27/现代前端技术解析总结/'">
-    <div class="archive-article-date">
-      
-      <time class="my-post-time">
-        <i class="icon icon-lg icon-file-text-o"></i>
-        &nbsp;
-          2018-06-27
-      </time>
+
+
+        </div>
     </div>
-    <div class="archive-article-inner">
-      
 
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a href="/2018/06/27/现代前端技术解析总结/">《现代前端技术解析》阅读总结</a>
-    </h3>
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
   
 
-
-
-      
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术/">技术</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/面试/">面试</a></li></ul>
-
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2018/06/27/现代前端技术解析总结/" id="post-next" class="post-nav-link">
+        <h4 class="title" data-hover="下一篇：《现代前端技术解析》阅读总结">下一篇：《现代前端技术解析》阅读总结</h4>
+      </a>
     </div>
-  </article>
-            
-            </div>
-        
+  
+</nav>
+
+
+
+    
+    
+
+    
+
+    
+
+
+</article>
 
 </div>
 
@@ -294,6 +334,9 @@ media="screen" type="text/css">
 </footer>
 
     </main>
+    
+        
+
     
     <div class="mask" id="mask"></div>
 <a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
